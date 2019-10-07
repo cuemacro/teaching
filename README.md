@@ -6,6 +6,7 @@ For instructions on how to install Anaconda and PyCharm see [Installing Anaconda
 
 # Coding log
 
+* 07 Oct 2019 - Added details on setting paths in Anaconda installation
 * 02 Oct 2019 - Moved files for installation
 * 01 Oct 2019 - Created teaching GitHub repo
 
