@@ -37,19 +37,21 @@ jupyter-nbextension install rise --py --sys-prefix
 pip install celery==4.3.0 celery[redis] celery[msgpack] msgpack-python
 
 # for findatapy
-pip install fxcmpy alpha_vantage yfinance twython newspaper3k seasonal pdfminer.six vaderSentiment vaderSentiment gensim textblob
+pip install fxcmpy alpha_vantage yfinance twython newspaper3k seasonal pdfminer.six vaderSentiment gensim
 
-# install tensorflow and transformers/huggingface
+# install tensorflow and transformers/huggingface (on Mac OS can have issues installing TensorFlow, so commented out)
 # only if you have GPU
 # pip install tensorflow-gpu transformers
-pip install tensorflow transformers
+# pip install tensorflow transformers
 
 # modin (downgrade pandas version)
 # may downgrade to pandas to 0.24.2
 pip install modin
 
 # findatapy, chartpy and finmarketpy (or can manually clone these from GitHub and add to your Python path)
-pip install git+https://github.com/cuemacro/finmarketpy.git git+https://github.com/cuemacro/chartpy.git git+https://github.com/cuemacro/findatapy.git
+# need to have Git
+# pip install git+https://github.com/cuemacro/finmarketpy.git git+https://github.com/cuemacro/chartpy.git git+https://github.com/cuemacro/findatapy.git
+pip install finmarketpy chartpy findatapy
 
 # graphics libraries
 pip install cufflinks==0.16 plotly_express==0.3.1 dash==1.1.1 dash-html-components==1.0.0 dash-core-components==1.1.1 plotly==3.10.0 dash-table==4.1.0
