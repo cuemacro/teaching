@@ -9,8 +9,8 @@ conda deactivate
 # conda remove -n py36 --all
 conda create -n py36 python=3.6 anaconda
 
-conda deactivate
-conda activate py36
+source deactivate
+source activate py36
 
 # newer versions of Pandas aren't supported as well by other libraries (eg. Arctic), so stick to 0.24.2
 conda install -c anaconda pandas=0.24.2 --yes
@@ -19,7 +19,8 @@ conda install -c anaconda pandas=0.24.2 --yes
 conda install -c conda-forge \
 jupyterlab jupyter_contrib_nbextensions jupyter_nbextensions_configurator \
 redis-py=3.3.7 python-blosc=1.8.1 pathos pyarrow=0.14.1 graphviz python-graphviz rise textblob wordcloud quandl \
-vaex-core vaex-viz vaex-jupyter vaex-arrow vaex-server vaex-hdf5 vaex-astro vaex-distributed pyspark py4j spacy --yes
+vaex-core vaex-viz vaex-jupyter vaex-arrow vaex-server vaex-hdf5 vaex-astro vaex-distributed pyspark py4j \
+spacy --yes
 
 # for database
 pip install arctic==1.79.2
@@ -54,7 +55,7 @@ pip install modin
 pip install finmarketpy chartpy findatapy
 
 # graphics libraries
-pip install cufflinks==0.16 plotly_express==0.3.1 dash==1.1.1 dash-html-components==1.0.0 dash-core-components==1.1.1 plotly==3.10.0 dash-table==4.1.0
+pip install cufflinks==0.17 plotly_express==0.4.1 dash==1.1.1 dash-html-components==1.0.0 dash-core-components==1.1.1 plotly==4.2.1 dash-table==4.1.0
 
 # to be able to plot Plotly into PNG or JPG
 conda install -c plotly plotly-orca --yes

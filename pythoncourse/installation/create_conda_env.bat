@@ -12,10 +12,11 @@ call conda activate py36
 REM newer versions of Pandas aren't supported as well by other libraries (eg. Arctic), so stick to 0.24.2
 call conda install -c anaconda pandas=0.24.2 --yes
 
-REM install from conda-forge (pyarrow is a newer version!)
+REM install from conda-forge
 call conda install -c conda-forge ^
 jupyterlab jupyter_contrib_nbextensions jupyter_nbextensions_configurator ^
-redis-py=3.3.7 python-blosc=1.8.1 pathos graphviz python-graphviz rise textblob wordcloud quandl spacy fastparquet --yes
+redis-py=3.3.7 python-blosc=1.8.1 pathos graphviz python-graphviz rise textblob wordcloud quandl ^
+spacy fastparquet python-snappy --yes
 
 call conda install -c conda-forge pystan fbprophet --yes
 
@@ -45,7 +46,7 @@ REM call pip install git+https://github.com/cuemacro/finmarketpy.git git+https:/
 call pip install finmarketpy chartpy findatapy
 
 REM graphics libraries
-call pip install cufflinks==0.16 plotly_express==0.3.1 dash==1.1.1 dash-html-components==1.0.0 dash-core-components==1.1.1 plotly==3.10.0 dash-table==4.1.0
+call pip install cufflinks==0.17 plotly_express==0.4.1 dash==1.1.1 dash-html-components==1.0.0 dash-core-components==1.1.1 plotly==4.2.1 dash-table==4.1.0
 
 REM to be able to plot Plotly into PNG or JPG
 call conda install -c plotly plotly-orca --yes
