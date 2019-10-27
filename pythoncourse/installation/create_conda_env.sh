@@ -60,3 +60,7 @@ pip install cufflinks==0.17 plotly_express==0.4.1 dash==1.1.1 dash-html-componen
 # to be able to plot Plotly into PNG or JPG
 conda install -c plotly plotly-orca --yes
 
+# GPU libraries
+# conda install -c rapidsai -c nvidia -c conda-forge -c defaults rapids=0.10 python=3.6
+
+

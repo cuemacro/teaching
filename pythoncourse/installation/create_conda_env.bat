@@ -51,4 +51,3 @@ call pip install cufflinks==0.17 plotly_express==0.4.1 dash==1.1.1 dash-html-com
 REM to be able to plot Plotly into PNG or JPG
 call conda install -c plotly plotly-orca --yes
 
-
