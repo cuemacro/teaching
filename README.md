@@ -6,6 +6,7 @@ For instructions on how to install Anaconda and PyCharm see [Installing Anaconda
 
 # Coding log
 
+* 28 Oct 2019 - Added Bloomberg installation
 * 27 Oct 2019 - Added source code
 * 24 Oct 2019 - Added sample FX data
 * 23 Oct 2019 - Updated installation instructions for pip installation
