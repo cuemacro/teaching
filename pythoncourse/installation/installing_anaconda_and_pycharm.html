@@ -13102,7 +13102,7 @@ div#notebook {
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="Download-and-install-Git">Download and install Git<a class="anchor-link" href="#Download-and-install-Git">&#182;</a></h2><p>Git is version control software, which is necessary to install some Python libraries we'll use. It's also worth understanding how to use version control if you want to code later! You can download and install Git for Windows, Linux and Mac operating systems from <a href="https://git-scm.com/downloads">https://git-scm.com/downloads</a></p>
+<h2 id="Download-and-install-Git">Download and install Git<a class="anchor-link" href="#Download-and-install-Git">&#182;</a></h2><p>Git is version control software, which maybe useful to install some Python libraries we'll use (in practice you can install these without Git, but they might not be the latest versions). It's also worth understanding how to use version control if you want to code later! You can download and install Git for Windows, Linux and Mac operating systems from <a href="https://git-scm.com/downloads">https://git-scm.com/downloads</a></p>
 <p>Note that for Linux, you can install from the command line but the syntax depends on your Linux distribution <a href="https://git-scm.com/download/linux">https://git-scm.com/download/linux</a> discusses this in some detail.</p>
 
 </div>
@@ -13120,7 +13120,7 @@ div#notebook {
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="Install-Bloomberg">Install Bloomberg<a class="anchor-link" href="#Install-Bloomberg">&#182;</a></h2><p>If you have access to a Bloomberg Terminal and are running Windows, it is recommended to install the blpapi library iun your Windows conda environment once it is setup. Full instructions are at <a href="https://github.com/cuemacro/findatapy/blob/master/BLOOMBERG.md">https://github.com/cuemacro/findatapy/blob/master/BLOOMBERG.md</a>. It requires several additional steps including the settings of paths in Windows.</p>
+<h2 id="Installing-Bloomberg">Installing Bloomberg<a class="anchor-link" href="#Installing-Bloomberg">&#182;</a></h2><p>It is helpful to install Bloomberg's blpapi Python library if you can (and have a Bloomberg account). It is recommended to install in your conda environment. Full details on how to install blpapi can be found at <a href="https://github.com/cuemacro/findatapy/blob/master/BLOOMBERG.md">https://github.com/cuemacro/findatapy/blob/master/BLOOMBERG.md</a></p>
 
 </div>
 </div>
@@ -13194,11 +13194,12 @@ REM call pip install tensorflow-gpu transformers
 call pip install tensorflow transformers
 
 REM for findatapy
-call pip install fxcmpy alpha_vantage yfinance twython newspaper3k seasonal pdfminer.six vaderSentiment gensim textblob
+call pip install fxcmpy alpha_vantage yfinance twython newspaper3k seasonal pdfminer.six vaderSentiment gensim
 
 REM findatapy, chartpy and finmarketpy
 REM needs git
-call pip install git+https://github.com/cuemacro/finmarketpy.git git+https://github.com/cuemacro/chartpy.git git+https://github.com/cuemacro/findatapy.git
+REM call pip install git+https://github.com/cuemacro/finmarketpy.git git+https://github.com/cuemacro/chartpy.git git+https://github.com/cuemacro/findatapy.git
+call pip install finmarketpy chartpy findatapy
 
 REM graphics libraries
 call pip install cufflinks==0.17 plotly_express==0.4.1 dash==1.1.1 dash-html-components==1.0.0 dash-core-components==1.1.1 plotly==4.2.1 dash-table==4.1.0
@@ -13267,8 +13268,8 @@ conda deactivate
 # conda remove -n py36 --all
 conda create -n py36 python=3.6 anaconda
 
-conda deactivate
-conda activate py36
+source deactivate
+source activate py36
 
 # newer versions of Pandas aren't supported as well by other libraries (eg. Arctic), so stick to 0.24.2
 conda install -c anaconda pandas=0.24.2 --yes
@@ -13295,25 +13296,30 @@ jupyter-nbextension install rise --py --sys-prefix
 pip install celery==4.3.0 celery[redis] celery[msgpack] msgpack-python
 
 # for findatapy
-pip install fxcmpy alpha_vantage yfinance twython newspaper3k seasonal pdfminer.six vaderSentiment vaderSentiment gensim textblob
+pip install fxcmpy alpha_vantage yfinance twython newspaper3k seasonal pdfminer.six vaderSentiment gensim
 
-# install tensorflow and transformers/huggingface
+# install tensorflow and transformers/huggingface (on Mac OS can have issues installing TensorFlow, so commented out)
 # only if you have GPU
 # pip install tensorflow-gpu transformers
-pip install tensorflow transformers
+# pip install tensorflow transformers
 
 # modin (downgrade pandas version)
 # may downgrade to pandas to 0.24.2
 pip install modin
 
 # findatapy, chartpy and finmarketpy (or can manually clone these from GitHub and add to your Python path)
-pip install git+https://github.com/cuemacro/finmarketpy.git git+https://github.com/cuemacro/chartpy.git git+https://github.com/cuemacro/findatapy.git
+# need to have Git
+# pip install git+https://github.com/cuemacro/finmarketpy.git git+https://github.com/cuemacro/chartpy.git git+https://github.com/cuemacro/findatapy.git
+pip install finmarketpy chartpy findatapy
 
 # graphics libraries
 pip install cufflinks==0.17 plotly_express==0.4.1 dash==1.1.1 dash-html-components==1.0.0 dash-core-components==1.1.1 plotly==4.2.1 dash-table==4.1.0
 
 # to be able to plot Plotly into PNG or JPG
-conda install -c plotly plotly-orca --yes</code></pre>
+conda install -c plotly plotly-orca --yes
+
+# GPU libraries
+# conda install -c rapidsai -c nvidia -c conda-forge -c defaults rapids=0.10 python=3.6</code></pre>
 
 </div>
 </div>
