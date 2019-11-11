@@ -2,6 +2,7 @@ import pandas as pd
 import dask.dataframe as dd
 import dask
 
+# change to your path!
 raw_data_path = '/home/redhat/cuemacro/pythoncourse/pythoncourse/notebooks/raw_data/'
 
 df_dask  = dd.read_parquet(raw_data_path + 'EURUSD_2019.gzip')

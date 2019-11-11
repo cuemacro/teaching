@@ -100,7 +100,7 @@ def load_data():
     df = market.fetch_market(market_data_request)
     df = df.fillna(method='ffill')
 
-    df_ret = df / df.shift(1)
+    df_ret = df / df.shift(1) - 1
 
     return df, df_ret
 
@@ -113,7 +113,7 @@ def load_data():
 def callback_vol_chart(dropdown_asset, dropdown_tenor):
 
     print(dropdown_asset + ' ' + dropdown_tenor)
-    df_vol = df_ret[dropdown_asset + '.close'].rolling(int(dropdown_tenor)).std() * math.sqrt(252)
+    df_vol = df_ret[dropdown_asset + '.close'].rolling(int(dropdown_tenor)).std() * math.sqrt(252) * 100.0
 
     return chart.plot(df_vol, style=style_vol), chart.plot(df_spot[dropdown_asset + '.close'], style=style_spot)
 
