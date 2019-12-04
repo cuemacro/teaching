@@ -3,11 +3,12 @@ REM assumes that Anaconda has already been downloaded
 REM update conda
 call conda update -n base -c defaults conda --yes
 
-REM remove any existing environment called py36, and create a py36 with anaconda packages
-REM call conda remove -n py36 --all
-call conda create -n py36 python=3.6 anaconda --yes
-call conda deactivate
-call conda activate py36
+call conda activate
+
+REM remove any existing environment called py36class, and create a py36class with anaconda packages
+REM call conda remove -n py36class --all
+call conda create -n py36class python=3.6 anaconda --yes
+call conda activate py36class
 
 REM newer versions of Pandas aren't supported as well by other libraries (eg. Arctic), so stick to 0.24.2
 call conda install -c anaconda pandas=0.24.2 --yes

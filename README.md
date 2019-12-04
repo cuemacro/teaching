@@ -6,6 +6,7 @@ For instructions on how to install Anaconda and PyCharm see [Installing Anaconda
 
 # Coding log
 
+* 04 Dec 2019 - Updated installation instructions for Anaconda/and using Azure notebooks
 * 11 Nov 2019 - Added course code (xlwings)
 * 28 Oct 2019 - Added Bloomberg installation
 * 27 Oct 2019 - Added source code

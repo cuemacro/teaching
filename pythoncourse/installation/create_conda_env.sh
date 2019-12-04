@@ -3,14 +3,12 @@
 # update conda
 conda update -n base -c defaults conda --yes
 
-# remove any existing environment called py36, and create a py36 with anaconda packages
-conda deactivate
+# remove any existing environment called py36class, and create a py36class with anaconda packages
+conda activate
 
-# conda remove -n py36 --all
-conda create -n py36 python=3.6 anaconda
-
-source deactivate
-source activate py36
+# conda remove -n py36class --all
+conda create -n py36class python=3.6 anaconda
+conda activate py36class
 
 # newer versions of Pandas aren't supported as well by other libraries (eg. Arctic), so stick to 0.24.2
 conda install -c anaconda pandas=0.24.2 --yes
@@ -40,10 +38,11 @@ pip install celery==4.3.0 celery[redis] celery[msgpack] msgpack-python
 # for findatapy
 pip install fxcmpy alpha_vantage yfinance twython newspaper3k seasonal pdfminer.six vaderSentiment gensim
 
-# install tensorflow and transformers/huggingface (on Mac OS can have issues installing TensorFlow, so commented out)
+# install tensorflow and transformers/huggingface (on Mac OS can have issues installing TensorFlow, so if you have Mac
+# comment it out)
 # only if you have GPU
 # pip install tensorflow-gpu transformers
-# pip install tensorflow transformers
+pip install tensorflow transformers
 
 # modin (downgrade pandas version)
 # may downgrade to pandas to 0.24.2
@@ -62,5 +61,8 @@ conda install -c plotly plotly-orca --yes
 
 # GPU libraries
 # conda install -c rapidsai -c nvidia -c conda-forge -c defaults rapids=0.10 python=3.6
+
+# in case modin has changed pandas version!
+conda install -c anaconda pandas=0.24.2 --yes
 
 
