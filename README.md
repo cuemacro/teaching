@@ -2,6 +2,8 @@
 
 In this repo, we have resources for Cuemacro courses (including Python introduction for finance), such as how to install Anaconda, PyCharm etc.
 
+For more information about my Python for finance workshops, please contact saeed@cuemacro.com
+
 For instructions on how to install Anaconda and PyCharm see [Installing Anaconda and PyCharm](pythoncourse/installation/installing_anaconda_and_pycharm.ipynb)
 
 # Coding log
