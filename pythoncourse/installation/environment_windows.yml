@@ -359,7 +359,7 @@ dependencies:
     - enum-compat==0.0.3
     - feedfinder2==0.0.4
     - feedparser==5.2.1
-    - findatapy==0.1.4
+    - findatapy==0.1.6
     - finmarketpy==0.11.3
     - flask-compress==1.4.0
     - freetype-py==2.1.0.post1
