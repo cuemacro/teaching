@@ -8,6 +8,7 @@ For instructions on how to install Anaconda and PyCharm see [Installing Anaconda
 
 # Coding log
 
+* 31 Dec 2019 - Added extra Dash examples
 * 19 Dec 2019 - Now using later findatapy version
 * 08 Dec 2019 - Fixed updated instructions using Azure
 * 04 Dec 2019 - Updated installation instructions for Anaconda/and using Azure notebooks
