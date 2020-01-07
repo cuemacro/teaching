@@ -8,6 +8,11 @@ For instructions on how to install Anaconda and PyCharm see [Installing Anaconda
 
 # Coding log
 
+* 07 Jan 2020 
+    * Added Dash example for event study 
+    * Added xlwings example for backtesting
+    * Script to strip input code from Jupyter notebooks
+* 03 Jan 2020 - Added more market data
 * 31 Dec 2019 - Added extra Dash examples
 * 19 Dec 2019 - Now using later findatapy version
 * 08 Dec 2019 - Fixed updated instructions using Azure
