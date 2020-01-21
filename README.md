@@ -8,6 +8,8 @@ For instructions on how to install Anaconda and PyCharm see [Installing Anaconda
 
 # Coding log
 
+* 21 Jan 2020
+    * Added Jupyterlab installation extensions
 * 07 Jan 2020 
     * Added Dash example for event study 
     * Added xlwings example for backtesting

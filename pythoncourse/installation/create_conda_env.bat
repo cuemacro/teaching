@@ -15,9 +15,9 @@ call conda install -c anaconda pandas=0.24.2 --yes
 
 REM install from conda-forge
 call conda install -c conda-forge ^
-jupyterlab jupyter_contrib_nbextensions jupyter_nbextensions_configurator ^
+jupyterlab jupyter_contrib_nbextensions jupyter_nbextensions_configurator ipywidgets=7.5 ^
 redis-py=3.3.7 python-blosc=1.8.1 pathos graphviz python-graphviz rise textblob wordcloud quandl ^
-spacy fastparquet python-snappy --yes
+spacy fastparquet python-snappy nodejs --yes
 
 call conda install -c conda-forge pystan fbprophet --yes
 
@@ -25,11 +25,6 @@ REM install PyTorch
 REM only if you have GPU
 REM call conda install pytorch torchvision cudatoolkit=10.0 -c pytorch --yes
 call conda install pytorch torchvision cpuonly -c pytorch --yes
-
-REM Jupyter libraries
-call jupyter contrib nbextension install --user
-call jupyter nbextension enable execute_time/ExecuteTime
-call jupyter-nbextension install rise --py --sys-prefix
 
 call pip install arctic==1.79.2
 
@@ -51,4 +46,13 @@ call pip install cufflinks==0.17 plotly_express==0.4.1 dash==1.1.1 dash-html-com
 
 REM to be able to plot Plotly into PNG or JPG
 call conda install -c plotly plotly-orca --yes
+
+REM Jupyter libraries
+call jupyter contrib nbextension install --user
+call jupyter nbextension enable execute_time/ExecuteTime
+call jupyter-nbextension install rise --py --sys-prefix
+call jupyter labextension install @jupyter-widgets/jupyterlab-manager@1.1 --no-build
+call jupyter labextension install plotlywidget@1.4.0 --no-build
+call jupyter labextension install jupyterlab-plotly@1.4.0 --no-build
+call jupyter lab build
 

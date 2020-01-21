@@ -15,10 +15,10 @@ conda install -c anaconda pandas=0.24.2 --yes
 
 # install from conda-forge (pyarrow is a newer version!)
 conda install -c conda-forge \
-jupyterlab jupyter_contrib_nbextensions jupyter_nbextensions_configurator \
+jupyterlab jupyter_contrib_nbextensions jupyter_nbextensions_configurator ipywidgets=7.5 \
 redis-py=3.3.7 python-blosc=1.8.1 pathos pyarrow=0.14.1 graphviz python-graphviz rise textblob wordcloud quandl \
 vaex-core vaex-viz vaex-jupyter vaex-arrow vaex-server vaex-hdf5 vaex-astro vaex-distributed pyspark py4j \
-spacy --yes
+spacy nodejs --yes
 
 # for database
 pip install arctic==1.79.2
@@ -27,10 +27,6 @@ pip install arctic==1.79.2
 # only if you have GPU
 # conda install pytorch torchvision cudatoolkit=10.0 -c pytorch --yes
 conda install pytorch torchvision cpuonly -c pytorch --yes
-
-jupyter contrib nbextension install --user # to activate js on Jupyter
-jupyter nbextension enable execute_time/ExecuteTime
-jupyter-nbextension install rise --py --sys-prefix
 
 # celery library
 pip install celery==4.3.0 celery[redis] celery[msgpack] msgpack-python
@@ -64,5 +60,14 @@ conda install -c plotly plotly-orca --yes
 
 # in case modin has changed pandas version!
 conda install -c anaconda pandas=0.24.2 --yes
+
+# Jupyter and Jupyterlab extensions
+jupyter contrib nbextension install --user # to activate js on Jupyter
+jupyter nbextension enable execute_time/ExecuteTime
+jupyter-nbextension install rise --py --sys-prefix
+jupyter labextension install @jupyter-widgets/jupyterlab-manager@1.1 --no-build
+jupyter labextension install plotlywidget@1.4.0 --no-build
+jupyter labextension install jupyterlab-plotly@1.4.0 --no-build
+jupyter lab build
 
 
