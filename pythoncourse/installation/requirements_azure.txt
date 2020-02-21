@@ -531,7 +531,7 @@ typing==3.7.4.1
 typing-extensions==3.7.4.1
 unicodecsv==0.14.1
 update-checker==0.16
-urllib3==1.23
+urllib3==1.24.2
 vaderSentiment==3.2.1
 vaex-astro==0.6.1
 vaex-core==1.5.0
