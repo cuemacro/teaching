@@ -11,6 +11,17 @@ import os
 
 from shutil import copyfile
 
+
+def _get_input_file_list(input_file_list):
+
+    if '*' in input_file_list:
+        input_file_list = glob.glob(input_file_list)
+
+    if  not(isinstance(input_file_list, list)):
+        input_file_list = [input_file_list]
+
+    return input_file_list
+
 def copy_files(source, destination, strip_file_name=None):
 
     if '*' in source:
@@ -38,11 +49,8 @@ def copy_files(source, destination, strip_file_name=None):
 
 def strip_input_code_from_ipynb(input_file_list):
 
-    if '*' in input_file_list:
-        input_file_list = glob.glob(input_file_list)
-
-    if  not(isinstance(input_file_list, list)):
-        input_file_list = [input_file_list]
+    # get list of files (including wildcards)
+    input_file_list = _get_input_file_list(input_file_list)
 
     for input_file in input_file_list:
         with open(input_file, 'r') as f:
@@ -72,6 +80,25 @@ def strip_input_code_from_ipynb(input_file_list):
         with open(input_file, 'w') as json_file:
             json.dump(nb, json_file)
 
+
+def tidy_reveal_js_slides(input_file_list):
+
+    # get list of files (including wildcards)
+    input_file_list = _get_input_file_list(input_file_list)
+
+    for input_file in input_file_list:
+        with open(input_file, 'r', encoding='utf-8') as f:
+            contents = f.read()
+
+        # replace font and remove transitions (add any of your changes here too!)
+        contents.replace('"slide"', '"none"')
+        contents.replace('Helvetica Neue', 'Open Sans Light')
+
+        # We write the Jupyter notebook back to disk with Python code stripped from the input boxes
+        with open(input_file, 'w', encoding='utf-8') as f:
+            f.write(contents)
+            print("written")
+
 if __name__ == '__main__':
 
     print(sys.argv[1])
@@ -79,5 +106,7 @@ if __name__ == '__main__':
 
     if sys.argv[1] == '--strip-python-code':
         strip_input_code_from_ipynb(sys.argv[2])
+    elif sys.argv[1] == '--tidy-reveal-js-slides':
+        tidy_reveal_js_slides(sys.argv[2])
     elif sys.argv[1] == '--copy-files':
         copy_files(sys.argv[2], sys.argv[3], strip_file_name=sys.argv[4])

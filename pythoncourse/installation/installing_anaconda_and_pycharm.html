@@ -13165,6 +13165,23 @@ div#notebook {
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="Installing-tabula-py-and-pytesseract">Installing tabula-py and pytesseract<a class="anchor-link" href="#Installing-tabula-py-and-pytesseract">&#182;</a></h2><p>If you'd like to use tabula-py (extracting tables from PDF) and pytesseract (for doing optical character recognition), as well as install the Python libraries with pip, you'll also need to some further steps:</p>
+<p>tabula-py uses the Java runtime underneath, hence it needs the Java runtime installed on your path.</p>
+<ul>
+<li>Tabula installation on Windows - <a href="https://tabula-py.readthedocs.io/en/latest/getting_started.html#get-tabula-py-working-windows-10">https://tabula-py.readthedocs.io/en/latest/getting_started.html#get-tabula-py-working-windows-10</a></li>
+</ul>
+<p>pytesseract is a wrapper for Tesseract, which needs to be installed first</p>
+<ul>
+<li>Tesseract installation on Windows - <a href="https://github.com/UB-Mannheim/tesseract/wiki">https://github.com/UB-Mannheim/tesseract/wiki</a>. </li>
+<li>Tesseract installation on Linux at <a href="https://tesseract-ocr.github.io/tessdoc/Home.html">https://tesseract-ocr.github.io/tessdoc/Home.html</a></li>
+</ul>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
 <h2 id="Installing-a-conda-environment-for-Windows-(method-1)">Installing a conda environment for Windows (method 1)<a class="anchor-link" href="#Installing-a-conda-environment-for-Windows-(method-1)">&#182;</a></h2><p>A conda environment is a separate version of Python, where you can install all your own Python environments.</p>
 <ul>
 <li>Download </li>
@@ -13199,39 +13216,34 @@ call conda update -n base -c defaults conda --yes
 call conda activate
 
 REM remove any existing environment called py36class, and create a py36class with anaconda packages
-REM call conda remove -n py36class --all
-call conda create -n py36class python=3.6 anaconda --yes
+call conda remove -n py36class --all --yes
+call conda create -n py36class python=3.6 anaconda
 call conda activate py36class
 
 REM newer versions of Pandas aren't supported as well by other libraries (eg. Arctic), so stick to 0.24.2
-call conda install -c anaconda pandas=0.24.2 --yes
+call conda install -c anaconda pandas=0.24.2 pyarrow=0.13.0 --yes
 
 REM install from conda-forge
 call conda install -c conda-forge ^
-jupyterlab jupyter_contrib_nbextensions jupyter_nbextensions_configurator ^
-redis-py=3.3.7 python-blosc=1.8.1 pathos graphviz python-graphviz rise textblob wordcloud quandl ^
-spacy fastparquet python-snappy --yes
+jupyterlab jupyter_contrib_nbextensions jupyter_nbextensions_configurator ipywidgets=7.5 ^
+redis-py=3.3.7 python-blosc=1.8.1 pathos graphviz python-graphviz rise textblob wordcloud quandl pyspark py4j ^
+spacy fastparquet python-snappy nodejs koalas textacy pystan fbprophet --yes
 
-call conda install -c conda-forge pystan fbprophet --yes
+call pip install arctic==1.79.2
+
+REM install tensorflow, transformers/huggingface and table readers
+REM only if you have GPU
+REM call pip install tensorflow-gpu transformers cvlib pytesseract tabula-py
+call pip install tensorflow==2.1.0 transformers pytesseract tabula-py
 
 REM install PyTorch
 REM only if you have GPU
 REM call conda install pytorch torchvision cudatoolkit=10.0 -c pytorch --yes
 call conda install pytorch torchvision cpuonly -c pytorch --yes
+call conda install -c conda-forge opencv --yes
+call pip install cvlib
 
-REM Jupyter libraries
-call jupyter contrib nbextension install --user
-call jupyter nbextension enable execute_time/ExecuteTime
-call jupyter-nbextension install rise --py --sys-prefix
-
-call pip install arctic==1.79.2
-
-REM install tensorflow and transformers/huggingface
-REM only if you have GPU
-REM call pip install tensorflow-gpu transformers
-call pip install tensorflow transformers
-
-REM for findatapy
+REM for findatapy (and NLP)
 call pip install fxcmpy alpha_vantage yfinance twython newspaper3k seasonal pdfminer.six vaderSentiment gensim
 
 REM findatapy, chartpy and finmarketpy
@@ -13240,10 +13252,19 @@ REM call pip install git+https://github.com/cuemacro/finmarketpy.git git+https:/
 call pip install finmarketpy chartpy findatapy
 
 REM graphics libraries
-call pip install cufflinks==0.17 plotly_express==0.4.1 dash==1.1.1 dash-html-components==1.0.0 dash-core-components==1.1.1 plotly==4.2.1 dash-table==4.1.0
+call pip install cufflinks==0.17 plotly_express==0.4.1 dash==1.8.0 dash-html-components==1.0.2 dash-core-components==1.7.0 plotly==4.5.0 dash-table==4.6.0
 
 REM to be able to plot Plotly into PNG or JPG
-call conda install -c plotly plotly-orca --yes</code></pre>
+call conda install -c plotly plotly-orca --yes
+
+REM Jupyter libraries
+call jupyter contrib nbextension install --user
+call jupyter nbextension enable execute_time/ExecuteTime
+call jupyter-nbextension install rise --py --sys-prefix
+call jupyter labextension install @jupyter-widgets/jupyterlab-manager@1.1 --no-build
+call jupyter labextension install plotlywidget@1.4.0 --no-build
+call jupyter labextension install jupyterlab-plotly@1.4.0 --no-build
+call jupyter lab build</code></pre>
 
 </div>
 </div>
@@ -13251,7 +13272,7 @@ call conda install -c plotly plotly-orca --yes</code></pre>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="Installing-a-conda-environment-for-Windows-(alternative-method-2)">Installing a conda environment for Windows (alternative method 2)<a class="anchor-link" href="#Installing-a-conda-environment-for-Windows-(alternative-method-2)">&#182;</a></h2><p>Alternatively we can download <a href="environment_windows.yml">environment_windows.yml</a> and use that to create our conda environment with all the necessary packages.</p>
+<h2 id="Installing-a-conda-environment-for-Windows-(alternative-method-2---quicker!)">Installing a conda environment for Windows (alternative method 2 - quicker!)<a class="anchor-link" href="#Installing-a-conda-environment-for-Windows-(alternative-method-2---quicker!)">&#182;</a></h2><p>Alternatively we can download <a href="environment_windows.yml">environment_windows.yml</a> and use that to create our conda environment with all the necessary packages.</p>
 <ul>
 <li>Open up the Anaconda Prompt (should be in the Start Menu)</li>
 <li><p>In this prompt, your Anaconda folder will be on the path (ie. it will recognise where <code>conda</code> is installed etc.)</p>
@@ -13333,48 +13354,51 @@ Anaconda)<ul>
 # update conda
 conda update -n base -c defaults conda --yes
 
-# remove any existing environment called py36class, and create a py36class with anaconda packages
-conda activate
+# conda config --set allow_conda_downgrades true
+# conda install conda=4.6.11
 
-# conda remove -n py36class --all
+source activate
+
+# remove any existing environment called py36class, and create a py36class with anaconda packages
+conda remove -n py36class --all --yes
 conda create -n py36class python=3.6 anaconda
-conda activate py36class
+source activate py36class
 
 # newer versions of Pandas aren't supported as well by other libraries (eg. Arctic), so stick to 0.24.2
-conda install -c anaconda pandas=0.24.2 --yes
+conda install -c anaconda pandas=0.24.2 pyarrow=0.13.0 --yes
 
 # install from conda-forge (pyarrow is a newer version!)
 conda install -c conda-forge \
 jupyterlab jupyter_contrib_nbextensions jupyter_nbextensions_configurator \
-redis-py=3.3.7 python-blosc=1.8.1 pathos pyarrow=0.14.1 graphviz python-graphviz rise textblob wordcloud quandl \
-vaex-core vaex-viz vaex-jupyter vaex-arrow vaex-server vaex-hdf5 vaex-astro vaex-distributed pyspark py4j spacy --yes
+redis-py=3.3.7 python-blosc=1.8.1 pathos graphviz python-graphviz rise textblob wordcloud quandl \
+vaex-core vaex-viz vaex-jupyter vaex-arrow vaex-server vaex-hdf5 vaex-astro vaex-distributed pyspark py4j \
+spacy fastparquet python-snappy nodejs koalas textacy pystan fbprophet --yes
 
 # for database
 pip install arctic==1.79.2
+
+# celery library
+pip install celery==4.3.0 celery[redis] celery[msgpack] msgpack-python
+
+# for findatapy (and NLP)
+pip install fxcmpy alpha_vantage yfinance twython newspaper3k seasonal pdfminer.six vaderSentiment gensim
+
+# install tensorflow and transformers/huggingface (on Mac OS can have issues installing TensorFlow, so if you have Mac
+# comment it out)
+# only if you have GPU
+# pip install tensorflow-gpu transformers cvlib pytesseract tabula-py
+pip install tensorflow==2.1.0 transformers pytesseract tabula-py
 
 # install PyTorch
 # only if you have GPU
 # conda install pytorch torchvision cudatoolkit=10.0 -c pytorch --yes
 conda install pytorch torchvision cpuonly -c pytorch --yes
+conda install -c conda-forge opencv --yes
+pip install cvlib
 
-jupyter contrib nbextension install --user # to activate js on Jupyter
-jupyter nbextension enable execute_time/ExecuteTime
-jupyter-nbextension install rise --py --sys-prefix
-
-# celery library
-pip install celery==4.3.0 celery[redis] celery[msgpack] msgpack-python
-
-# for findatapy
-pip install fxcmpy alpha_vantage yfinance twython newspaper3k seasonal pdfminer.six vaderSentiment gensim
-
-# install tensorflow and transformers/huggingface (on Mac OS can have issues installing TensorFlow, so commented out)
-# only if you have GPU
-# pip install tensorflow-gpu transformers
-# pip install tensorflow transformers
-
-# modin (downgrade pandas version)
+# modin (later versions need later versions of pandas)
 # may downgrade to pandas to 0.24.2
-pip install modin
+pip install modin=0.5.0
 
 # findatapy, chartpy and finmarketpy (or can manually clone these from GitHub and add to your Python path)
 # need to have Git
@@ -13382,13 +13406,25 @@ pip install modin
 pip install finmarketpy chartpy findatapy
 
 # graphics libraries
-pip install cufflinks==0.17 plotly_express==0.4.1 dash==1.1.1 dash-html-components==1.0.0 dash-core-components==1.1.1 plotly==4.2.1 dash-table==4.1.0
+pip install cufflinks==0.17 plotly_express==0.4.1 dash==1.8.0 dash-html-components==1.0.2 dash-core-components==1.7.0 plotly==4.5.0 dash-table==4.6.0
 
 # to be able to plot Plotly into PNG or JPG
 conda install -c plotly plotly-orca --yes
 
 # GPU libraries
-# conda install -c rapidsai -c nvidia -c conda-forge -c defaults rapids=0.10 python=3.6</code></pre>
+# conda install -c rapidsai -c nvidia -c conda-forge -c defaults rapids=0.10 python=3.6
+
+# in case modin has changed pandas version!
+# conda install -c anaconda pandas=0.24.2 --yes
+
+# Jupyter and Jupyterlab extensions
+jupyter contrib nbextension install --user # to activate js on Jupyter
+jupyter nbextension enable execute_time/ExecuteTime
+jupyter-nbextension install rise --py --sys-prefix
+jupyter labextension install @jupyter-widgets/jupyterlab-manager@1.1 --no-build
+jupyter labextension install plotlywidget@1.4.0 --no-build
+jupyter labextension install jupyterlab-plotly@1.4.0 --no-build
+jupyter lab build</code></pre>
 
 </div>
 </div>
@@ -13396,7 +13432,7 @@ conda install -c plotly plotly-orca --yes
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="Installing-a-conda-environment-for-Linux-(alternative-method-2)">Installing a conda environment for Linux (alternative method 2)<a class="anchor-link" href="#Installing-a-conda-environment-for-Linux-(alternative-method-2)">&#182;</a></h2><p>Alternatively we can download <a href="environment_linux.yml">environment_linux.yml</a> and use that to create our conda environment with all the necessary packages.</p>
+<h2 id="Installing-a-conda-environment-for-Linux-(alternative-method-2---quicker!)">Installing a conda environment for Linux (alternative method 2 - quicker!)<a class="anchor-link" href="#Installing-a-conda-environment-for-Linux-(alternative-method-2---quicker!)">&#182;</a></h2><p>Alternatively we can download <a href="environment_linux.yml">environment_linux.yml</a> and use that to create our conda environment with all the necessary packages. This should be a lot faster to run.</p>
 <ul>
 <li>Open up a terminal window (making sure that Anaconda is on your path)</li>
 <li><p>In this prompt, your Anaconda folder will be on the path (ie. it will recognise where <code>conda</code> is installed etc.)</p>
@@ -13463,11 +13499,12 @@ conda install -c plotly plotly-orca --yes
 </ul>
 <h3 id="Alternatively-in-your-Azure-Jupyter-notebook-to-setup-your-Python-environment-(easier)">Alternatively in your Azure Jupyter notebook to setup your Python environment (easier)<a class="anchor-link" href="#Alternatively-in-your-Azure-Jupyter-notebook-to-setup-your-Python-environment-(easier)">&#182;</a></h3><ul>
 <li>If you're having trouble getting Azure to setup your conda environment with the above method (often it isn't clear when Azure has setup the conda environment from above). In that case, it is suggested to do the below, which will also execute a lot quicker</li>
-<li>Here we are trying to only install additional packages, as Azure already comes with many to begin, and this will reduce the download/install time - </li>
+<li>Here we are trying to only install some of the most important additional packages, as Azure already comes with many to begin, and this will reduce the download/install time</li>
 <li>We've also excluded some which are likely to are less stable in the Azure environment (or require a lot of other dependencies) </li>
 <li>We've rewritten to use pip, as conda can take a while on slower machines (except for packages which are difficult to install with pip like plotly-orca, which is optional)</li>
 <li>Then run the below commands in your Jupyter notebook (this will likely take a long time, usually a couple of minutes)</li>
 <li>Make sure you are running Azure notebooks in Python 3.6 (not 3.5)</li>
+<li>Note, that you might to run these every so often, because after 60 minutes of inactivity Azure will kill your notebook instance (and hence any Python library installations you do will also disappear)</li>
 </ul>
 
 </div>
@@ -13478,11 +13515,12 @@ conda install -c plotly plotly-orca --yes
 <div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="o">!</span>pip install <span class="err">\</span>
-  <span class="n">redis</span><span class="o">==</span><span class="mf">3.3</span><span class="o">.</span><span class="mi">7</span> <span class="n">pathos</span> <span class="n">pyarrow</span><span class="o">==</span><span class="mf">0.15</span> <span class="n">pandas</span><span class="o">==</span><span class="mf">0.24</span><span class="o">.</span><span class="mi">2</span> <span class="n">wordcloud</span> <span class="n">quandl</span> \
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># A selection of libraries (note: this isn&#39;t everything)</span>
+<span class="o">!</span>pip install <span class="err">\</span>
+  <span class="n">redis</span><span class="o">==</span><span class="mf">3.3</span><span class="o">.</span><span class="mi">7</span> <span class="n">pathos</span> <span class="n">pyarrow</span><span class="o">==</span><span class="mf">0.13</span><span class="o">.</span><span class="mi">0</span> <span class="n">pandas</span><span class="o">==</span><span class="mf">0.24</span><span class="o">.</span><span class="mi">2</span> <span class="n">wordcloud</span> <span class="n">quandl</span> \
   <span class="n">vaex</span><span class="o">-</span><span class="n">core</span> <span class="n">vaex</span><span class="o">-</span><span class="n">viz</span> <span class="n">vaex</span><span class="o">-</span><span class="n">jupyter</span> <span class="n">vaex</span><span class="o">-</span><span class="n">server</span> <span class="n">vaex</span><span class="o">-</span><span class="n">hdf5</span> <span class="n">vaex</span><span class="o">-</span><span class="n">astro</span> <span class="n">vaex</span><span class="o">-</span><span class="n">distributed</span> <span class="n">pyspark</span> <span class="n">py4j</span> \
   <span class="n">spacy</span> <span class="n">celery</span><span class="o">==</span><span class="mf">4.3</span><span class="o">.</span><span class="mi">0</span> <span class="n">celery</span><span class="p">[</span><span class="n">redis</span><span class="p">]</span> <span class="n">celery</span><span class="p">[</span><span class="n">msgpack</span><span class="p">]</span> <span class="n">msgpack</span><span class="o">-</span><span class="n">python</span> \
-  <span class="n">fxcmpy</span> <span class="n">alpha_vantage</span> <span class="n">yfinance</span> <span class="n">twython</span> <span class="n">newspaper3k</span> <span class="n">seasonal</span> <span class="n">pdfminer</span><span class="o">.</span><span class="n">six</span> <span class="n">vaderSentiment</span> <span class="n">gensim</span> \
+  <span class="n">fxcmpy</span> <span class="n">alpha_vantage</span> <span class="n">yfinance</span> <span class="n">twython</span> <span class="n">newspaper3k</span> <span class="n">seasonal</span> <span class="n">pdfminer</span><span class="o">.</span><span class="n">six</span> <span class="n">vaderSentiment</span> <span class="n">gensim</span> <span class="n">textacy</span> \
   <span class="n">transformers</span> \
   <span class="n">finmarketpy</span> <span class="n">chartpy</span> <span class="n">findatapy</span> \
   <span class="n">cufflinks</span><span class="o">==</span><span class="mf">0.17</span> <span class="n">plotly_express</span><span class="o">==</span><span class="mf">0.4</span><span class="o">.</span><span class="mi">1</span> \
@@ -13535,6 +13573,57 @@ conda install -c plotly plotly-orca --yes
 </div>
 </div>
 
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>You can check if your Azure Python package installation has worked by importing Pandas and checking the version is indeed 0.24.2</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[2]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">pandas</span>
+<span class="n">pandas</span><span class="o">.</span><span class="n">__version__</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt output_prompt">Out[2]:</div>
+
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>&#39;0.24.2&#39;</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="Direct-compute-on-a-paid-Azure-Jupyter-instance">Direct compute on a paid Azure Jupyter instance<a class="anchor-link" href="#Direct-compute-on-a-paid-Azure-Jupyter-instance">&#182;</a></h3><p>The free version of Azure notebooks has a number of limitations. In particular, that it resets every hour and only has 4GB RAM. You can instead create paid instances Data Science Virtual Machine for Linux (Ubuntu) on Azure, which is a Linux box for a number of different CPUs/RAM which are much more powerful. You can configure the machine as want, and the configuration will be stored for as long as you have the instance. Do make sure to power down the machine, once you are finished using it. This won't wipe the hard disk, but it will mean you aren't paying for it when it's idle.</p>
+<p>You can then connect your Azure notebook to run on this server via "Direct compute", where you need to specify the IP of the machine. If you get a powerful machine you should be able to host multiple users. However, you should add usernames/passwords for every user if you do this.</p>
+
+</div>
+</div>
 </div>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
