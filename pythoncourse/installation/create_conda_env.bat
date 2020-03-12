@@ -10,9 +10,6 @@ call conda remove -n py36class --all --yes
 call conda create -n py36class python=3.6 anaconda
 call conda activate py36class
 
-REM newer versions of Pandas aren't supported as well by other libraries (eg. Arctic), so stick to 0.24.2
-call conda install -c anaconda pandas=0.24.2 pyarrow=0.13.0 --yes
-
 REM install from conda-forge
 call conda install -c conda-forge ^
 jupyterlab jupyter_contrib_nbextensions jupyter_nbextensions_configurator ipywidgets=7.5 ^
@@ -46,6 +43,12 @@ call pip install cufflinks==0.17 plotly_express==0.4.1 dash==1.8.0 dash-html-com
 
 REM to be able to plot Plotly into PNG or JPG
 call conda install -c plotly plotly-orca --yes
+
+REM in case has been installed elsewhere by pip
+call pip uninstall pandas
+
+REM newer versions of Pandas aren't supported as well by other libraries (eg. Arctic), so stick to 0.24.2
+call conda install -c anaconda pandas=0.24.2 pyarrow=0.13.0 --yes
 
 REM Jupyter libraries
 call jupyter contrib nbextension install --user

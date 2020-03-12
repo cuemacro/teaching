@@ -8,6 +8,8 @@ For instructions on how to install Anaconda and PyCharm see [Installing Anaconda
 
 # Coding log
 
+* 12 Mar 2020
+    * Edited Anaconda installation files
 * 21 Feb 2020
     * Added extra details on checking Azure Notebook package installation
     * Added additional libraries to conda installations for Windows and Linux

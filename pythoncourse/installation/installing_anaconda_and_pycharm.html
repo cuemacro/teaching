@@ -13089,7 +13089,7 @@ div#notebook {
 <h2 id="Make-sure-firewalls-are-open-to-allow-access-to-market-data">Make sure firewalls are open to allow access to market data<a class="anchor-link" href="#Make-sure-firewalls-are-open-to-allow-access-to-market-data">&#182;</a></h2><p>This is an important one! Make sure that you can download data via Python for libraries like Quandl and also to install Python.</p>
 <ul>
 <li>Once you've done your Python installation (and have signed up for a Quandl account and API key for free), try running this code below to check. </li>
-<li>Your firewall should also allow you to have access to allow the downloading of packages via conda and pip (if it isn't then you can't do much else). </li>
+<li>Your firewall should also allow you to have access to allow the downloading of packages via conda and pip (if it isn't then you can't do much else, although in some circumstances you might be able to change the pip download URL to a site that does work)</li>
 <li>If opening up firewalls is too much of an issue or you don't have admin rights to install Python locally, then one easier way to get started with Python for learning purposes, is to use something Azure Notebooks (see below). </li>
 <li>This will however, at the very least need the website <a href="https://notebooks.azure.com/">https://notebooks.azure.com/</a> to be accessible)</li>
 </ul>
@@ -13220,9 +13220,6 @@ call conda remove -n py36class --all --yes
 call conda create -n py36class python=3.6 anaconda
 call conda activate py36class
 
-REM newer versions of Pandas aren't supported as well by other libraries (eg. Arctic), so stick to 0.24.2
-call conda install -c anaconda pandas=0.24.2 pyarrow=0.13.0 --yes
-
 REM install from conda-forge
 call conda install -c conda-forge ^
 jupyterlab jupyter_contrib_nbextensions jupyter_nbextensions_configurator ipywidgets=7.5 ^
@@ -13256,6 +13253,12 @@ call pip install cufflinks==0.17 plotly_express==0.4.1 dash==1.8.0 dash-html-com
 
 REM to be able to plot Plotly into PNG or JPG
 call conda install -c plotly plotly-orca --yes
+
+REM in case has been installed elsewhere by pip
+call pip uninstall pandas
+
+REM newer versions of Pandas aren't supported as well by other libraries (eg. Arctic), so stick to 0.24.2
+call conda install -c anaconda pandas=0.24.2 pyarrow=0.13.0 --yes
 
 REM Jupyter libraries
 call jupyter contrib nbextension install --user
@@ -13364,9 +13367,6 @@ conda remove -n py36class --all --yes
 conda create -n py36class python=3.6 anaconda
 source activate py36class
 
-# newer versions of Pandas aren't supported as well by other libraries (eg. Arctic), so stick to 0.24.2
-conda install -c anaconda pandas=0.24.2 pyarrow=0.13.0 --yes
-
 # install from conda-forge (pyarrow is a newer version!)
 conda install -c conda-forge \
 jupyterlab jupyter_contrib_nbextensions jupyter_nbextensions_configurator \
@@ -13410,6 +13410,12 @@ pip install cufflinks==0.17 plotly_express==0.4.1 dash==1.8.0 dash-html-componen
 
 # to be able to plot Plotly into PNG or JPG
 conda install -c plotly plotly-orca --yes
+
+# in case has been installed elsewhere
+pip uninstall pandas
+
+# newer versions of Pandas aren't supported as well by other libraries (eg. Arctic), so stick to 0.24.2
+conda install -c anaconda pandas=0.24.2 pyarrow=0.13.0 --yes
 
 # GPU libraries
 # conda install -c rapidsai -c nvidia -c conda-forge -c defaults rapids=0.10 python=3.6
@@ -13619,9 +13625,10 @@ jupyter lab build</code></pre>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="Direct-compute-on-a-paid-Azure-Jupyter-instance">Direct compute on a paid Azure Jupyter instance<a class="anchor-link" href="#Direct-compute-on-a-paid-Azure-Jupyter-instance">&#182;</a></h3><p>The free version of Azure notebooks has a number of limitations. In particular, that it resets every hour and only has 4GB RAM. You can instead create paid instances Data Science Virtual Machine for Linux (Ubuntu) on Azure (DSVM), which is a Linux box for a number of different CPUs/RAM which are much more powerful. You can configure the machine as want, and the configuration will be stored for as long as you have the instance. Do make sure to power down the machine, once you are finished using it. This won't wipe the hard disk, but it will mean you aren't paying for it when it's idle.</p>
+<h3 id="Direct-compute-on-a-paid-Azure-Jupyter-instance-(Data-Science-Virtual-Machine)">Direct compute on a paid Azure Jupyter instance (Data Science Virtual Machine)<a class="anchor-link" href="#Direct-compute-on-a-paid-Azure-Jupyter-instance-(Data-Science-Virtual-Machine)">&#182;</a></h3><p>The free version of Azure notebooks has a number of limitations. In particular, that it resets every hour and only has 4GB RAM. You can instead create paid instances Data Science Virtual Machine for Linux (Ubuntu) on Azure (DSVM), which is a Linux box for a number of different CPUs/RAM which are much more powerful. You can configure the machine as want, and the configuration will be stored for as long as you have the instance. Do make sure to power down the machine, once you are finished using it. This won't wipe the hard disk, but it will mean you aren't paying for it when it's idle.</p>
 <p>Whilst Azure 3.6 ML from the DSVM already has many libraries installed, eg. TensorFlow etc. You will still need to install additional Python libraries, but this can be done once. Script <code>update_azure_conda_env.sh</code> will attempt to install these extra libraries such as NLTK etc. and also a version of Pandas which should be more compatible.</p>
-<p>You can then connect your Azure notebook to run on this server via "Direct compute", where you need to specify the IP of the machine. If you get a powerful machine you should be able to host multiple users. However, you should add usernames/passwords for every user if you do this.</p>
+<p>You can then connect your Azure notebook to run on this server via "Direct compute", where you need to specify the IP of the machine. At <a href="https://docs.microsoft.com/en-us/azure/notebooks/use-data-science-virtual-machine">https://docs.microsoft.com/en-us/azure/notebooks/use-data-science-virtual-machine</a> it gives details on how to do "Direct compute" on your Azure Notebook. If you get a powerful machine you should be able to host multiple users. However, you should add usernames/passwords for every user if you do this, so each user runs in their own instance.</p>
+<p>You may need to run <code>conda install ipykernel</code> to make a new conda environment appear in the Jupyter notebook. Make sure that you select the right Python kernel from the Jupyter menu (Kernel / Change Kernel).</p>
 
 </div>
 </div>
