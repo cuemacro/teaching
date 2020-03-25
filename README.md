@@ -8,6 +8,8 @@ For instructions on how to install Anaconda and PyCharm see [Installing Anaconda
 
 # Coding log
 
+* 25 Mar 2020
+    * Updated coronavirus Jupyter notebook with new paths for source data
 * 12 Mar 2020
     * Edited Anaconda installation files
     * Added coronavirus Jupyter notebook example
