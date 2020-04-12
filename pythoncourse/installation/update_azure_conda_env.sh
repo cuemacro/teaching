@@ -10,7 +10,7 @@ conda install -c anaconda pandas=0.24.2 --yes
 conda install -c conda-forge \
 python-blosc=1.8.1 graphviz python-graphviz rise \
 vaex-core vaex-viz vaex-jupyter vaex-arrow vaex-server vaex-hdf5 vaex-astro vaex-distributed \
-nltk spacy fastparquet python-snappy fbprophet pystan pyarrow=0.16.0 --yes
+nltk spacy fastparquet python-snappy fbprophet pystan pyarrow=0.16.0 bqplot --yes
 
 # For celery and NLP
 pip install celery==4.4.0 celery[redis] celery[msgpack] msgpack-python fxcmpy alpha_vantage yfinance twython newspaper3k seasonal \

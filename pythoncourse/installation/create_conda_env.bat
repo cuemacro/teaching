@@ -14,7 +14,8 @@ REM Install from conda-forge
 call conda install -c conda-forge ^
 jupyterlab jupyter_contrib_nbextensions jupyter_nbextensions_configurator ipywidgets=7.5 ^
 redis-py=3.3.7 python-blosc=1.8.1 pathos graphviz python-graphviz textblob wordcloud quandl pyspark py4j ^
-spacy fastparquet python-snappy nodejs koalas textacy pystan fbprophet setuptools-git=1.2 vispy=0.6.4 blpapi --yes
+spacy fastparquet python-snappy nodejs koalas textacy pystan fbprophet setuptools-git=1.2 vispy=0.6.4 bqplot=0.12.6 ^
+datashader=0.10.0 pyproj=2.6.0 blpapi --yes
 
 call pip install arctic==1.79.2
 
@@ -39,7 +40,8 @@ REM call pip install git+https://github.com/cuemacro/finmarketpy.git git+https:/
 call pip install finmarketpy chartpy findatapy
 
 REM Graphics libraries
-call pip install cufflinks==0.17 plotly_express==0.4.1 dash==1.9.0 dash-html-components==1.0.2 dash-core-components==1.8.0 plotly==4.5.4 dash-table==4.6.0
+call pip install cufflinks==0.17 plotly_express==0.4.1 dash==1.9.0 dash-html-components==1.0.2 dash-core-components==1.8.0 ^
+    plotly==4.5.4 dash-table==4.6.0 dtale==1.8.1
 
 REM To be able to plot Plotly into PNG or JPG
 call conda install -c plotly plotly-orca --yes
@@ -58,5 +60,6 @@ call jupyter-nbextension install rise --py --sys-prefix
 call jupyter labextension install @jupyter-widgets/jupyterlab-manager@2.0.0 --no-build
 call jupyter labextension install plotlywidget@1.5.4 --no-build
 call jupyter labextension install jupyterlab-plotly@1.5.4 --no-build
+call jupyter labextension install bqplot
 call jupyter lab build
 

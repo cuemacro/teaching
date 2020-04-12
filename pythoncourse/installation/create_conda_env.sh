@@ -18,7 +18,8 @@ conda install -c conda-forge \
 jupyterlab jupyter_contrib_nbextensions jupyter_nbextensions_configurator \
 redis-py=3.3.7 python-blosc=1.8.1 pathos graphviz python-graphviz textblob wordcloud quandl \
 vaex-core vaex-viz vaex-jupyter vaex-arrow vaex-server vaex-hdf5 vaex-astro vaex-distributed pyspark py4j \
-spacy fastparquet python-snappy nodejs koalas textacy pystan fbprophet setuptools-git=1.2 vispy=0.6.4 --yes
+spacy fastparquet python-snappy nodejs koalas textacy pystan fbprophet setuptools-git=1.2 vispy=0.6.4 bqplot=0.12.6 \
+datashader=0.10.0 pyproj=2.6.0 --yes
 
 # For database
 pip install arctic==1.79.2
@@ -27,7 +28,7 @@ pip install arctic==1.79.2
 pip install celery==4.4.0 celery[redis] celery[msgpack] msgpack-python
 
 # For findatapy (and NLP)
-pip install fxcmpy alpha_vantage yfinance twython newspaper3k seasonal pdfminer.six vaderSentiment gensim rise progressbar2=3.50.1
+pip install fxcmpy alpha_vantage yfinance twython newspaper3k seasonal pdfminer.six vaderSentiment gensim rise progressbar2==3.50.1
 
 # install tensorflow and transformers/huggingface (on Mac OS can have issues installing TensorFlow, so if you have Mac
 # comment it out)
@@ -53,7 +54,7 @@ pip install finmarketpy chartpy findatapy
 
 # Graphics libraries
 pip install cufflinks==0.17 plotly_express==0.4.1 \
-        dash==1.9.0 dash-html-components==1.0.2 dash-core-components==1.8.0 plotly==4.5.4 dash-table==4.6.0
+        dash==1.9.0 dash-html-components==1.0.2 dash-core-components==1.8.0 plotly==4.5.4 dash-table==4.6.0 dtale==1.8.1
 
 # To be able to plot Plotly into PNG or JPG
 conda install -c plotly plotly-orca --yes
@@ -75,6 +76,7 @@ jupyter-nbextension install rise --py --sys-prefix
 jupyter labextension install @jupyter-widgets/jupyterlab-manager@2.0.0 --no-build
 jupyter labextension install plotlywidget@1.5.4 --no-build
 jupyter labextension install jupyterlab-plotly@1.5.4 --no-build
+jupyter labextension install bqplot
 jupyter lab build
 
 

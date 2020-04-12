@@ -8,6 +8,9 @@ For instructions on how to install Anaconda and PyCharm see [Installing Anaconda
 
 # Coding log
 
+* 12 Apr 2020
+    * Updated coronavirus Jupyter notebook, fixing bugs and adding new charts
+    * Updated Anaconda installation files for Windows and Linux with new libraries
 * 28 Mar 2020
     * Updated coronavirus Jupyter notebook with interactive ipywidgets examples from Ewan Kirk
     * Updated Anaconda installation files for Windows and Linux

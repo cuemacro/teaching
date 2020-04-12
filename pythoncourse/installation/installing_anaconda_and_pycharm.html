@@ -13132,6 +13132,7 @@ div#notebook {
 <li><code>C:\Users\&lt;your-username&gt;\Anaconda3\Scripts</code></li>
 <li><code>C:\Users\&lt;your-username&gt;\Anaconda3\Library\bin</code></li>
 </ul>
+<p>You might need to allow Win32 long paths, otherwise Windows will restrict the number of folders on your path, can end up being very long with Python installations! See <a href="https://stackoverflow.com/questions/26155135/node-npm-windows-file-paths-are-too-long-to-install-packages/37528731#37528731">https://stackoverflow.com/questions/26155135/node-npm-windows-file-paths-are-too-long-to-install-packages/37528731#37528731</a> on how to set this.</p>
 
 </div>
 </div>
@@ -13224,7 +13225,8 @@ REM Install from conda-forge
 call conda install -c conda-forge ^
 jupyterlab jupyter_contrib_nbextensions jupyter_nbextensions_configurator ipywidgets=7.5 ^
 redis-py=3.3.7 python-blosc=1.8.1 pathos graphviz python-graphviz textblob wordcloud quandl pyspark py4j ^
-spacy fastparquet python-snappy nodejs koalas textacy pystan fbprophet setuptools-git=1.2 vispy=0.6.4 blpapi --yes
+spacy fastparquet python-snappy nodejs koalas textacy pystan fbprophet setuptools-git=1.2 vispy=0.6.4 bqplot=0.12.6 ^
+datashader=0.10.0 pyproj=2.6.0 blpapi --yes
 
 call pip install arctic==1.79.2
 
@@ -13249,7 +13251,8 @@ REM call pip install git+https://github.com/cuemacro/finmarketpy.git git+https:/
 call pip install finmarketpy chartpy findatapy
 
 REM Graphics libraries
-call pip install cufflinks==0.17 plotly_express==0.4.1 dash==1.9.0 dash-html-components==1.0.2 dash-core-components==1.8.0 plotly==4.5.4 dash-table==4.6.0
+call pip install cufflinks==0.17 plotly_express==0.4.1 dash==1.9.0 dash-html-components==1.0.2 dash-core-components==1.8.0 ^
+    plotly==4.5.4 dash-table==4.6.0 dtale==1.8.1
 
 REM To be able to plot Plotly into PNG or JPG
 call conda install -c plotly plotly-orca --yes
@@ -13268,6 +13271,7 @@ call jupyter-nbextension install rise --py --sys-prefix
 call jupyter labextension install @jupyter-widgets/jupyterlab-manager@2.0.0 --no-build
 call jupyter labextension install plotlywidget@1.5.4 --no-build
 call jupyter labextension install jupyterlab-plotly@1.5.4 --no-build
+call jupyter labextension install bqplot
 call jupyter lab build</code></pre>
 
 </div>
@@ -13373,7 +13377,8 @@ conda install -c conda-forge \
 jupyterlab jupyter_contrib_nbextensions jupyter_nbextensions_configurator \
 redis-py=3.3.7 python-blosc=1.8.1 pathos graphviz python-graphviz textblob wordcloud quandl \
 vaex-core vaex-viz vaex-jupyter vaex-arrow vaex-server vaex-hdf5 vaex-astro vaex-distributed pyspark py4j \
-spacy fastparquet python-snappy nodejs koalas textacy pystan fbprophet setuptools-git=1.2 vispy=0.6.4 --yes
+spacy fastparquet python-snappy nodejs koalas textacy pystan fbprophet setuptools-git=1.2 vispy=0.6.4 bqplot=0.12.6 \
+datashader=0.10.0 pyproj=2.6.0 --yes
 
 # For database
 pip install arctic==1.79.2
@@ -13382,7 +13387,7 @@ pip install arctic==1.79.2
 pip install celery==4.4.0 celery[redis] celery[msgpack] msgpack-python
 
 # For findatapy (and NLP)
-pip install fxcmpy alpha_vantage yfinance twython newspaper3k seasonal pdfminer.six vaderSentiment gensim rise progressbar2=3.50.1
+pip install fxcmpy alpha_vantage yfinance twython newspaper3k seasonal pdfminer.six vaderSentiment gensim rise progressbar2==3.50.1
 
 # install tensorflow and transformers/huggingface (on Mac OS can have issues installing TensorFlow, so if you have Mac
 # comment it out)
@@ -13408,7 +13413,7 @@ pip install finmarketpy chartpy findatapy
 
 # Graphics libraries
 pip install cufflinks==0.17 plotly_express==0.4.1 \
-        dash==1.9.0 dash-html-components==1.0.2 dash-core-components==1.8.0 plotly==4.5.4 dash-table==4.6.0
+        dash==1.9.0 dash-html-components==1.0.2 dash-core-components==1.8.0 plotly==4.5.4 dash-table==4.6.0 dtale==1.8.1
 
 # To be able to plot Plotly into PNG or JPG
 conda install -c plotly plotly-orca --yes
@@ -13430,6 +13435,7 @@ jupyter-nbextension install rise --py --sys-prefix
 jupyter labextension install @jupyter-widgets/jupyterlab-manager@2.0.0 --no-build
 jupyter labextension install plotlywidget@1.5.4 --no-build
 jupyter labextension install jupyterlab-plotly@1.5.4 --no-build
+jupyter labextension install bqplot
 jupyter lab build</code></pre>
 
 </div>
@@ -13523,9 +13529,9 @@ jupyter lab build</code></pre>
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># A selection of libraries (note: this isn&#39;t everything)</span>
 <span class="o">!</span>pip install <span class="err">\</span>
-  <span class="n">redis</span><span class="o">==</span><span class="mf">3.3</span><span class="o">.</span><span class="mi">7</span> <span class="n">pathos</span> <span class="n">pyarrow</span><span class="o">==</span><span class="mf">0.13</span><span class="o">.</span><span class="mi">0</span> <span class="n">pandas</span><span class="o">==</span><span class="mf">0.24</span><span class="o">.</span><span class="mi">2</span> <span class="n">wordcloud</span> <span class="n">quandl</span> \
+  <span class="n">redis</span><span class="o">==</span><span class="mf">3.3</span><span class="o">.</span><span class="mi">7</span> <span class="n">pathos</span> <span class="n">pyarrow</span><span class="o">==</span><span class="mf">0.16</span><span class="o">.</span><span class="mi">0</span> <span class="n">pandas</span><span class="o">==</span><span class="mf">0.24</span><span class="o">.</span><span class="mi">2</span> <span class="n">wordcloud</span> <span class="n">quandl</span> \
   <span class="n">vaex</span><span class="o">-</span><span class="n">core</span> <span class="n">vaex</span><span class="o">-</span><span class="n">viz</span> <span class="n">vaex</span><span class="o">-</span><span class="n">jupyter</span> <span class="n">vaex</span><span class="o">-</span><span class="n">server</span> <span class="n">vaex</span><span class="o">-</span><span class="n">hdf5</span> <span class="n">vaex</span><span class="o">-</span><span class="n">astro</span> <span class="n">vaex</span><span class="o">-</span><span class="n">distributed</span> <span class="n">pyspark</span> <span class="n">py4j</span> \
-  <span class="n">spacy</span> <span class="n">celery</span><span class="o">==</span><span class="mf">4.3</span><span class="o">.</span><span class="mi">0</span> <span class="n">celery</span><span class="p">[</span><span class="n">redis</span><span class="p">]</span> <span class="n">celery</span><span class="p">[</span><span class="n">msgpack</span><span class="p">]</span> <span class="n">msgpack</span><span class="o">-</span><span class="n">python</span> \
+  <span class="n">spacy</span> <span class="n">celery</span><span class="o">==</span><span class="mf">4.4</span><span class="o">.</span><span class="mi">0</span> <span class="n">celery</span><span class="p">[</span><span class="n">redis</span><span class="p">]</span> <span class="n">celery</span><span class="p">[</span><span class="n">msgpack</span><span class="p">]</span> <span class="n">msgpack</span><span class="o">-</span><span class="n">python</span> \
   <span class="n">fxcmpy</span> <span class="n">alpha_vantage</span> <span class="n">yfinance</span> <span class="n">twython</span> <span class="n">newspaper3k</span> <span class="n">seasonal</span> <span class="n">pdfminer</span><span class="o">.</span><span class="n">six</span> <span class="n">vaderSentiment</span> <span class="n">gensim</span> <span class="n">textacy</span> \
   <span class="n">transformers</span> \
   <span class="n">finmarketpy</span> <span class="n">chartpy</span> <span class="n">findatapy</span> \
