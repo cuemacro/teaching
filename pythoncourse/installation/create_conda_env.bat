@@ -15,7 +15,7 @@ call conda install -c conda-forge ^
 jupyterlab jupyter_contrib_nbextensions jupyter_nbextensions_configurator ipywidgets=7.5 ^
 redis-py=3.3.7 python-blosc=1.8.1 pathos graphviz python-graphviz textblob wordcloud quandl pyspark py4j ^
 spacy fastparquet python-snappy nodejs koalas textacy pystan fbprophet setuptools-git=1.2 vispy=0.6.4 bqplot=0.12.6 ^
-datashader=0.10.0 pyproj=2.6.0 blpapi --yes
+datashader=0.10.0 pyproj=2.6.0 blpapi xlwings=0.18.0 holoviews=1.13.2 --yes
 
 call pip install arctic==1.79.2
 
@@ -32,7 +32,7 @@ call conda install -c conda-forge opencv --yes
 call pip install cvlib
 
 REM For findatapy (and NLP)
-call pip install fxcmpy alpha_vantage yfinance twython newspaper3k seasonal pdfminer.six vaderSentiment gensim rise
+call pip install fxcmpy alpha_vantage yfinance twython newspaper3k seasonal pdfminer.six vaderSentiment gensim rise requests_html
 
 REM findatapy, chartpy and finmarketpy
 REM needs git

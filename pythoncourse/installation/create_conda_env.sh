@@ -19,7 +19,7 @@ jupyterlab jupyter_contrib_nbextensions jupyter_nbextensions_configurator \
 redis-py=3.3.7 python-blosc=1.8.1 pathos graphviz python-graphviz textblob wordcloud quandl \
 vaex-core vaex-viz vaex-jupyter vaex-arrow vaex-server vaex-hdf5 vaex-astro vaex-distributed pyspark py4j \
 spacy fastparquet python-snappy nodejs koalas textacy pystan fbprophet setuptools-git=1.2 vispy=0.6.4 bqplot=0.12.6 \
-datashader=0.10.0 pyproj=2.6.0 --yes
+datashader=0.10.0 pyproj=2.6.0 holoviews=1.13.2 --yes
 
 # For database
 pip install arctic==1.79.2
@@ -28,7 +28,7 @@ pip install arctic==1.79.2
 pip install celery==4.4.0 celery[redis] celery[msgpack] msgpack-python
 
 # For findatapy (and NLP)
-pip install fxcmpy alpha_vantage yfinance twython newspaper3k seasonal pdfminer.six vaderSentiment gensim rise progressbar2==3.50.1
+pip install fxcmpy alpha_vantage yfinance twython newspaper3k seasonal pdfminer.six vaderSentiment gensim rise progressbar2==3.50.1 requests_html
 
 # install tensorflow and transformers/huggingface (on Mac OS can have issues installing TensorFlow, so if you have Mac
 # comment it out)

@@ -6,8 +6,17 @@ For more information about my Python for finance workshops, please contact saeed
 
 For instructions on how to install Anaconda and PyCharm see [Installing Anaconda and PyCharm](pythoncourse/installation/installing_anaconda_and_pycharm.ipynb)
 
+If you can't view the Jupyter notebook in GitHub, you can try viewing that by copying and pasting the URL for the installation guide
+https://github.com/cuemacro/teaching/blob/master/pythoncourse/installation/installing_anaconda_and_pycharm.ipynb
+in https://nbviewer.jupyter.org/ ie. to go to the following link 
+https://nbviewer.jupyter.org/github/cuemacro/teaching/blob/master/pythoncourse/installation/installing_anaconda_and_pycharm.ipynb
+
 # Coding log
 
+* 06 May 2020
+    * Note on using nbviewer
+    * Updated Anaconda installation files
+    * Updated environment YML files for new versions of chartpy, findatapy and finmarketpy
 * 12 Apr 2020
     * Updated coronavirus Jupyter notebook, fixing bugs and adding new charts
     * Updated Anaconda installation files for Windows and Linux with new libraries
