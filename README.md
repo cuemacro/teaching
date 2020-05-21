@@ -13,6 +13,8 @@ https://nbviewer.jupyter.org/github/cuemacro/teaching/blob/master/pythoncourse/i
 
 # Coding log
 
+* 21 May 2020
+    * Updated Anaconda installation files and environment YML files to include new Python libaries
 * 06 May 2020
     * Note on using nbviewer
     * Updated Anaconda installation files

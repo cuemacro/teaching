@@ -1,4 +1,4 @@
-REM Assumes that Anaconda has already been downloaded
+REM Assumes that Anaconda has already been downloaded and installed
 
 REM Update conda
 call conda update -n base -c defaults conda --yes
@@ -10,38 +10,41 @@ call conda remove -n py36class --all --yes
 call conda create -n py36class python=3.6 anaconda
 call conda activate py36class
 
-REM Install from conda-forge
-call conda install -c conda-forge ^
-jupyterlab jupyter_contrib_nbextensions jupyter_nbextensions_configurator ipywidgets=7.5 ^
-redis-py=3.3.7 python-blosc=1.8.1 pathos graphviz python-graphviz textblob wordcloud quandl pyspark py4j ^
-spacy fastparquet python-snappy nodejs koalas textacy pystan fbprophet setuptools-git=1.2 vispy=0.6.4 bqplot=0.12.6 ^
-datashader=0.10.0 pyproj=2.6.0 blpapi xlwings=0.18.0 holoviews=1.13.2 --yes
+REM Install scikit-learn (downgrade for some later dependencies) - xlwings for Windows
+call conda install anaconda scikit-learn=0.20.2 --yes
+call conda install -c conda-forge xlwings=0.19.4 --yes
 
-call pip install arctic==1.79.2
-
-REM Install tensorflow, transformers/huggingface and table readers
-REM only if you have GPU
-REM call pip install tensorflow-gpu transformers cvlib pytesseract cmdstanpy==0.4 tabula-py==1.4.3
-call pip install tensorflow==2.1.0 transformers pytesseract cmdstanpy==0.4 tabula-py==1.4.3
-
-REM Install PyTorch
-REM only if you have GPU
-REM call conda install pytorch torchvision cudatoolkit=10.0 -c pytorch --yes
+REM Install PyTorch & Tensorflow
+REM only if you have GPU below 2 lines instead of CPU versions
+REM call conda install tensorflow-gpu=2.1.0
+REM call conda install pytorch torchvision cudatoolkit=10.1 -c pytorch --yes
+call conda install anaconda tensorflow=2.1.0 --yes
 call conda install pytorch torchvision cpuonly -c pytorch --yes
-call conda install -c conda-forge opencv --yes
-call pip install cvlib
 
-REM For findatapy (and NLP)
-call pip install fxcmpy alpha_vantage yfinance twython newspaper3k seasonal pdfminer.six vaderSentiment gensim rise requests_html
+REM Install from conda-forge (pyarrow is a newer version!)
+call conda install -c conda-forge ^
+  jupyter_contrib_nbextensions jupyter_nbextensions_configurator ^
+  redis-py python-blosc pathos graphviz python-graphviz textblob ^
+  vaex pyspark=2.4.0 koalas ^
+  spacy fastparquet python-snappy nodejs pystan fbprophet setuptools-git ^
+  vispy datashader pyproj holoviews streamz quandl bqplot opencv s3fs blpapi  ^
+  --yes
 
-REM findatapy, chartpy and finmarketpy
-REM needs git
-REM call pip install git+https://github.com/cuemacro/finmarketpy.git git+https://github.com/cuemacro/chartpy.git git+https://github.com/cuemacro/findatapy.git
-call pip install finmarketpy chartpy findatapy
-
-REM Graphics libraries
-call pip install cufflinks==0.17 plotly_express==0.4.1 dash==1.9.0 dash-html-components==1.0.2 dash-core-components==1.8.0 ^
-    plotly==4.5.4 dash-table==4.6.0 dtale==1.8.1
+REM Install database
+REM Install Celery
+REM For findatapy (and NLP) and complex graphics
+REM Install transformers/huggingface and table libraries
+REM Install graphics/plotting libraries
+REM Install findatapy, chartpy and findatapy
+call pip install arctic==1.79.2 ^
+   celery==4.4.0 celery[redis] celery[msgpack] msgpack-python ^
+   fxcmpy alpha_vantage yfinance twython newspaper3k seasonal pdfminer.six vaderSentiment gensim wordcloud rise requests_html ^
+   textacy==0.8.0 ^
+   transformers pytesseract cmdstanpy==0.4 tabula-py==1.4.3 ^
+   cvlib ^
+   cufflinks==0.17 plotly_express==0.4.1 ^
+        dash==1.9.0 dash-html-components==1.0.2 dash-core-components==1.8.0 plotly==4.5.4 dash-table==4.6.0 dtale==1.8.1 ^
+   finmarketpy chartpy findatapy
 
 REM To be able to plot Plotly into PNG or JPG
 call conda install -c plotly plotly-orca --yes
@@ -51,15 +54,15 @@ call pip uninstall pandas
 
 REM Newer versions of Pandas aren't supported as well by other libraries eg. Arctic so stick to 0.24.2
 call conda install -c anaconda pandas=0.24.2 --yes
-call conda install -c conda-forge pyarrow=0.16.0 --yes
+call conda install -c conda-forge pyarrow=0.17.1 --yes
 
 REM Jupyter libraries
 call jupyter contrib nbextension install --user
 call jupyter nbextension enable execute_time/ExecuteTime
 call jupyter-nbextension install rise --py --sys-prefix
-call jupyter labextension install @jupyter-widgets/jupyterlab-manager@2.0.0 --no-build
-call jupyter labextension install plotlywidget@1.5.4 --no-build
-call jupyter labextension install jupyterlab-plotly@1.5.4 --no-build
+call jupyter labextension install @jupyter-widgets/jupyterlab-manager --no-build
+call jupyter labextension install plotlywidget --no-build
+call jupyter labextension install jupyterlab-plotly --no-build
 call jupyter labextension install bqplot
 call jupyter lab build
 

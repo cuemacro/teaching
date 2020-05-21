@@ -13077,7 +13077,7 @@ div#notebook {
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="Installing-Anaconda-and-PyCharm">Installing Anaconda and PyCharm<a class="anchor-link" href="#Installing-Anaconda-and-PyCharm">&#182;</a></h1><p>Saeed Amen - Copyright Cuemacro 2019 - <a href="https://www.cuemacro.com">https://www.cuemacro.com</a> - saeed@cuemacro.com</p>
+<h1 id="Installing-Anaconda-and-PyCharm">Installing Anaconda and PyCharm<a class="anchor-link" href="#Installing-Anaconda-and-PyCharm">&#182;</a></h1><p>Saeed Amen - Copyright Cuemacro 2020 - <a href="https://www.cuemacro.com">https://www.cuemacro.com</a> - saeed@cuemacro.com</p>
 <p>In this notebook, we discuss how to install the Anaconda distribution of Python and other applications you need to run do development in Python, which will be useful for doing financial analysis in Python with libraries like finmarketpy. You can also down a lot of this material from <a href="https://github.com/cuemacro/teaching">https://github.com/cuemacro/teaching</a> - in particular the scripts for installing the conda environments. We'll also be installing a lot of other useful libraries for machine learning, natural language processing etc. We'll also make other suggestions so you can do financial data analysis, such as making sure that your firewalls allow access to sites like Quandl.</p>
 
 </div>
@@ -13158,7 +13158,7 @@ div#notebook {
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="Installing-Bloomberg-to-access-data-via-API-(optional)">Installing Bloomberg to access data via API (optional)<a class="anchor-link" href="#Installing-Bloomberg-to-access-data-via-API-(optional)">&#182;</a></h2><p>It is helpful to install Bloomberg's blpapi Python library if you can (and have a Bloomberg account and have a Bloomberg Terminal with Windows). It is recommended to install in your conda environment if it running locally. Full details on how to install blpapi can be found at <a href="https://github.com/cuemacro/findatapy/blob/master/BLOOMBERG.md">https://github.com/cuemacro/findatapy/blob/master/BLOOMBERG.md</a>. The Windows script already includes the conda installation of blpapi.</p>
+<h2 id="Installing-Bloomberg-to-access-data-via-API-(optional)">Installing Bloomberg to access data via API (optional)<a class="anchor-link" href="#Installing-Bloomberg-to-access-data-via-API-(optional)">&#182;</a></h2><p>It is helpful to install Bloomberg's blpapi Python library if you can (and have a Bloomberg account and have a Bloomberg Terminal with Windows). It is recommended to install in your conda environment if it running locally. Full details on how to install blpapi can be found at <a href="https://github.com/cuemacro/findatapy/blob/master/BLOOMBERG.md">https://github.com/cuemacro/findatapy/blob/master/BLOOMBERG.md</a> (without using conda). The Windows script already includes the conda installation of blpapi, which makes it a lot quicker!</p>
 
 </div>
 </div>
@@ -13183,7 +13183,32 @@ div#notebook {
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="Installing-a-conda-environment-for-Windows-(method-1)">Installing a conda environment for Windows (method 1)<a class="anchor-link" href="#Installing-a-conda-environment-for-Windows-(method-1)">&#182;</a></h2><p>A conda environment is a separate version of Python, where you can install all your own Python environments.</p>
+<h2 id="Installing-a-conda-environment-for-Windows-(quickest-method---recommended)">Installing a conda environment for Windows (quickest method - recommended)<a class="anchor-link" href="#Installing-a-conda-environment-for-Windows-(quickest-method---recommended)">&#182;</a></h2><p>We can download <a href="https://raw.githubusercontent.com/cuemacro/teaching/master/pythoncourse/installation/environment_windows.yml">environment_windows.yml (click to download)</a> and use that to create our conda environment with all the necessary packages. This also installs the exact same libraries versions that I have.</p>
+<ul>
+<li>Open up the Anaconda Prompt (should be in the Start Menu)</li>
+<li><p>In this prompt, your Anaconda folder will be on the path (ie. it will recognise where <code>conda</code> is installed etc.)</p>
+<ul>
+<li>Type in <code>conda env create -f environment_windows.yml</code> and press Enter</li>
+<li>Anaconda will then run all the necessary command to download the various packages above using conda and pip</li>
+<li>At the end of the process you'll have a Python 3.6 conda environment with the name 'py36class' which you can use, with all the packages you'll need for this course, such as pandas, numpy etc.</li>
+<li>Note that you may need to put in the full path for wherever you downloaded the <code>environment_windows.yml</code> file or you can simply <code>cd</code> to that folder and then run the above conda command</li>
+</ul>
+</li>
+<li><p>The <code>environment_windows.yml</code> file (or similar name) basically has all the instructions required to recreate a conda environment</p>
+</li>
+<li>To create your own <code>environment.yml</code> file (for backup purposes, or if you'd like to distribute your conda environment) run the below command in your Anaconda Prompt<ul>
+<li><code>conda env export &gt; environment_windows.yml</code></li>
+</ul>
+</li>
+</ul>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="Installing-a-conda-environment-for-Windows-(slower-method)">Installing a conda environment for Windows (slower method)<a class="anchor-link" href="#Installing-a-conda-environment-for-Windows-(slower-method)">&#182;</a></h2><p>A conda environment is a separate version of Python, where you can install all your own Python environments. This is a slower way to do it, but this makes it easier to change the versions of the libraries (note, might not be 100% same versions as my libraries!)</p>
 <ul>
 <li>Download </li>
 <li>Open up Notepad</li>
@@ -13208,8 +13233,8 @@ div#notebook {
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="Copy-the-below-to-create_conda_env.bat-for-Windows-(or-download-it)">Copy the below to create_conda_env.bat for Windows (or <a href="create_conda_env.bat">download it</a>)<a class="anchor-link" href="#Copy-the-below-to-create_conda_env.bat-for-Windows-(or-download-it)">&#182;</a></h3>
-<pre><code>REM Assumes that Anaconda has already been downloaded
+<h3 id="Copy-the-below-to-create_conda_env.bat-for-Windows-(or-download-it-from-GitHub)">Copy the below to create_conda_env.bat for Windows (or <a href="https://raw.githubusercontent.com/cuemacro/teaching/master/pythoncourse/installation/create_conda_env.bat">download it from GitHub</a>)<a class="anchor-link" href="#Copy-the-below-to-create_conda_env.bat-for-Windows-(or-download-it-from-GitHub)">&#182;</a></h3>
+<pre><code>REM Assumes that Anaconda has already been downloaded and installed
 
 REM Update conda
 call conda update -n base -c defaults conda --yes
@@ -13221,38 +13246,41 @@ call conda remove -n py36class --all --yes
 call conda create -n py36class python=3.6 anaconda
 call conda activate py36class
 
-REM Install from conda-forge
-call conda install -c conda-forge ^
-jupyterlab jupyter_contrib_nbextensions jupyter_nbextensions_configurator ipywidgets=7.5 ^
-redis-py=3.3.7 python-blosc=1.8.1 pathos graphviz python-graphviz textblob wordcloud quandl pyspark py4j ^
-spacy fastparquet python-snappy nodejs koalas textacy pystan fbprophet setuptools-git=1.2 vispy=0.6.4 bqplot=0.12.6 ^
-datashader=0.10.0 pyproj=2.6.0 blpapi xlwings=0.18.0 --yes
+REM Install scikit-learn (downgrade for some later dependencies) - xlwings for Windows
+call conda install anaconda scikit-learn=0.20.2 --yes
+call conda install -c conda-forge xlwings=0.19.4 --yes
 
-call pip install arctic==1.79.2
-
-REM Install tensorflow, transformers/huggingface and table readers
-REM only if you have GPU
-REM call pip install tensorflow-gpu transformers cvlib pytesseract cmdstanpy==0.4 tabula-py==1.4.3
-call pip install tensorflow==2.1.0 transformers pytesseract cmdstanpy==0.4 tabula-py==1.4.3
-
-REM Install PyTorch
-REM only if you have GPU
-REM call conda install pytorch torchvision cudatoolkit=10.0 -c pytorch --yes
+REM Install PyTorch &amp; Tensorflow
+REM only if you have GPU below 2 lines instead of CPU versions
+REM call conda install tensorflow-gpu=2.1.0
+REM call conda install pytorch torchvision cudatoolkit=10.1 -c pytorch --yes
+call conda install anaconda tensorflow=2.1.0 --yes
 call conda install pytorch torchvision cpuonly -c pytorch --yes
-call conda install -c conda-forge opencv --yes
-call pip install cvlib
 
-REM For findatapy (and NLP)
-call pip install fxcmpy alpha_vantage yfinance twython newspaper3k seasonal pdfminer.six vaderSentiment gensim rise
+REM Install from conda-forge (pyarrow is a newer version!)
+call conda install -c conda-forge ^
+  jupyter_contrib_nbextensions jupyter_nbextensions_configurator ^
+  redis-py python-blosc pathos graphviz python-graphviz textblob ^
+  vaex pyspark=2.4.0 koalas ^
+  spacy fastparquet python-snappy nodejs pystan fbprophet setuptools-git ^
+  vispy datashader pyproj holoviews streamz quandl bqplot opencv s3fs blpapi  ^
+  --yes
 
-REM findatapy, chartpy and finmarketpy
-REM needs git
-REM call pip install git+https://github.com/cuemacro/finmarketpy.git git+https://github.com/cuemacro/chartpy.git git+https://github.com/cuemacro/findatapy.git
-call pip install finmarketpy chartpy findatapy
-
-REM Graphics libraries
-call pip install cufflinks==0.17 plotly_express==0.4.1 dash==1.9.0 dash-html-components==1.0.2 dash-core-components==1.8.0 ^
-    plotly==4.5.4 dash-table==4.6.0 dtale==1.8.1
+REM Install database
+REM Install Celery
+REM For findatapy (and NLP) and complex graphics
+REM Install transformers/huggingface and table libraries
+REM Install graphics/plotting libraries
+REM Install findatapy, chartpy and findatapy
+call pip install arctic==1.79.2 ^
+   celery==4.4.0 celery[redis] celery[msgpack] msgpack-python ^
+   fxcmpy alpha_vantage yfinance twython newspaper3k seasonal pdfminer.six vaderSentiment gensim wordcloud rise requests_html ^
+   textacy==0.8.0 ^
+   transformers pytesseract cmdstanpy==0.4 tabula-py==1.4.3 ^
+   cvlib ^
+   cufflinks==0.17 plotly_express==0.4.1 ^
+        dash==1.9.0 dash-html-components==1.0.2 dash-core-components==1.8.0 plotly==4.5.4 dash-table==4.6.0 dtale==1.8.1 ^
+   finmarketpy chartpy findatapy
 
 REM To be able to plot Plotly into PNG or JPG
 call conda install -c plotly plotly-orca --yes
@@ -13262,15 +13290,15 @@ call pip uninstall pandas
 
 REM Newer versions of Pandas aren't supported as well by other libraries eg. Arctic so stick to 0.24.2
 call conda install -c anaconda pandas=0.24.2 --yes
-call conda install -c conda-forge pyarrow=0.16.0 --yes
+call conda install -c conda-forge pyarrow=0.17.1 --yes
 
 REM Jupyter libraries
 call jupyter contrib nbextension install --user
 call jupyter nbextension enable execute_time/ExecuteTime
 call jupyter-nbextension install rise --py --sys-prefix
-call jupyter labextension install @jupyter-widgets/jupyterlab-manager@2.0.0 --no-build
-call jupyter labextension install plotlywidget@1.5.4 --no-build
-call jupyter labextension install jupyterlab-plotly@1.5.4 --no-build
+call jupyter labextension install @jupyter-widgets/jupyterlab-manager --no-build
+call jupyter labextension install plotlywidget --no-build
+call jupyter labextension install jupyterlab-plotly --no-build
 call jupyter labextension install bqplot
 call jupyter lab build</code></pre>
 
@@ -13280,21 +13308,32 @@ call jupyter lab build</code></pre>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="Installing-a-conda-environment-for-Windows-(alternative-method-2---quicker!)">Installing a conda environment for Windows (alternative method 2 - quicker!)<a class="anchor-link" href="#Installing-a-conda-environment-for-Windows-(alternative-method-2---quicker!)">&#182;</a></h2><p>Alternatively we can download <a href="environment_windows.yml">environment_windows.yml</a> and use that to create our conda environment with all the necessary packages.</p>
+<h2 id="Installing-xlwings-addin-in-Excel-on-Windows-(or-Mac)">Installing xlwings addin in Excel on Windows (or Mac)<a class="anchor-link" href="#Installing-xlwings-addin-in-Excel-on-Windows-(or-Mac)">&#182;</a></h2><p>Both of the above should install the xlwings Python library. You also need to add the xlwings addin to Excel too. Instructions for this can be found at <a href="https://docs.xlwings.org/en/stable/addin.html">https://docs.xlwings.org/en/stable/addin.html</a> (xlwings is also supported on Excel for Mac, although the functionality may differ). It won't work on Linux, given there's no Linux version of Excel). Usually this will involve, closing Excel, then running the following commands in your Anaconda Prompt, before restarting Excel:</p>
+
+<pre><code>conda activate py36class
+xlwings addin install</code></pre>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="Installing-a-conda-environment-for-Linux-(quickest-method---recommended)">Installing a conda environment for Linux (quickest method - recommended)<a class="anchor-link" href="#Installing-a-conda-environment-for-Linux-(quickest-method---recommended)">&#182;</a></h2><p>We can download <a href="https://raw.githubusercontent.com/cuemacro/teaching/master/pythoncourse/installation/environment_linux.yml">environment_linux.yml (click to download)</a> and use that to create our conda environment with all the necessary packages. This should be a lot faster to run. This also installs the exact same libraries versions that I have.</p>
 <ul>
-<li>Open up the Anaconda Prompt (should be in the Start Menu)</li>
+<li>Open up a terminal window (making sure that Anaconda is on your path)</li>
 <li><p>In this prompt, your Anaconda folder will be on the path (ie. it will recognise where <code>conda</code> is installed etc.)</p>
 <ul>
-<li>Type in <code>conda env create -f environment_windows.yml</code> and press Enter</li>
+<li>Type in <code>conda env create -f environment_linux.yml</code> and press Enter</li>
 <li>Anaconda will then run all the necessary command to download the various packages above using conda and pip</li>
 <li>At the end of the process you'll have a Python 3.6 conda environment with the name 'py36class' which you can use, with all the packages you'll need for this course, such as pandas, numpy etc.</li>
-<li>Note that you may need to put in the full path for wherever you downloaded the environment_windows.yml file</li>
+<li>Note that you may need to put in the full path for wherever you downloaded the <code>environment_linux.yml</code> file or you can simply <code>cd</code> to that folder and then run the above conda command</li>
 </ul>
 </li>
-<li><p>The <code>environment.yml</code> file (or similar name) basically has all the instructions required to recreate a conda environment</p>
+<li><p>The <code>environment_linux.yml</code> file (or similar name) basically has all the instructions required to recreate a conda environment</p>
 </li>
 <li>To create your own <code>environment.yml</code> file (for backup purposes, or if you'd like to distribute your conda environment) run the below command in your Anaconda Prompt<ul>
-<li><code>conda env export &gt; environment.yml</code></li>
+<li><code>conda env export &gt; environment_linux.yml</code></li>
 </ul>
 </li>
 </ul>
@@ -13305,15 +13344,7 @@ call jupyter lab build</code></pre>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="Installing-xlwings-addin-in-Excel-on-Windows">Installing xlwings addin in Excel on Windows<a class="anchor-link" href="#Installing-xlwings-addin-in-Excel-on-Windows">&#182;</a></h2><p>Both of the above should install the xlwings Python library. You also need to add the xlwings addin to Excel too. Instructions for this can be found at <a href="https://docs.xlwings.org/en/stable/addin.html">https://docs.xlwings.org/en/stable/addin.html</a> (xlwings is also supported on Excel for Mac, although the functionality may differ. It won't work on Linux, given there's no Linux version of Excel).</p>
-
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="Installing-a-conda-environment-for-Linux-and-Mac">Installing a conda environment for Linux and Mac<a class="anchor-link" href="#Installing-a-conda-environment-for-Linux-and-Mac">&#182;</a></h2><p>A conda environment is a separate version of Python, where you can install all your own Python environments. For Linux 
+<h2 id="Installing-a-conda-environment-for-Linux-and-Mac-(slower-method)">Installing a conda environment for Linux and Mac (slower method)<a class="anchor-link" href="#Installing-a-conda-environment-for-Linux-and-Mac-(slower-method)">&#182;</a></h2><p>A conda environment is a separate version of Python, where you can install all your own Python environments. For Linux 
 and Mac, we'll install more libraries, which you might need to use later (some of which aren't fully supported by Windows).</p>
 <ul>
 <li>Download </li>
@@ -13356,8 +13387,10 @@ Anaconda)<ul>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="Copy-the-below-to-create_conda_env.sh-(or-download-it)">Copy the below to create_conda_env.sh (or <a href="create_conda_env.sh">download it</a>)<a class="anchor-link" href="#Copy-the-below-to-create_conda_env.sh-(or-download-it)">&#182;</a></h3>
+<h3 id="Copy-the-below-to-create_conda_env.sh-(or-download-it-from-GitHub)">Copy the below to create_conda_env.sh (or <a href="https://raw.githubusercontent.com/cuemacro/teaching/master/pythoncourse/installation/create_conda_env.sh">download it from GitHub</a>)<a class="anchor-link" href="#Copy-the-below-to-create_conda_env.sh-(or-download-it-from-GitHub)">&#182;</a></h3>
 <pre><code>#!/usr/bin/env bash
+
+# Assumes that Anaconda has already been downloaded and installed
 
 # Update conda
 conda update -n base -c defaults conda --yes
@@ -13372,48 +13405,43 @@ conda remove -n py36class --all --yes
 conda create -n py36class python=3.6 anaconda
 source activate py36class
 
+# Install scikit-learn (downgrade for some later dependencies) - xlwings only works for Mac (won't install on Linux)
+conda install anaconda scikit-learn=0.20.2 --yes
+conda install conda-forge xlwings=0.19.4 --yes
+
+# Install PyTorch &amp; Tensorflow
+# only if you have GPU below 2 lines instead of CPU versions
+# conda install tensorflow-gpu=2.1.0
+# conda install pytorch torchvision cudatoolkit=10.1 -c pytorch --yes
+conda install anaconda tensorflow=2.1.0 --yes
+conda install pytorch torchvision cpuonly -c pytorch --yes
+
 # Install from conda-forge (pyarrow is a newer version!)
 conda install -c conda-forge \
-jupyterlab jupyter_contrib_nbextensions jupyter_nbextensions_configurator \
-redis-py=3.3.7 python-blosc=1.8.1 pathos graphviz python-graphviz textblob wordcloud quandl \
-vaex-core vaex-viz vaex-jupyter vaex-arrow vaex-server vaex-hdf5 vaex-astro vaex-distributed pyspark py4j \
-spacy fastparquet python-snappy nodejs koalas textacy pystan fbprophet setuptools-git=1.2 vispy=0.6.4 bqplot=0.12.6 \
-datashader=0.10.0 pyproj=2.6.0 --yes
+  jupyter_contrib_nbextensions jupyter_nbextensions_configurator \
+  redis-py python-blosc pathos graphviz python-graphviz textblob \
+  vaex pyspark=2.4.0 koalas \
+  spacy fastparquet python-snappy nodejs pystan fbprophet setuptools-git \
+  vispy datashader pyproj holoviews streamz quandl bqplot opencv s3fs \
+  --yes
 
-# For database
-pip install arctic==1.79.2
-
-# Celery library
-pip install celery==4.4.0 celery[redis] celery[msgpack] msgpack-python
-
-# For findatapy (and NLP)
-pip install fxcmpy alpha_vantage yfinance twython newspaper3k seasonal pdfminer.six vaderSentiment gensim rise progressbar2==3.50.1
-
-# install tensorflow and transformers/huggingface (on Mac OS can have issues installing TensorFlow, so if you have Mac
-# comment it out)
-# only if you have GPU
-# pip install tensorflow-gpu transformers cvlib pytesseract cmdstanpy==0.4 tabula-py==1.4.3
-pip install tensorflow==2.1.0 transformers pytesseract cmdstanpy==0.4 tabula-py==1.4.3
-
-# Install PyTorch
-# only if you have GPU
-# conda install pytorch torchvision cudatoolkit=10.0 -c pytorch --yes
-conda install pytorch torchvision cpuonly -c pytorch --yes
-conda install -c conda-forge opencv --yes
-pip install cvlib
-
-# modin (later versions need later versions of pandas)
-# may downgrade to pandas to 0.24.2
-pip install modin==0.5.4
-
-# findatapy, chartpy and finmarketpy (or can manually clone these from GitHub and add to your Python path)
-# need to have Git
-# pip install git+https://github.com/cuemacro/finmarketpy.git git+https://github.com/cuemacro/chartpy.git git+https://github.com/cuemacro/findatapy.git
-pip install finmarketpy chartpy findatapy
-
-# Graphics libraries
-pip install cufflinks==0.17 plotly_express==0.4.1 \
-        dash==1.9.0 dash-html-components==1.0.2 dash-core-components==1.8.0 plotly==4.5.4 dash-table==4.6.0 dtale==1.8.1
+# Install database
+# Install Celery
+# For findatapy (and NLP) and complex graphics
+# Install transformers/huggingface and table libraries
+# Install graphics/plotting libraries
+# Install findatapy, chartpy and findatapy
+# Install modin (later versions need later versions of pandas, may downgrade to pandas to 0.24.2
+pip install arctic==1.79.2 \
+   celery==4.4.0 celery[redis] celery[msgpack] msgpack-python \
+   fxcmpy alpha_vantage yfinance twython newspaper3k seasonal pdfminer.six vaderSentiment gensim wordcloud rise requests_html \
+   textacy==0.8.0 \
+   transformers pytesseract cmdstanpy==0.4 tabula-py==1.4.3 \
+   cvlib \
+   cufflinks==0.17 plotly_express==0.4.1 \
+        dash==1.9.0 dash-html-components==1.0.2 dash-core-components==1.8.0 plotly==4.5.4 dash-table==4.6.0 dtale==1.8.1 \
+   finmarketpy chartpy findatapy \
+   modin==0.5.4
 
 # To be able to plot Plotly into PNG or JPG
 conda install -c plotly plotly-orca --yes
@@ -13423,45 +13451,20 @@ pip uninstall pandas
 
 # Newer versions of Pandas aren't supported as well by other libraries (eg. Arctic), so stick to 0.24.2
 conda install -c anaconda pandas=0.24.2 --yes
-conda install -c conda-forge pyarrow=0.16.0 --yes
+conda install -c conda-forge pyarrow=0.17.1 --yes
 
-# GPU libraries
+# GPU libraries for working with DataFrames
 # conda install -c rapidsai -c nvidia -c conda-forge -c defaults rapids=0.10 python=3.6
 
 # Jupyter and Jupyterlab extensions
 jupyter contrib nbextension install --user # to activate js on Jupyter
 jupyter nbextension enable execute_time/ExecuteTime
 jupyter-nbextension install rise --py --sys-prefix
-jupyter labextension install @jupyter-widgets/jupyterlab-manager@2.0.0 --no-build
-jupyter labextension install plotlywidget@1.5.4 --no-build
-jupyter labextension install jupyterlab-plotly@1.5.4 --no-build
+jupyter labextension install @jupyter-widgets/jupyterlab-manager --no-build
+jupyter labextension install plotlywidget --no-build
+jupyter labextension install jupyterlab-plotly --no-build
 jupyter labextension install bqplot
 jupyter lab build</code></pre>
-
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="Installing-a-conda-environment-for-Linux-(alternative-method-2---quicker!)">Installing a conda environment for Linux (alternative method 2 - quicker!)<a class="anchor-link" href="#Installing-a-conda-environment-for-Linux-(alternative-method-2---quicker!)">&#182;</a></h2><p>Alternatively we can download <a href="environment_linux.yml">environment_linux.yml</a> and use that to create our conda environment with all the necessary packages. This should be a lot faster to run.</p>
-<ul>
-<li>Open up a terminal window (making sure that Anaconda is on your path)</li>
-<li><p>In this prompt, your Anaconda folder will be on the path (ie. it will recognise where <code>conda</code> is installed etc.)</p>
-<ul>
-<li>Type in <code>conda env create -f environment_linux.yml</code> and press Enter</li>
-<li>Anaconda will then run all the necessary command to download the various packages above using conda and pip</li>
-<li>At the end of the process you'll have a Python 3.6 conda environment with the name 'py36class' which you can use, with all the packages you'll need for this course, such as pandas, numpy etc.</li>
-<li>Note that you may need to put in the full path for wherever you downloaded the environment_windows.yml file</li>
-</ul>
-</li>
-<li><p>The <code>environment.yml</code> file (or similar name) basically has all the instructions required to recreate a conda environment</p>
-</li>
-<li>To create your own <code>environment.yml</code> file (for backup purposes, or if you'd like to distribute your conda environment) run the below command in your Anaconda Prompt<ul>
-<li><code>conda env export &gt; environment.yml</code></li>
-</ul>
-</li>
-</ul>
 
 </div>
 </div>
@@ -13502,7 +13505,7 @@ jupyter lab build</code></pre>
 <h3 id="Creating-your-conda-environment-in-Microsoft-Azure-Notebooks-(harder)">Creating your conda environment in Microsoft Azure Notebooks (harder)<a class="anchor-link" href="#Creating-your-conda-environment-in-Microsoft-Azure-Notebooks-(harder)">&#182;</a></h3><ul>
 <li>You'll also need to set this new project to use the conda environment ready for the course, so it has all the right Python libraries ready for you to use<ul>
 <li>At <a href="https://docs.microsoft.com/en-us/azure/notebooks/quickstart-create-jupyter-notebook-project-environment">https://docs.microsoft.com/en-us/azure/notebooks/quickstart-create-jupyter-notebook-project-environment</a> you can find additional details on how to create a conda environment for Azure Notebooks (using an environment.yml file)</li>
-<li>You'll need the <a href="environment_azure_linux.yml">environment_azure_linux.yml</a> and then upload it to your newly made project</li>
+<li>You'll need the <a href="https://raw.githubusercontent.com/cuemacro/teaching/master/pythoncourse/installation/environment_azure_linux.yml">environment_azure_linux.yml</a> and then upload it to your newly made project</li>
 <li>Note, some libraries may not work in Azure notebooks such as the Bloomberg Python API</li>
 <li>GPU versions of some of the libraries may not work, unless you set to Azure notebooks to use a (paid-for) GPU enabled workstation</li>
 </ul>
@@ -13516,7 +13519,7 @@ jupyter lab build</code></pre>
 <li>We've rewritten to use pip, as conda can take a while on slower machines (except for packages which are difficult to install with pip like plotly-orca, which is optional)</li>
 <li>Then run the below commands in your Jupyter notebook (this will likely take a long time, usually a couple of minutes)</li>
 <li>Make sure you are running Azure notebooks in Python 3.6 (not 3.5)</li>
-<li>Note, that you might to run these every so often, because after 60 minutes of inactivity Azure will kill your notebook instance (and hence any Python library installations you do will also disappear)</li>
+<li>Note, that you might to run these every so often, because after 60 minutes of inactivity Azure will kill your notebook instance if you are using the free account on Azure Notebooks (and hence any Python library installations you do will also disappear)</li>
 </ul>
 
 </div>
@@ -13527,7 +13530,7 @@ jupyter lab build</code></pre>
 <div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># A selection of libraries (note: this isn&#39;t everything)</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># A selection of libraries (note: this isn&#39;t everything, you may need to &quot;pip&quot; install extra libraries)</span>
 <span class="o">!</span>pip install <span class="err">\</span>
   <span class="n">redis</span><span class="o">==</span><span class="mf">3.3</span><span class="o">.</span><span class="mi">7</span> <span class="n">pathos</span> <span class="n">pyarrow</span><span class="o">==</span><span class="mf">0.16</span><span class="o">.</span><span class="mi">0</span> <span class="n">pandas</span><span class="o">==</span><span class="mf">0.24</span><span class="o">.</span><span class="mi">2</span> <span class="n">wordcloud</span> <span class="n">quandl</span> \
   <span class="n">vaex</span><span class="o">-</span><span class="n">core</span> <span class="n">vaex</span><span class="o">-</span><span class="n">viz</span> <span class="n">vaex</span><span class="o">-</span><span class="n">jupyter</span> <span class="n">vaex</span><span class="o">-</span><span class="n">server</span> <span class="n">vaex</span><span class="o">-</span><span class="n">hdf5</span> <span class="n">vaex</span><span class="o">-</span><span class="n">astro</span> <span class="n">vaex</span><span class="o">-</span><span class="n">distributed</span> <span class="n">pyspark</span> <span class="n">py4j</span> \
@@ -13536,7 +13539,7 @@ jupyter lab build</code></pre>
   <span class="n">transformers</span> \
   <span class="n">finmarketpy</span> <span class="n">chartpy</span> <span class="n">findatapy</span> \
   <span class="n">cufflinks</span><span class="o">==</span><span class="mf">0.17</span> <span class="n">plotly_express</span><span class="o">==</span><span class="mf">0.4</span><span class="o">.</span><span class="mi">1</span> \
-  <span class="n">plotly</span><span class="o">==</span><span class="mf">4.2</span><span class="o">.</span><span class="mi">1</span>
+  <span class="n">plotly</span><span class="o">==</span><span class="mf">4.5</span><span class="o">.</span><span class="mi">4</span>
 </pre></div>
 
     </div>
@@ -13568,7 +13571,7 @@ jupyter lab build</code></pre>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>Or rather than running the above commands, you can try creating a full conda environment in Azure from the yml file (although from experience this is less likely to work, is much slower and it's difficult to activate later)</p>
+<p>Or rather than running the above commands, you can try creating a full conda environment in Azure from the yml file (although from experience this is less likely to work, and is much slower and it's difficult to activate later)</p>
 
 </div>
 </div>
@@ -13660,7 +13663,7 @@ jupyter lab build</code></pre>
 <div class="text_cell_render border-box-sizing rendered_html">
 
 <pre><code>conda activate py36class
-jupyter notebook --notebook-dir='e:/Remote/pythoncourse/pythoncourse/notebooks'</code></pre>
+jupyter notebook --notebook-dir='e:/cuemacro/pythoncourse/pythoncourse/notebooks'</code></pre>
 
 </div>
 </div>
