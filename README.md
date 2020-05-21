@@ -1,6 +1,6 @@
 # teaching - resources for Cuemacro courses
 
-In this repo, we have resources for Cuemacro courses (including Python introduction for finance), such as how to install Anaconda, PyCharm etc.
+In this repo, we have resources for Cuemacro courses (including Python for finance taught on QDC), such as how to install Anaconda, PyCharm etc.
 
 For more information about my Python for finance workshops, please contact saeed@cuemacro.com
 
@@ -11,12 +11,17 @@ https://github.com/cuemacro/teaching/blob/master/pythoncourse/installation/insta
 in https://nbviewer.jupyter.org/ ie. to go to the following link 
 https://nbviewer.jupyter.org/github/cuemacro/teaching/blob/master/pythoncourse/installation/installing_anaconda_and_pycharm.ipynb
 
+# Jupyter notebooks on teaching
+
+* [Installing Anaconda Python and PyCharm (nbviewer link)](https://nbviewer.jupyter.org/github/cuemacro/teaching/blob/master/pythoncourse/installation/installing_anaconda_and_pycharm.ipynb) - how to install a Python environment for data analysis
+* [Coronavirus example (nbviewer link)](https://nbviewer.jupyter.org/github/cuemacro/teaching/blob/master/pythoncourse/installation/coronavirus_example.ipynb) - how to download case data for coronavirus and do basic analysis including charting
+
 # Coding log
 
 * 21 May 2020
     * Updated Anaconda installation files and environment YML files to include new Python libaries
 * 06 May 2020
-    * Note on using nbviewer
+    * Note on using nbviewer to view Jupyter notebooks
     * Updated Anaconda installation files
     * Updated environment YML files for new versions of chartpy, findatapy and finmarketpy
 * 12 Apr 2020
