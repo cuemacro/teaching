@@ -17,10 +17,10 @@ dependencies:
   - aplus=0.11.0=py_1
   - argh=0.26.2=py36_0
   - arrow-cpp=0.17.1=py36hed236bb_2_cpu
-  - arviz=0.7.0=py_0
+  - arviz=0.8.0=py_0
   - asn1crypto=1.3.0=py36_0
   - astor=0.8.0=py36_0
-  - astroid=2.4.0=py36_0
+  - astroid=2.4.1=py36_0
   - astropy=4.0.1.post1=py36he774522_1
   - atomicwrites=1.4.0=py_0
   - attrs=19.3.0=py_0
@@ -46,6 +46,7 @@ dependencies:
   - botocore=1.12.189=py_0
   - bottleneck=1.3.2=py36h2a96729_0
   - bqplot=0.12.11=pyh9f0ad1d_0
+  - branca=0.3.1=py_0
   - bzip2=1.0.8=he774522_0
   - c-ares=1.15.0=h2fa13f4_1001
   - ca-certificates=2020.4.5.1=hecc5488_0
@@ -127,9 +128,17 @@ dependencies:
   - inflection=0.3.1=py_1
   - intel-openmp=2020.1=216
   - intervaltree=3.0.2=py_0
+  - ipydatawidgets=4.0.1=py_0
   - ipykernel=5.1.4=py36h39e3cac_0
+  - ipyleaflet=0.12.6=pyh9f0ad1d_0
+  - ipympl=0.5.6=pyh9f0ad1d_1
+  - ipyscales=0.4.0=py_1
   - ipython=7.13.0=py36h5ca1d4c_0
   - ipython_genutils=0.2.0=py36_0
+  - ipyvolume=0.6.0a4=pyh9f0ad1d_0
+  - ipyvue=1.3.2=pyh9f0ad1d_0
+  - ipyvuetify=1.4.0=pyh8c360ce_1
+  - ipywebrtc=0.5.0=py36_0
   - ipywidgets=7.5.1=py_0
   - isort=4.3.21=py36_0
   - itsdangerous=1.1.0=py36_0
@@ -137,7 +146,7 @@ dependencies:
   - jedi=0.15.2=py36_0
   - jinja2=2.11.2=py_0
   - jmespath=0.10.0=pyh9f0ad1d_0
-  - joblib=0.14.1=py_0
+  - joblib=0.15.1=py_0
   - jpeg=9c=hfa6e2cd_1001
   - json5=0.9.4=py_0
   - jsonschema=3.2.0=py36_0
@@ -151,7 +160,7 @@ dependencies:
   - jupyter_latex_envs=1.4.4=py36_1000
   - jupyter_nbextensions_configurator=0.4.1=py36_0
   - jupyterlab=1.2.6=pyhf63ae98_0
-  - jupyterlab_server=1.1.1=py_0
+  - jupyterlab_server=1.1.4=py_0
   - keras-applications=1.0.8=py_0
   - keras-preprocessing=1.1.0=py_1
   - keyring=21.1.1=py36_2
@@ -225,7 +234,7 @@ dependencies:
   - mkl_fft=1.0.15=py36h14836fe_0
   - mkl_random=1.1.0=py36h675688f_0
   - mock=4.0.2=py_0
-  - more-itertools=8.2.0=py_0
+  - more-itertools=8.3.0=py_0
   - mpmath=1.1.0=py36_0
   - msys2-conda-epoch=20160418=1
   - multipledispatch=0.6.0=py36_0
@@ -267,6 +276,7 @@ dependencies:
   - pathos=0.2.5=py_0
   - pathtools=0.1.2=py_1
   - patsy=0.5.1=py36_0
+  - pcre=8.44=h6538335_0
   - pep8=1.7.1=py36_0
   - pexpect=4.8.0=py36_0
   - pickleshare=0.7.5=py36_0
@@ -281,7 +291,6 @@ dependencies:
   - pox=0.2.7=py_0
   - ppft=1.6.6.1=py36h9f0ad1d_1
   - preshed=3.0.2=py36hbd05846_2
-  - progressbar2=3.51.3=pyh9f0ad1d_0
   - proj=7.0.0=haa36216_3
   - prometheus_client=0.7.1=py_0
   - prompt-toolkit=3.0.4=py_0
@@ -306,11 +315,10 @@ dependencies:
   - pyflakes=2.1.1=py36_0
   - pygments=2.6.1=py_0
   - pyjwt=1.7.1=py36_0
-  - pylint=2.5.0=py36_1
+  - pylint=2.5.2=py36_0
   - pymeeus=0.3.7=pyh9f0ad1d_0
   - pynacl=1.3.0=py36h62dcd97_0
   - pyodbc=4.0.30=py36ha925a31_0
-  - pyopengl=3.1.5=py_0
   - pyopenssl=19.1.0=py36_0
   - pyparsing=2.4.7=py_0
   - pyproj=2.6.1.post1=py36h6792c24_0
@@ -338,6 +346,7 @@ dependencies:
   - python-snappy=0.5.4=py36h9a6de72_1
   - python-utils=2.4.0=py_0
   - python_abi=3.6=1_cp36m
+  - pythreejs=2.2.0=pyh8c360ce_0
   - pytorch=1.5.0=py3.6_cpu_0
   - pytz=2020.1=py_0
   - pyviz_comms=0.7.4=pyh8c360ce_0
@@ -361,7 +370,7 @@ dependencies:
   - rsa=4.0=py_0
   - rtree=0.9.4=py36h21ff451_1
   - ruamel_yaml=0.15.87=py36he774522_0
-  - s3fs=0.4.2=py_0
+  - s3fs=0.2.2=py_0
   - s3transfer=0.1.13=py36_1001
   - scikit-image=0.16.2=py36h47e9c7a_0
   - scikit-learn=0.20.2=py36h343c172_0
@@ -378,7 +387,7 @@ dependencies:
   - snowballstemmer=2.0.0=py_0
   - sortedcollections=1.1.2=py36_0
   - sortedcontainers=2.1.0=py36_0
-  - soupsieve=2.0=py_0
+  - soupsieve=2.0.1=py_0
   - spacy=2.2.4=py36hdbb1a49_1
   - sphinx=3.0.3=py_0
   - sphinxcontrib=1.0=py36_1
@@ -391,12 +400,13 @@ dependencies:
   - sphinxcontrib-websupport=1.2.1=py_0
   - spyder=4.1.3=py36_0
   - spyder-kernels=1.9.1=py36_0
-  - sqlalchemy=1.3.16=py36he774522_0
+  - sqlalchemy=1.3.17=py36he774522_0
   - sqlite=3.31.1=h2a8f88b_1
   - srsly=1.0.2=py36h003fed8_0
-  - statsmodels=0.11.0=py36he774522_0
+  - statsmodels=0.11.1=py36he774522_0
   - streamz=0.5.3=pyh9f0ad1d_0
   - sympy=1.5.1=py36_0
+  - tabulate=0.8.7=pyh9f0ad1d_0
   - tbb=2020.0=h74a9793_0
   - tblib=1.6.0=py_0
   - tensorboard=2.1.0=py3_0
@@ -423,10 +433,17 @@ dependencies:
   - ujson=1.35=py36hfa6e2cd_0
   - unicodecsv=0.14.1=py36h6450c06_0
   - urllib3=1.25.8=py36_0
-  - vaex=1.0.0b6=py36_0
+  - vaex-arrow=0.4.2=py_1
+  - vaex-astro=0.6.1=py_1
+  - vaex-core=1.5.0=py36he350917_0
+  - vaex-distributed=0.3.0=py_0
+  - vaex-hdf5=0.5.6=py_0
+  - vaex-jupyter=0.4.1=py_0
+  - vaex-server=0.2.1=py_0
+  - vaex-viz=0.3.8=py_1
   - vc=14.1=h0510ff6_4
   - vispy=0.6.4=py36hbd37c6d_1
-  - vs2015_runtime=14.16.27012=hf0eaf9b_1
+  - vs2015_runtime=14.16.27012=hf0eaf9b_2
   - wasabi=0.6.0=py_0
   - watchdog=0.10.2=py36_0
   - wcwidth=0.1.9=py_0
@@ -456,6 +473,7 @@ dependencies:
     - aiohttp==3.6.2
     - alpha-vantage==2.2.0
     - amqp==2.5.2
+    - ansi2html==1.5.2
     - appdirs==1.4.4
     - arctic==1.79.2
     - async-timeout==3.0.1
@@ -469,18 +487,19 @@ dependencies:
     - colorlover==0.3.0
     - configparser==5.0.0
     - cssselect==1.1.0
-    - cufflinks==0.17.0
+    - cufflinks==0.17.3
     - cvlib==0.2.5
     - cython==0.29.14
-    - dash==1.9.0
-    - dash-core-components==1.8.0
+    - dash==1.12.0
+    - dash-core-components==1.10.0
     - dash-daq==0.5.0
-    - dash-html-components==1.0.2
-    - dash-renderer==1.2.4
-    - dash-table==4.6.0
+    - dash-html-components==1.0.3
+    - dash-renderer==1.4.1
+    - dash-table==4.7.0
     - dataclasses==0.7
     - distro==1.5.0
     - dtale==1.8.1
+    - en-core-web-lg==2.2.5
     - enum-compat==0.0.3
     - fake-useragent==0.1.11
     - feedfinder2==0.0.4
@@ -495,6 +514,7 @@ dependencies:
     - imutils==0.5.3
     - jellyfish==0.6.1
     - jieba3k==0.35.1
+    - jupyter-dash==0.2.1
     - kombu==4.6.8
     - lz4==3.0.2
     - mockextras==1.0.2
@@ -507,9 +527,10 @@ dependencies:
     - parse==1.15.0
     - pdfkit==0.6.1
     - pdfminer-six==20200517
-    - plotly==4.5.4
+    - plotly==4.8.0
     - plotly-express==0.4.1
     - progressbar==2.5
+    - progressbar2==3.38.0
     - pycryptodome==3.9.7
     - pyee==7.0.2
     - pyemd==0.5.1
@@ -537,10 +558,10 @@ dependencies:
     - tinysegmenter==0.3
     - tldextract==2.2.2
     - tokenizers==0.7.0
-    - transformers==2.9.1
+    - transformers==2.10.0
     - twython==3.8.2
     - tzlocal==2.1
-    - vadersentiment==3.3.1
+    - vadersentiment==3.3.2
     - vine==1.3.0
     - w3lib==1.22.0
     - websocket-client==0.57.0
@@ -548,3 +569,5 @@ dependencies:
     - wordcloud==1.7.0
     - yarl==1.4.2
     - yfinance==0.1.54
+prefix: C:\Anaconda3\envs\py36class
+

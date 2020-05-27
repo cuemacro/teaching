@@ -70,7 +70,13 @@ def strip_input_code_from_ipynb(input_file_list):
 
                     if len(pot_str) >= 1:
                         if '#' == pot_str[0]:
-                            new_source.append(nb['cells'][i]['source'][j])
+                            try:
+                                pot2 = pot_str[1]
+                            except:
+                                pot2 = ''
+
+                            if pot2 != '#':
+                                new_source.append(nb['cells'][i]['source'][j])
 
                         # print(nb['cells'][i]['source'][j])
 

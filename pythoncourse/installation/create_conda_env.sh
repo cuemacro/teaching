@@ -30,7 +30,8 @@ conda install pytorch torchvision cpuonly -c pytorch --yes
 conda install -c conda-forge \
   jupyter_contrib_nbextensions jupyter_nbextensions_configurator \
   redis-py python-blosc pathos graphviz python-graphviz textblob \
-  vaex pyspark=2.4.0 koalas \
+  vaex-core vaex-viz vaex-jupyter vaex-arrow vaex-server vaex-hdf5 vaex-astro vaex-distributed \
+  pyspark=2.4.0 koalas \
   spacy fastparquet python-snappy nodejs pystan fbprophet setuptools-git \
   vispy datashader pyproj holoviews streamz quandl bqplot opencv s3fs \
   --yes
@@ -48,8 +49,8 @@ pip install arctic==1.79.2 \
    textacy==0.8.0 \
    transformers pytesseract cmdstanpy==0.4 tabula-py==1.4.3 \
    cvlib \
-   cufflinks==0.17 plotly_express==0.4.1 \
-        dash==1.9.0 dash-html-components==1.0.2 dash-core-components==1.8.0 plotly==4.5.4 dash-table==4.6.0 dtale==1.8.1 \
+   cufflinks==0.17.3 plotly==4.8.0 \
+        dash==1.12.0 dash-html-components==1.0.3 dash-core-components==1.10.0 dash-table==4.7.0 jupyter-dash==0.2.1 dtale==1.8.1 progressbar2==3.38.0 \
    finmarketpy chartpy findatapy \
    modin==0.5.4
 
