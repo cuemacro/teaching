@@ -61,6 +61,8 @@ REM Jupyter libraries
 call jupyter contrib nbextension install --user
 call jupyter nbextension enable execute_time/ExecuteTime
 call jupyter-nbextension install rise --py --sys-prefix
+call jupyter nbextension install --sys-prefix --symlink --py jupyter_dash
+call jupyter nbextension enable --py jupyter_dash
 call jupyter labextension install @jupyter-widgets/jupyterlab-manager --no-build
 call jupyter labextension install plotlywidget --no-build
 call jupyter labextension install jupyterlab-plotly --no-build

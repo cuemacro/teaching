@@ -71,6 +71,9 @@ conda install -c conda-forge pyarrow=0.17.1 --yes
 jupyter contrib nbextension install --user # to activate js on Jupyter
 jupyter nbextension enable execute_time/ExecuteTime
 jupyter-nbextension install rise --py --sys-prefix
+jupyter nbextension install --sys-prefix --symlink --py jupyter_dash
+jupyter nbextension enable --py jupyter_dash
+
 jupyter labextension install @jupyter-widgets/jupyterlab-manager --no-build
 jupyter labextension install plotlywidget --no-build
 jupyter labextension install jupyterlab-plotly --no-build

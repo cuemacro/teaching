@@ -594,5 +594,4 @@ dependencies:
     - wordcloud==1.7.0
     - yarl==1.4.2
     - yfinance==0.1.54
-prefix: /home/tcapyuser/anaconda3/envs/py36class
 
