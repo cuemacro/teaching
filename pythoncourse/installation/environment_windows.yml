@@ -104,7 +104,7 @@ dependencies:
   - google-auth=1.14.1=py_0
   - google-auth-oauthlib=0.4.1=py_2
   - google-pasta=0.2.0=py_0
-  - graphviz=2.38.0=h6538335_1011
+  - graphviz=2.38=hfd603c8_2
   - greenlet=0.4.15=py36hfa6e2cd_0
   - grpc-cpp=1.29.0=h7c6d948_0
   - grpcio=1.27.2=py36h351948d_0
@@ -270,8 +270,8 @@ dependencies:
   - parquet-cpp=1.5.1=2
   - parso=0.5.2=py_0
   - partd=1.1.0=py_0
-  - path=13.1.0=py36_0
-  - path.py=12.4.0=0
+  - path=13.2.0=py36_0
+  - path.py=12.0.2=py_0
   - pathlib2=2.3.5=py36_0
   - pathos=0.2.5=py_0
   - pathtools=0.1.2=py_1
@@ -339,7 +339,7 @@ dependencies:
   - python=3.6.10=h9f7ef89_2
   - python-blosc=1.9.1=py36h59272d7_0
   - python-dateutil=2.8.1=py_0
-  - python-graphviz=0.14=pyh9f0ad1d_0
+  - python-graphviz=0.14=py_0
   - python-jsonrpc-server=0.3.4=py_0
   - python-language-server=0.31.9=py36_0
   - python-libarchive-c=2.9=py_0
@@ -483,6 +483,7 @@ dependencies:
     - brotli==1.0.7
     - bs4==0.0.1
     - celery==4.4.0
+    - chart-studio==1.1.0
     - chartpy==0.1.6
     - cmdstanpy==0.4.0
     - colorlover==0.3.0

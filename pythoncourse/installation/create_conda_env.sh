@@ -18,9 +18,9 @@ source activate py36class
 # Install Tensorflow, PyTorch and Anaconda (lots of pacakged)
 # Pandas 0.24.2 is needed for some packages and scikit-learn 0.20.2
 # only if you have GPU below 2 lines instead of CPU versions
-# conda install anaconda tensorflow-gpu=2.1.0 anaconda pandas=0.24.2 scikit-learn=0.20.2 --yes
+# conda install anaconda tensorflow-gpu=2.1.0 anaconda pandas=0.24.2 scikit-learn=0.20.2 graphviz python-graphviz --yes
 # conda install pytorch torchvision cudatoolkit=10.1 -c pytorch --yes
-conda install anaconda tensorflow=2.1.0 anaconda pandas=0.24.2 scikit-learn=0.20.2 --yes
+conda install anaconda tensorflow=2.1.0 anaconda pandas=0.24.2 scikit-learn=0.20.2 graphviz python-graphviz --yes
 conda install pytorch torchvision cpuonly -c pytorch --yes
 
 # OpenCV and PyArrow need to be installed earlier
@@ -28,11 +28,11 @@ conda install -c conda-forge pyarrow=0.17.1 opencv --yes
 
 # xlwings only works for Mac
 conda install -c conda-forge xlwings=0.19.4 --yes
-#vaex-core vaex-viz vaex-jupyter vaex-arrow vaex-server vaex-hdf5 vaex-astro vaex-distributed vaex-ml \
+
 # Install from conda-forge (pyarrow is a newer version!)
 conda install -c conda-forge \
   jupyter_contrib_nbextensions jupyter_nbextensions_configurator \
-  redis-py python-blosc pathos graphviz python-graphviz textblob \
+  redis-py python-blosc pathos textblob \
   vaex \
   spacy fastparquet python-snappy nodejs pystan fbprophet setuptools-git \
   pyspark=2.4.0 koalas \
@@ -54,7 +54,7 @@ pip install arctic==1.79.2 \
    transformers pytesseract cmdstanpy==0.4 tabula-py==1.4.3 \
    cvlib \
    cufflinks==0.17.3 plotly==4.8.0 \
-        dash==1.12.0 dash-html-components==1.0.3 dash-core-components==1.10.0 dash-table==4.7.0 jupyter-dash==0.2.1 \
+        dash==1.12.0 dash-html-components==1.0.3 dash-core-components==1.10.0 dash-table==4.7.0 jupyter-dash==0.2.1 chart_studio==1.1.0 \
         dtale==1.8.1 progressbar2==3.38.0 \
    finmarketpy chartpy findatapy
 

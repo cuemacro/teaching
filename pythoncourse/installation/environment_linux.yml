@@ -344,7 +344,7 @@ dependencies:
   - python=3.6.10=hcf32534_1
   - python-blosc=1.9.1=py36h830a2c2_0
   - python-dateutil=2.8.1=py_0
-  - python-graphviz=0.14=pyh9f0ad1d_0
+  - python-graphviz=0.14=py_0
   - python-jsonrpc-server=0.3.4=py_0
   - python-language-server=0.31.9=py36_0
   - python-libarchive-c=2.9=py_0
@@ -497,6 +497,7 @@ dependencies:
     - brotli==1.0.7
     - bs4==0.0.1
     - celery==4.4.0
+    - chart-studio==1.1.0
     - chartpy==0.1.6
     - cmdstanpy==0.4.0
     - colorlover==0.3.0
