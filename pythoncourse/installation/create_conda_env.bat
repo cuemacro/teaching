@@ -28,7 +28,7 @@ REM Install from conda-forge (pyarrow is a newer version!)
 call conda install -c conda-forge ^
   jupyter_contrib_nbextensions jupyter_nbextensions_configurator ^
   redis-py python-blosc pathos graphviz python-graphviz textblob ^
-  vaex-core vaex-viz vaex-jupyter vaex-arrow vaex-server vaex-hdf5 vaex-astro vaex-distributed ^
+  vaex ^
   pyspark=2.4.0 koalas ^
   spacy fastparquet python-snappy nodejs pystan fbprophet setuptools-git ^
   vispy datashader pyproj holoviews streamz quandl bqplot blpapi ^

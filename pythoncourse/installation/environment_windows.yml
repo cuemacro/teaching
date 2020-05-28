@@ -270,8 +270,8 @@ dependencies:
   - parquet-cpp=1.5.1=2
   - parso=0.5.2=py_0
   - partd=1.1.0=py_0
-  - path=13.2.0=py36_0
-  - path.py=12.0.2=py_0
+  - path=13.1.0=py36_0
+  - path.py=12.4.0=0
   - pathlib2=2.3.5=py36_0
   - pathos=0.2.5=py_0
   - pathtools=0.1.2=py_1
@@ -434,12 +434,13 @@ dependencies:
   - ujson=1.35=py36hfa6e2cd_0
   - unicodecsv=0.14.1=py36h6450c06_0
   - urllib3=1.25.8=py36_0
+  - vaex=2.6.0=pyh9f0ad1d_0
   - vaex-arrow=0.5.0=pyh9f0ad1d_0
   - vaex-astro=0.7.0=pyh9f0ad1d_0
   - vaex-core=2.0.1=py36hcc50265_0
-  - vaex-distributed=0.3.0=py_0
   - vaex-hdf5=0.6.0=pyh9f0ad1d_0
   - vaex-jupyter=0.5.0=pyh9f0ad1d_0
+  - vaex-ml=0.9.0=pyh9f0ad1d_0
   - vaex-server=0.3.0=pyh9f0ad1d_0
   - vaex-viz=0.4.0=pyh9f0ad1d_0
   - vc=14.1=h0510ff6_4

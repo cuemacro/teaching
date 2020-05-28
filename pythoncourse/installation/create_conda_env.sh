@@ -28,12 +28,12 @@ conda install -c conda-forge pyarrow=0.17.1 opencv --yes
 
 # xlwings only works for Mac
 conda install -c conda-forge xlwings=0.19.4 --yes
-
+#vaex-core vaex-viz vaex-jupyter vaex-arrow vaex-server vaex-hdf5 vaex-astro vaex-distributed vaex-ml \
 # Install from conda-forge (pyarrow is a newer version!)
 conda install -c conda-forge \
   jupyter_contrib_nbextensions jupyter_nbextensions_configurator \
   redis-py python-blosc pathos graphviz python-graphviz textblob \
-  vaex-core vaex-viz vaex-jupyter vaex-arrow vaex-server vaex-hdf5 vaex-astro vaex-distributed \
+  vaex \
   spacy fastparquet python-snappy nodejs pystan fbprophet setuptools-git \
   pyspark=2.4.0 koalas \
   vispy datashader pyproj holoviews streamz quandl bqplot \
