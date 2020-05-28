@@ -13,7 +13,7 @@ call conda activate py36class
 REM Install Tensorflow, PyTorch and Anaconda (lots of pacakged)
 REM Pandas 0.24.2 is needed for some packages and scikit-learn 0.20.2
 REM only if you have GPU below 2 lines instead of CPU versions
-REM conda install tensorflow-gpu=2.1.0 anaconda pandas=0.24.2 scikit-learn=0.20.2 --yes
+REM conda install anaconda tensorflow-gpu=2.1.0 anaconda pandas=0.24.2 scikit-learn=0.20.2 --yes
 REM conda install pytorch torchvision cudatoolkit=10.1 -c pytorch --yes
 call conda install anaconda tensorflow=2.1.0 anaconda pandas=0.24.2 scikit-learn=0.20.2 --yes
 call conda install pytorch torchvision cpuonly -c pytorch --yes

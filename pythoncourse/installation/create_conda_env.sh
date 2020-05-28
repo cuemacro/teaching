@@ -18,7 +18,7 @@ source activate py36class
 # Install Tensorflow, PyTorch and Anaconda (lots of pacakged)
 # Pandas 0.24.2 is needed for some packages and scikit-learn 0.20.2
 # only if you have GPU below 2 lines instead of CPU versions
-# conda install tensorflow-gpu=2.1.0 anaconda pandas=0.24.2 scikit-learn=0.20.2 --yes
+# conda install anaconda tensorflow-gpu=2.1.0 anaconda pandas=0.24.2 scikit-learn=0.20.2 --yes
 # conda install pytorch torchvision cudatoolkit=10.1 -c pytorch --yes
 conda install anaconda tensorflow=2.1.0 anaconda pandas=0.24.2 scikit-learn=0.20.2 --yes
 conda install pytorch torchvision cpuonly -c pytorch --yes
