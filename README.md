@@ -19,6 +19,8 @@ https://nbviewer.jupyter.org/github/cuemacro/teaching/blob/master/pythoncourse/i
 # Coding log
 
 * 27 May 2020
+    * Updated Anaconda installation files (speeded up, removed modin)
+* 27 May 2020
     * Updated Anaconda installation files (new Plotly version)
     * Added different filter for removing comments in Jupyter notebook
 * 21 May 2020
