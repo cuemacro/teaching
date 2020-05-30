@@ -18,6 +18,8 @@ https://nbviewer.jupyter.org/github/cuemacro/teaching/blob/master/pythoncourse/i
 
 # Coding log
 
+* 30 May 2020
+    * Added pyLDAvis to Anaconda installation files
 * 27 May 2020
     * Updated Anaconda installation files (speeded up, removed modin)
 * 27 May 2020

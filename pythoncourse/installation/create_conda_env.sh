@@ -56,7 +56,7 @@ pip install arctic==1.79.2 \
    cufflinks==0.17.3 plotly==4.8.0 \
         dash==1.12.0 dash-html-components==1.0.3 dash-core-components==1.10.0 dash-table==4.7.0 jupyter-dash==0.2.1 chart_studio==1.1.0 \
         dtale==1.8.1 progressbar2==3.38.0 \
-   finmarketpy chartpy findatapy
+   finmarketpy chartpy findatapy pyldavis
 
 # To be able to plot Plotly into PNG or JPG
 conda install -c plotly plotly-orca --yes
