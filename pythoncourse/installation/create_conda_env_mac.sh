@@ -8,19 +8,21 @@ conda update -n base -c defaults conda --yes
 # conda config --set allow_conda_downgrades true
 # conda install conda=4.6.11
 
+conda activate
 source activate
 
 # Remove any existing environment called py36class, and create a py36class with anaconda packages
 conda remove -n py36class --all --yes
 conda create -n py36class python=3.6
+conda activate py36class
 source activate py36class
 
 # Install Tensorflow, PyTorch and Anaconda (lots of pacakged)
 # Pandas 0.24.2 is needed for some packages and scikit-learn 0.20.2
-# only if you have GPU below 2 lines instead of CPU versions
-# conda install anaconda tensorflow-gpu=2.1.0 anaconda pandas=0.24.2 scikit-learn=0.20.2 graphviz python-graphviz --yes
+# only if you have GPU below 2 lines instead of CPU versions (although this hasn't been tested on Mac)
+# conda install anaconda tensorflow-gpu=2.0.0 anaconda pandas=0.24.2 scikit-learn=0.20.2 graphviz python-graphviz --yes
 # conda install pytorch torchvision cudatoolkit=10.1 -c pytorch --yes
-conda install anaconda tensorflow=2.1.0 anaconda pandas=0.24.2 scikit-learn=0.20.2 graphviz python-graphviz --yes
+conda install anaconda tensorflow=2.0.0 anaconda pandas=0.24.2 scikit-learn=0.20.2 graphviz python-graphviz --yes
 conda install pytorch torchvision cpuonly -c pytorch --yes
 
 # OpenCV and PyArrow need to be installed earlier

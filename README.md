@@ -19,7 +19,7 @@ https://nbviewer.jupyter.org/github/cuemacro/teaching/blob/master/pythoncourse/i
 # Coding log
 
 * 04 Jun 2020
-    * Added Mac conda environment
+    * Added Mac conda environment (and installation)
 * 30 May 2020
     * Added pyLDAvis to Anaconda installation files
 * 27 May 2020

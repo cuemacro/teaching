@@ -8,11 +8,13 @@ conda update -n base -c defaults conda --yes
 # conda config --set allow_conda_downgrades true
 # conda install conda=4.6.11
 
+conda activate
 source activate
 
 # Remove any existing environment called py36class, and create a py36class with anaconda packages
 conda remove -n py36class --all --yes
 conda create -n py36class python=3.6
+conda activate py36class
 source activate py36class
 
 # Install Tensorflow, PyTorch and Anaconda (lots of pacakged)
