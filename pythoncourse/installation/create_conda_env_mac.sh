@@ -64,7 +64,6 @@ conda install -c plotly plotly-orca --yes
 # Note that modin may not be compatible with other libraries, so it is recommended
 # you install it in its own environment if you do want to use it
 # pip install modin==0.5.4
-
 # conda install -c conda-forge pyarrow=0.17.1 --yes
 
 # GPU libraries for working with DataFrames
