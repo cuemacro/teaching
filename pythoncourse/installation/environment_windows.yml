@@ -36,10 +36,10 @@ dependencies:
   - blas=1.0=mkl
   - bleach=3.1.4=py_0
   - blinker=1.4=py36_0
-  - blosc=1.18.1=h6538335_0
+  - blosc=1.15.0=h7bd577a_0
   - blpapi=3.14.0=py36_blpapicpp3.14.3.1_0
   - bokeh=2.0.2=py36_0
-  - boost-cpp=1.72.0=h0caebb8_0
+  - boost-cpp=1.72.0=h2ba7cf6_1
   - boto=2.49.0=py36_0
   - boto3=1.9.66=py36_0
   - botocore=1.12.189=py_0
@@ -72,8 +72,8 @@ dependencies:
   - cymem=2.0.3=py36hbd05846_1
   - cython-blis=0.4.1=py36h68a101e_1
   - cytoolz=0.10.1=py36he774522_0
-  - dask=2.17.0=py_0
-  - dask-core=2.17.0=py_0
+  - dask=2.17.2=py_0
+  - dask-core=2.17.2=py_0
   - datashader=0.10.0=py_0
   - datashape=0.5.4=py_1
   - decorator=4.4.2=py_0
@@ -93,7 +93,7 @@ dependencies:
   - flask=1.1.2=py_0
   - freetype=2.9.1=ha9979f8_1
   - freetype-py=2.1.0.post1=py_0
-  - fsspec=0.7.1=py_0
+  - fsspec=0.7.4=py_0
   - future=0.18.2=py36_0
   - gast=0.2.2=py36_0
   - get_terminal_size=1.0.0=h38e98db_0
@@ -146,7 +146,7 @@ dependencies:
   - jinja2=2.11.2=py_0
   - jmespath=0.10.0=pyh9f0ad1d_0
   - joblib=0.15.1=py_0
-  - jpeg=9c=hfa6e2cd_1001
+  - jpeg=9d=he774522_0
   - json5=0.9.4=py_0
   - jsonschema=3.2.0=py36_0
   - jupyter=1.0.0=py36_7
@@ -181,11 +181,11 @@ dependencies:
   - libopencv=4.2.0=py36_6
   - libpng=1.6.37=h2a8f88b_0
   - libprotobuf=3.11.4=h7bd577a_0
-  - libpython=2.0=py36_0
+  - libpython=2.0=py36h9f0ad1d_0
   - libsodium=1.0.16=h9d3ae62_0
   - libspatialindex=1.9.3=h33f27b4_0
   - libssh2=1.9.0=h7a1dbc1_1
-  - libtiff=4.1.0=h885aae3_6
+  - libtiff=4.1.0=h56a325e_1
   - libwebp=1.0.2=hfa6e2cd_5
   - libxml2=2.9.9=h464c3ec_0
   - libxslt=1.1.33=h579f668_0
@@ -193,7 +193,7 @@ dependencies:
   - locket=0.2.0=py36hfed976d_1
   - lunarcalendar=0.0.9=py_0
   - lxml=4.5.0=py36h1350720_0
-  - lz4-c=1.9.2=h62dcd97_1
+  - lz4-c=1.9.2=h62dcd97_0
   - lzo=2.10=he774522_2
   - m2w64-binutils=2.25.1=5
   - m2w64-bzip2=1.0.6=6
@@ -246,7 +246,7 @@ dependencies:
   - networkx=2.4=py_0
   - ninja=1.9.0=py36h74a9793_0
   - nltk=3.4.5=py36_0
-  - nodejs=14.3.0=0
+  - nodejs=14.4.0=0
   - nose=1.3.7=py36_2
   - notebook=6.0.3=py36_0
   - numba=0.49.1=py36h47e9c7a_0
@@ -270,8 +270,8 @@ dependencies:
   - parquet-cpp=1.5.1=2
   - parso=0.5.2=py_0
   - partd=1.1.0=py_0
-  - path=13.2.0=py36_0
-  - path.py=12.0.2=py_0
+  - path=13.1.0=py36_0
+  - path.py=12.4.0=0
   - pathlib2=2.3.5=py36_0
   - pathos=0.2.5=py_0
   - pathtools=0.1.2=py_1
@@ -293,8 +293,8 @@ dependencies:
   - preshed=3.0.2=py36hbd05846_2
   - proj=7.0.0=haa36216_3
   - prometheus_client=0.7.1=py_0
-  - prompt-toolkit=3.0.4=py_0
-  - prompt_toolkit=3.0.4=0
+  - prompt-toolkit=3.0.5=py_0
+  - prompt_toolkit=3.0.5=0
   - protobuf=3.11.4=py36h33f27b4_0
   - psutil=5.7.0=py36he774522_0
   - py=1.8.1=py_0
@@ -328,7 +328,7 @@ dependencies:
   - pysocks=1.7.1=py36_0
   - pyspark=2.4.0=py36_1000
   - pystan=2.19.1.1=py36h12199cf_1
-  - pytables=3.6.1=py36h1da0976_0
+  - pytables=3.5.1=py36h1da0976_0
   - pytest=5.4.2=py36_0
   - pytest-arraydiff=0.3=py36h39e3cac_0
   - pytest-astropy=0.8.0=py_0
@@ -337,7 +337,7 @@ dependencies:
   - pytest-openfiles=0.5.0=py_0
   - pytest-remotedata=0.3.2=py36_0
   - python=3.6.10=h9f7ef89_2
-  - python-blosc=1.9.1=py36h59272d7_0
+  - python-blosc=1.7.0=py36he774522_0
   - python-dateutil=2.8.1=py_0
   - python-graphviz=0.14=py_0
   - python-jsonrpc-server=0.3.4=py_0
@@ -363,7 +363,7 @@ dependencies:
   - qtpy=1.9.0=py_0
   - quandl=3.4.6=py36_0
   - re2=2020.05.01=h33f27b4_1
-  - redis-py=3.5.2=pyh9f0ad1d_0
+  - redis-py=3.5.3=pyh9f0ad1d_0
   - requests=2.23.0=py36_0
   - requests-oauthlib=1.3.0=py_0
   - rope=0.17.0=py_0
@@ -377,19 +377,19 @@ dependencies:
   - scipy=1.4.1=py36h9439919_0
   - seaborn=0.10.1=py_0
   - send2trash=1.5.0=py36_0
-  - setuptools=46.4.0=py36_0
+  - setuptools=47.1.1=py36_0
   - setuptools-git=1.2=py_1
   - simplegeneric=0.8.1=py36_2
   - singledispatch=3.4.0.3=py36h17d0c80_0
   - sip=4.19.8=py36h6538335_0
-  - six=1.14.0=py36_0
+  - six=1.15.0=py_0
   - snappy=1.1.8=he025d50_1
   - snowballstemmer=2.0.0=py_0
   - sortedcollections=1.1.2=py36_0
   - sortedcontainers=2.1.0=py36_0
   - soupsieve=2.0.1=py_0
   - spacy=2.2.4=py36hdbb1a49_1
-  - sphinx=3.0.3=py_0
+  - sphinx=3.0.4=py_0
   - sphinxcontrib=1.0=py36_1
   - sphinxcontrib-applehelp=1.0.2=py_0
   - sphinxcontrib-devhelp=1.0.2=py_0
@@ -434,14 +434,14 @@ dependencies:
   - ujson=1.35=py36hfa6e2cd_0
   - unicodecsv=0.14.1=py36h6450c06_0
   - urllib3=1.25.8=py36_0
-  - vaex=2.6.0=pyh9f0ad1d_0
-  - vaex-arrow=0.5.0=pyh9f0ad1d_0
+  - vaex=3.0.0=pyh9f0ad1d_0
+  - vaex-arrow=0.5.1=pyh9f0ad1d_0
   - vaex-astro=0.7.0=pyh9f0ad1d_0
-  - vaex-core=2.0.1=py36hcc50265_0
+  - vaex-core=2.0.2=py36hcc50265_0
   - vaex-hdf5=0.6.0=pyh9f0ad1d_0
-  - vaex-jupyter=0.5.0=pyh9f0ad1d_0
+  - vaex-jupyter=0.5.1.post0=pyh9f0ad1d_0
   - vaex-ml=0.9.0=pyh9f0ad1d_0
-  - vaex-server=0.3.0=pyh9f0ad1d_0
+  - vaex-server=0.3.1=pyh9f0ad1d_0
   - vaex-viz=0.4.0=pyh9f0ad1d_0
   - vc=14.1=h0510ff6_4
   - vispy=0.6.4=py36hbd37c6d_1
@@ -470,11 +470,11 @@ dependencies:
   - zict=2.0.0=py_0
   - zipp=3.1.0=py_0
   - zlib=1.2.11=h62dcd97_4
-  - zstd=1.4.4=h9f78265_3
+  - zstd=1.4.4=ha9fde0e_3
   - pip:
     - aiohttp==3.6.2
     - alpha-vantage==2.2.0
-    - amqp==2.5.2
+    - amqp==2.6.0
     - ansi2html==1.5.2
     - appdirs==1.4.4
     - arctic==1.79.2
@@ -501,7 +501,6 @@ dependencies:
     - dataclasses==0.7
     - distro==1.5.0
     - dtale==1.8.1
-    - en-core-web-lg==2.2.5
     - enum-compat==0.0.3
     - fake-useragent==0.1.11
     - feedfinder2==0.0.4
@@ -518,7 +517,7 @@ dependencies:
     - jellyfish==0.6.1
     - jieba3k==0.35.1
     - jupyter-dash==0.2.1
-    - kombu==4.6.8
+    - kombu==4.6.10
     - lz4==3.0.2
     - mockextras==1.0.2
     - msgpack-python==0.5.6
@@ -561,7 +560,7 @@ dependencies:
     - tinysegmenter==0.3
     - tldextract==2.2.2
     - tokenizers==0.7.0
-    - transformers==2.10.0
+    - transformers==2.11.0
     - twython==3.8.2
     - tzlocal==2.1
     - vadersentiment==3.3.2
