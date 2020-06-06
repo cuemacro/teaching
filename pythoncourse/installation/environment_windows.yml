@@ -41,8 +41,8 @@ dependencies:
   - bokeh=2.0.2=py36_0
   - boost-cpp=1.72.0=h2ba7cf6_1
   - boto=2.49.0=py36_0
-  - boto3=1.9.66=py36_0
-  - botocore=1.12.189=py_0
+  - boto3=1.9.191=py_0
+  - botocore=1.12.191=py_0
   - bottleneck=1.3.2=py36h2a96729_0
   - bqplot=0.12.12=pyh9f0ad1d_0
   - branca=0.3.1=py_0
@@ -177,7 +177,7 @@ dependencies:
   - liblapack=3.8.0=8_h8933c1f_netlib
   - liblapacke=3.8.0=8_h8933c1f_netlib
   - liblief=0.10.1=ha925a31_0
-  - libnetcdf=4.7.3=h1302dcc_0
+  - libnetcdf=4.6.2=h396784b_1001
   - libopencv=4.2.0=py36_6
   - libpng=1.6.37=h2a8f88b_0
   - libprotobuf=3.11.4=h7bd577a_0
@@ -241,8 +241,7 @@ dependencies:
   - murmurhash=1.0.0=py36hbd05846_0
   - nbconvert=5.6.1=py36_0
   - nbformat=5.0.6=py_0
-  - nest-asyncio=1.3.3=py_0
-  - netcdf4=1.5.3=py36h012c1a0_0
+  - netcdf4=1.5.1.2=py36h2b7c3b1_0
   - networkx=2.4=py_0
   - ninja=1.9.0=py36h74a9793_0
   - nltk=3.4.5=py36_0
@@ -270,8 +269,8 @@ dependencies:
   - parquet-cpp=1.5.1=2
   - parso=0.5.2=py_0
   - partd=1.1.0=py_0
-  - path=13.1.0=py36_0
-  - path.py=12.4.0=0
+  - path=13.2.0=py36_0
+  - path.py=12.0.2=py_0
   - pathlib2=2.3.5=py36_0
   - pathos=0.2.5=py_0
   - pathtools=0.1.2=py_1
@@ -283,7 +282,7 @@ dependencies:
   - pillow=7.1.2=py36hcc1f983_0
   - pip=20.0.2=py36_3
   - pkginfo=1.5.0.1=py36_0
-  - plac=0.9.6=py36_0
+  - plac=0.9.6=py_1
   - plotly-orca=1.3.1=1
   - pluggy=0.13.1=py36_0
   - ply=3.11=py36_0
@@ -300,7 +299,7 @@ dependencies:
   - py=1.8.1=py_0
   - py-lief=0.10.1=py36ha925a31_0
   - py-opencv=4.2.0=py36h95af2a2_6
-  - py4j=0.10.8.1=pyh9f0ad1d_1
+  - py4j=0.10.7=py_1
   - pyarrow=0.17.1=py36h1234567_3_cpu
   - pyasn1=0.4.8=py_0
   - pyasn1-modules=0.2.7=py_0
@@ -326,7 +325,7 @@ dependencies:
   - pyreadline=2.1=py36_1
   - pyrsistent=0.16.0=py36he774522_0
   - pysocks=1.7.1=py36_0
-  - pyspark=2.4.0=py36_1000
+  - pyspark=2.4.1=py_0
   - pystan=2.19.1.1=py36h12199cf_1
   - pytables=3.5.1=py36h1da0976_0
   - pytest=5.4.2=py36_0
@@ -337,7 +336,7 @@ dependencies:
   - pytest-openfiles=0.5.0=py_0
   - pytest-remotedata=0.3.2=py36_0
   - python=3.6.10=h9f7ef89_2
-  - python-blosc=1.7.0=py36he774522_0
+  - python-blosc=1.7.0=py36h6538335_1000
   - python-dateutil=2.8.1=py_0
   - python-graphviz=0.14=py_0
   - python-jsonrpc-server=0.3.4=py_0
@@ -371,7 +370,7 @@ dependencies:
   - rtree=0.9.4=py36h21ff451_1
   - ruamel_yaml=0.15.87=py36he774522_0
   - s3fs=0.2.2=py_0
-  - s3transfer=0.1.13=py36_1001
+  - s3transfer=0.2.1=py36_0
   - scikit-image=0.16.2=py36h47e9c7a_0
   - scikit-learn=0.20.2=py36h343c172_0
   - scipy=1.4.1=py36h9439919_0
@@ -434,15 +433,15 @@ dependencies:
   - ujson=1.35=py36hfa6e2cd_0
   - unicodecsv=0.14.1=py36h6450c06_0
   - urllib3=1.25.8=py36_0
-  - vaex=3.0.0=pyh9f0ad1d_0
-  - vaex-arrow=0.5.1=pyh9f0ad1d_0
-  - vaex-astro=0.7.0=pyh9f0ad1d_0
-  - vaex-core=2.0.2=py36hcc50265_0
-  - vaex-hdf5=0.6.0=pyh9f0ad1d_0
-  - vaex-jupyter=0.5.1.post0=pyh9f0ad1d_0
-  - vaex-ml=0.9.0=pyh9f0ad1d_0
-  - vaex-server=0.3.1=pyh9f0ad1d_0
-  - vaex-viz=0.4.0=pyh9f0ad1d_0
+  - vaex=2.6.0=py_0
+  - vaex-arrow=0.4.2=py_1
+  - vaex-astro=0.6.1=py_1
+  - vaex-core=1.5.0=py36he350917_0
+  - vaex-hdf5=0.5.6=py_0
+  - vaex-jupyter=0.4.1=py_0
+  - vaex-ml=0.8.0=py_0
+  - vaex-server=0.2.1=py_0
+  - vaex-viz=0.3.8=py_1
   - vc=14.1=h0510ff6_4
   - vispy=0.6.4=py36hbd37c6d_1
   - vs2015_runtime=14.16.27012=hf0eaf9b_2
@@ -571,4 +570,5 @@ dependencies:
     - wordcloud==1.7.0
     - yarl==1.4.2
     - yfinance==0.1.54
+prefix: C:\Anaconda3\envs\py36class
 

@@ -35,11 +35,13 @@ conda install -c conda-forge xlwings=0.19.4 --yes
 conda install -c conda-forge \
   jupyter_contrib_nbextensions jupyter_nbextensions_configurator \
   redis-py python-blosc pathos textblob \
-  vaex \
+  vaex=2.6.0 \
   spacy fastparquet python-snappy nodejs pystan fbprophet setuptools-git \
   pyspark=2.4.0 koalas \
   vispy datashader pyproj holoviews streamz quandl bqplot \
   --yes
+
+# vaex-core vaex-viz vaex-jupyter vaex-arrow vaex-server vaex-hdf5 vaex-astro vaex-distributed vaex-ml
 
 # Install database
 # Install Celery

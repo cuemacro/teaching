@@ -1,5 +1,3 @@
-print('hello world!!!')
+print('hello world')
 
-print('Hello Mars!')
-
-print('Hello Jupyter')
+print('hello mars!')

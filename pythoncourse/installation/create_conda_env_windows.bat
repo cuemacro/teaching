@@ -28,11 +28,13 @@ REM Install from conda-forge (pyarrow is a newer version!)
 call conda install -c conda-forge ^
   jupyter_contrib_nbextensions jupyter_nbextensions_configurator ^
   redis-py python-blosc pathos textblob ^
-  vaex ^
-  pyspark=2.4.0 koalas ^
+  vaex=2.6.0 ^
+  pyspark=2.4.1 koalas ^
   spacy fastparquet python-snappy nodejs pystan fbprophet setuptools-git ^
   vispy datashader pyproj holoviews streamz quandl bqplot blpapi ^
   --yes
+
+REM vaex-core vaex-viz vaex-jupyter vaex-arrow vaex-server vaex-hdf5 vaex-astro vaex-distributed vaex-ml
 
 REM Install database
 REM Install Celery
@@ -49,8 +51,7 @@ call pip install arctic==1.79.2 ^
    cvlib ^
    cufflinks==0.17.3 plotly==4.8.0 ^
         dash==1.12.0 dash-html-components==1.0.3 dash-core-components==1.10.0 dash-table==4.7.0 jupyter-dash==0.2.1 chart_studio==1.1.0 ^
-        dtale==1.8.1 progressbar2==3.38.0 ^
-   finmarketpy chartpy findatapy pyldavis
+        dtale==1.8.1 progressbar2==3.38.0 finmarketpy chartpy findatapy pyldavis
 
 REM To be able to plot Plotly into PNG or JPG
 call conda install -c plotly plotly-orca --yes

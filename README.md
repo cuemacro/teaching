@@ -18,6 +18,8 @@ https://nbviewer.jupyter.org/github/cuemacro/teaching/blob/master/pythoncourse/i
 
 # Coding log
 
+* 07 Jun 2020
+    * Fixed Windows conda YML file (fixed vaex link), also updated Linux YML file
 * 04 Jun 2020
     * Added Mac conda environment (and installation)
 * 30 May 2020
