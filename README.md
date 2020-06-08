@@ -18,6 +18,8 @@ https://nbviewer.jupyter.org/github/cuemacro/teaching/blob/master/pythoncourse/i
 
 # Coding log
 
+* 08 Jun 2020
+    * Updated YML files for chartpy v0.1.8
 * 07 Jun 2020
     * Fixed Windows conda YML file (fixed vaex link), also updated Linux YML file
 * 04 Jun 2020
