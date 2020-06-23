@@ -18,6 +18,8 @@ https://nbviewer.jupyter.org/github/cuemacro/teaching/blob/master/pythoncourse/i
 
 # Coding log
 
+* 23 Jun 2020
+    * Updated Celery files and coronavirus notebook
 * 08 Jun 2020
     * Updated YML files for chartpy v0.1.8
 * 07 Jun 2020
