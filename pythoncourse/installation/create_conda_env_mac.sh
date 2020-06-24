@@ -63,7 +63,7 @@ pip install arctic==1.79.2 \
    finmarketpy chartpy findatapy pyldavis
 
 # To be able to plot Plotly into PNG or JPG
-conda install -c plotly plotly-orca --yes
+conda install -c plotly plotly-orca=1.3.1 --yes
 
 # Note that modin may not be compatible with other libraries, so it is recommended
 # you install it in its own environment if you do want to use it

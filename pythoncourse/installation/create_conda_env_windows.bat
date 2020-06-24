@@ -54,7 +54,7 @@ call pip install arctic==1.79.2 ^
         dtale==1.8.1 progressbar2==3.38.0 finmarketpy chartpy findatapy pyldavis
 
 REM To be able to plot Plotly into PNG or JPG
-call conda install -c plotly plotly-orca --yes
+call conda install -c plotly plotly-orca=1.3.1 --yes
 
 REM Jupyter libraries
 call jupyter contrib nbextension install --user
