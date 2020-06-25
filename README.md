@@ -18,6 +18,8 @@ https://nbviewer.jupyter.org/github/cuemacro/teaching/blob/master/pythoncourse/i
 
 # Coding log
 
+* 25 Jun 2020
+    * Added BAT file to start Excel/xlwings
 * 23 Jun 2020
     * Updated Celery files and coronavirus notebook
 * 08 Jun 2020
