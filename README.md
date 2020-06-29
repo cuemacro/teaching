@@ -14,10 +14,12 @@ https://nbviewer.jupyter.org/github/cuemacro/teaching/blob/master/pythoncourse/i
 # Jupyter notebooks on teaching
 
 * [Installing Anaconda Python and PyCharm (nbviewer link)](https://nbviewer.jupyter.org/github/cuemacro/teaching/blob/master/pythoncourse/installation/installing_anaconda_and_pycharm.ipynb) - how to install a Python environment for data analysis
-* [Coronavirus example (nbviewer link)](https://nbviewer.jupyter.org/github/cuemacro/teaching/blob/master/pythoncourse/installation/coronavirus_example.ipynb) - how to download case data for coronavirus and do basic analysis including charting
+* [Coronavirus example (nbviewer link)](https://nbviewer.jupyter.org/github/cuemacro/teaching/blob/master/pythoncourse/notebooks/coronavirus_example.ipynb) - how to download case data for coronavirus and do basic analysis including charting
 
 # Coding log
 
+* 29 Jun 2020
+    * Updated coronavirus path and tidied conda installation files
 * 25 Jun 2020
     * Added BAT file to start Excel/xlwings
 * 23 Jun 2020

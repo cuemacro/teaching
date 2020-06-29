@@ -10,11 +10,11 @@ call conda remove -n py36class --all --yes
 call conda create -n py36class python=3.6
 call conda activate py36class
 
-REM Install Tensorflow, PyTorch and Anaconda (lots of pacakged)
+REM Install Tensorflow, PyTorch and Anaconda (lots of packages)
 REM Pandas 0.24.2 is needed for some packages and scikit-learn 0.20.2
 REM only if you have GPU below 2 lines instead of CPU versions
-REM conda install anaconda tensorflow-gpu=2.1.0 anaconda pandas=0.24.2 scikit-learn=0.20.2 graphviz python-graphviz --yes
-REM conda install pytorch torchvision cudatoolkit=10.1 -c pytorch --yes
+REM call conda install anaconda tensorflow-gpu=2.1.0 anaconda pandas=0.24.2 scikit-learn=0.20.2 graphviz python-graphviz --yes
+REM call conda install pytorch torchvision cudatoolkit=10.1 -c pytorch --yes
 call conda install anaconda tensorflow=2.1.0 anaconda pandas=0.24.2 scikit-learn=0.20.2 graphviz python-graphviz --yes
 call conda install pytorch torchvision cpuonly -c pytorch --yes
 
@@ -51,7 +51,8 @@ call pip install arctic==1.79.2 ^
    cvlib ^
    cufflinks==0.17.3 plotly==4.8.0 ^
         dash==1.12.0 dash-html-components==1.0.3 dash-core-components==1.10.0 dash-table==4.7.0 jupyter-dash==0.2.1 chart_studio==1.1.0 ^
-        dtale==1.8.1 progressbar2==3.38.0 finmarketpy chartpy findatapy pyldavis
+        dtale==1.8.1 progressbar2==3.38.0 pyldavis ^
+   finmarketpy chartpy findatapy
 
 REM To be able to plot Plotly into PNG or JPG
 call conda install -c plotly plotly-orca=1.3.1 --yes
@@ -67,4 +68,3 @@ REM call jupyter labextension install plotlywidget --no-build
 REM call jupyter labextension install jupyterlab-plotly --no-build
 REM call jupyter labextension install bqplot --no-build
 REM call jupyter lab build
-

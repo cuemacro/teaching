@@ -17,7 +17,7 @@ conda create -n py36class python=3.6
 conda activate py36class
 source activate py36class
 
-# Install Tensorflow, PyTorch and Anaconda (lots of pacakged)
+# Install Tensorflow, PyTorch and Anaconda (lots of packages)
 # Pandas 0.24.2 is needed for some packages and scikit-learn 0.20.2
 # only if you have GPU below 2 lines instead of CPU versions
 # conda install anaconda tensorflow-gpu=2.1.0 anaconda pandas=0.24.2 scikit-learn=0.20.2 graphviz python-graphviz --yes
@@ -59,8 +59,8 @@ pip install arctic==1.79.2 \
    cvlib \
    cufflinks==0.17.3 plotly==4.8.0 \
         dash==1.12.0 dash-html-components==1.0.3 dash-core-components==1.10.0 dash-table==4.7.0 jupyter-dash==0.2.1 chart_studio==1.1.0 \
-        dtale==1.8.1 progressbar2==3.38.0 \
-   finmarketpy chartpy findatapy pyldavis
+        dtale==1.8.1 progressbar2==3.38.0 pyldavis \
+   finmarketpy chartpy findatapy
 
 # To be able to plot Plotly into PNG or JPG
 conda install -c plotly plotly-orca=1.3.1 --yes
