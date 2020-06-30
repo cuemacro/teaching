@@ -53,7 +53,7 @@ def strip_input_code_from_ipynb(input_file_list):
     input_file_list = _get_input_file_list(input_file_list)
 
     for input_file in input_file_list:
-        with open(input_file, 'r') as f:
+        with open(input_file, 'r', encoding="utf8") as f:
             contents = f.read()
 
         import json
