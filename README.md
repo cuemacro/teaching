@@ -18,6 +18,8 @@ https://nbviewer.jupyter.org/github/cuemacro/teaching/blob/master/pythoncourse/i
 
 # Coding log
 
+* 30 Jun 2020
+    * Added orca path on coronavirus notebook
 * 29 Jun 2020
     * Updated coronavirus path and tidied conda installation files
 * 25 Jun 2020

@@ -1,3 +1,1 @@
-print('hello world')
-
-print('hello mars!')
+print('Hello world')
