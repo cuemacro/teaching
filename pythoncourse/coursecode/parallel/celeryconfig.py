@@ -4,13 +4,13 @@ BROKER_URL = 'redis://localhost'
 CELERY_RESULT_BACKEND = 'redis://localhost'
 
 # from kombu import serialization
-# serialization.registry._decoders.("application/x-python-serialize")
+# serialization.registry._decoders("application/x-python-serialize")
 
 # the below should not need to be changed by nearly all users
-CELERY_EVENT_SERIALIZER = 'pickle'
-CELERY_ACCEPT_CONTENT = ['pickle'] #
-CELERY_TASK_SERIALIZER = 'pickle'
-CELERY_RESULT_SERIALIZER = 'pickle'
+CELERY_EVENT_SERIALIZER = 'json'
+CELERY_ACCEPT_CONTENT = ['json'] #
+CELERY_TASK_SERIALIZER = 'json'
+CELERY_RESULT_SERIALIZER = 'json'
 CELERY_HIJACK_ROOT_LOGGER = False
 CELERY_STORE_ERRORS_EVEN_IF_IGNORED = True
 CELERYD_MAX_TASKS_PER_CHILD = 50 # stop memory leaks, so restart workers after a 100 tasks

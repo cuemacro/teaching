@@ -13078,7 +13078,9 @@ div#notebook {
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <h1 id="Installing-Anaconda-and-PyCharm">Installing Anaconda and PyCharm<a class="anchor-link" href="#Installing-Anaconda-and-PyCharm">&#182;</a></h1><p>Saeed Amen - Copyright Cuemacro 2020 - <a href="https://www.cuemacro.com">https://www.cuemacro.com</a> - saeed@cuemacro.com</p>
-<p>In this notebook, we discuss how to install the Anaconda distribution of Python and other applications you need to run do development in Python, which will be useful for doing financial analysis in Python with libraries like finmarketpy. You can also down a lot of this material from <a href="https://github.com/cuemacro/teaching">https://github.com/cuemacro/teaching</a> - in particular the scripts for installing the conda environments. We'll also be installing a lot of other useful libraries for machine learning, natural language processing etc. We'll also make other suggestions so you can do financial data analysis, such as making sure that your firewalls allow access to sites like Quandl.</p>
+<p>In this notebook, we discuss how to install the Anaconda distribution of Python and other applications you need to run do development in Python, which will be useful for doing financial analysis in Python with libraries including the Cuemacro libraries, finmarketpy, findatapy and chartpy.</p>
+<p>You can also download a lot of this material from <a href="https://github.com/cuemacro/teaching">https://github.com/cuemacro/teaching</a> - in particular the scripts for installing the conda environments. We'll also be installing a lot of other useful libraries for machine learning, natural language processing etc.</p>
+<p>We'll also make other suggestions so you can do financial data analysis, such as making sure that your firewalls allow access to sites like Quandl.</p>
 
 </div>
 </div>
@@ -13091,7 +13093,7 @@ div#notebook {
 <li>Once you've done your Python installation (and have signed up for a Quandl account and API key for free), try running this code below to check. </li>
 <li>Your firewall should also allow you to have access to allow the downloading of packages via conda and pip (if it isn't then you can't do much else, although in some circumstances you might be able to change the pip download URL to a site that does work)</li>
 <li>If opening up firewalls is too much of an issue or you don't have admin rights to install Python locally, then one easier way to get started with Python for learning purposes, is to use something Azure Notebooks (see below). </li>
-<li>This will however, at the very least need the website <a href="https://notebooks.azure.com/">https://notebooks.azure.com/</a> to be accessible)</li>
+<li>This will however, at the very least need the website <a href="https://notebooks.azure.com/">https://notebooks.azure.com/</a> to be accessible</li>
 </ul>
 
 </div>
@@ -13188,10 +13190,10 @@ div#notebook {
 <li>Open up the Anaconda Prompt (should be in the Start Menu)</li>
 <li><p>In this prompt, your Anaconda folder will be on the path (ie. it will recognise where <code>conda</code> is installed etc.)</p>
 <ul>
-<li>Type in <code>conda activate</code> to exit the current conda environment, then <code>conda remove -n py36class --all --yes</code> to remove any existing environments called <code>py36class</code></li>
+<li>Type in <code>conda activate</code> to exit the current conda environment, then <code>conda remove -n py37class --all --yes</code> to remove any existing environments called <code>py37class</code></li>
 <li>Type in <code>conda env create -f environment_windows.yml</code> and press Enter</li>
 <li>Anaconda will then run all the necessary command to download the various packages above using conda and pip</li>
-<li>At the end of the process you'll have a Python 3.6 conda environment with the name 'py36class' which you can use, with all the packages you'll need for this course, such as pandas, numpy etc.</li>
+<li>At the end of the process you'll have a Python 3.7 conda environment with the name 'py37class' which you can use, with all the packages you'll need for this course, such as pandas, numpy etc.</li>
 <li>Note that you may need to put in the full path for wherever you downloaded the <code>environment_windows.yml</code> file or you can simply <code>cd</code> to that folder and then run the above conda command</li>
 </ul>
 </li>
@@ -13243,7 +13245,7 @@ div#notebook {
 <div class="text_cell_render border-box-sizing rendered_html">
 <h2 id="Installing-xlwings-addin-in-Excel-on-Windows-(or-Mac)">Installing xlwings addin in Excel on Windows (or Mac)<a class="anchor-link" href="#Installing-xlwings-addin-in-Excel-on-Windows-(or-Mac)">&#182;</a></h2><p>Both of the above should install the xlwings Python library. You also need to add the xlwings addin to Excel too. Instructions for this can be found at <a href="https://docs.xlwings.org/en/stable/addin.html">https://docs.xlwings.org/en/stable/addin.html</a> (xlwings is also supported on Excel for Mac, although the functionality may differ). It won't work on Linux, given there's no Linux version of Excel). Usually this will involve, closing Excel, then running the following commands in your Anaconda Prompt, before restarting Excel:</p>
 
-<pre><code>conda activate py36class
+<pre><code>conda activate py37class
 xlwings addin install</code></pre>
 
 </div>
@@ -13257,10 +13259,10 @@ xlwings addin install</code></pre>
 <li>Open up a terminal window (making sure that Anaconda is on your path) on Linux or Mac</li>
 <li><p>In this prompt, your Anaconda folder will be on the path (ie. it will recognise where <code>conda</code> is installed etc.)</p>
 <ul>
-<li>Type in <code>conda activate</code> to exit the current conda environment, then <code>conda remove -n py36class --all --yes</code> to remove any existing environments called <code>py36class</code></li>
+<li>Type in <code>conda activate</code> to exit the current conda environment, then <code>conda remove -n py37class --all --yes</code> to remove any existing environments called <code>py37class</code></li>
 <li>Type in <code>conda env create -f environment_linux.yml</code> and press Enter (or <code>conda env create -f environment_mac.yml</code> on Mac)</li>
 <li>Anaconda will then run all the necessary command to download the various packages above using conda and pip</li>
-<li>At the end of the process you'll have a Python 3.6 conda environment with the name 'py36class' which you can use, with all the packages you'll need for this course, such as pandas, numpy etc.</li>
+<li>At the end of the process you'll have a Python 3.6 conda environment with the name 'py37class' which you can use, with all the packages you'll need for this course, such as pandas, numpy etc.</li>
 <li>Note that you may need to put in the full path for wherever you downloaded the <code>environment_linux.yml</code> (or <code>environment_mac.yml</code>) file or you can simply <code>cd</code> to that folder and then run the above conda command</li>
 </ul>
 </li>
@@ -13341,10 +13343,10 @@ Anaconda)<ul>
 <li>You can download and install PyCharm Community from <a href="https://www.jetbrains.com/pycharm/download">https://www.jetbrains.com/pycharm/download</a></li>
 <li>There are versions for PyCharm for Windows, Linux and Mac operating systems.</li>
 <li>PyCharm IDE makes it easier to write and run Python code</li>
-<li>In File / Settings - you will likely need to set PyCharm to use your py36class environment, which is likely at the following locations<ul>
-<li>Windows: <code>C:\Users\&lt;your-username&gt;\Anaconda3\envs\py36class</code></li>
-<li>macOS: <code>/Users/&lt;your-username&gt;/anaconda3/envs/py36class</code></li>
-<li>Linux: <code>/home/&lt;your-username&gt;/anaconda3/envs/py36class</code></li>
+<li>In File / Settings - you will likely need to set PyCharm to use your py37class environment, which is likely at the following locations<ul>
+<li>Windows: <code>C:\Users\&lt;your-username&gt;\Anaconda3\envs\py37class</code></li>
+<li>macOS: <code>/Users/&lt;your-username&gt;/anaconda3/envs/py37class</code></li>
+<li>Linux: <code>/home/&lt;your-username&gt;/anaconda3/envs/py37class</code></li>
 </ul>
 </li>
 <li>PyCharm will create a workspace for you, where you can place your code</li>
@@ -13396,35 +13398,14 @@ Anaconda)<ul>
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># A selection of libraries (note: this isn&#39;t everything, you may need to &quot;pip&quot; install extra libraries)</span>
 <span class="o">!</span>pip install <span class="err">\</span>
-  <span class="n">redis</span><span class="o">==</span><span class="mf">3.3</span><span class="o">.</span><span class="mi">7</span> <span class="n">pathos</span> <span class="n">pyarrow</span><span class="o">==</span><span class="mf">0.16</span><span class="o">.</span><span class="mi">0</span> <span class="n">pandas</span><span class="o">==</span><span class="mf">0.24</span><span class="o">.</span><span class="mi">2</span> <span class="n">wordcloud</span> <span class="n">quandl</span> \
+  <span class="n">redis</span> <span class="n">pathos</span> <span class="n">pyarrow</span><span class="o">==</span><span class="mf">1.0</span><span class="o">.</span><span class="mi">1</span> <span class="n">pandas</span><span class="o">==</span><span class="mf">1.0</span><span class="o">.</span><span class="mi">5</span> <span class="n">wordcloud</span> <span class="n">quandl</span> \
   <span class="n">vaex</span><span class="o">-</span><span class="n">core</span> <span class="n">vaex</span><span class="o">-</span><span class="n">viz</span> <span class="n">vaex</span><span class="o">-</span><span class="n">jupyter</span> <span class="n">vaex</span><span class="o">-</span><span class="n">server</span> <span class="n">vaex</span><span class="o">-</span><span class="n">hdf5</span> <span class="n">vaex</span><span class="o">-</span><span class="n">astro</span> <span class="n">vaex</span><span class="o">-</span><span class="n">distributed</span> <span class="n">pyspark</span> <span class="n">py4j</span> \
   <span class="n">spacy</span> <span class="n">celery</span><span class="o">==</span><span class="mf">4.4</span><span class="o">.</span><span class="mi">0</span> <span class="n">celery</span><span class="p">[</span><span class="n">redis</span><span class="p">]</span> <span class="n">celery</span><span class="p">[</span><span class="n">msgpack</span><span class="p">]</span> <span class="n">msgpack</span><span class="o">-</span><span class="n">python</span> \
   <span class="n">fxcmpy</span> <span class="n">alpha_vantage</span> <span class="n">yfinance</span> <span class="n">twython</span> <span class="n">newspaper3k</span> <span class="n">seasonal</span> <span class="n">pdfminer</span><span class="o">.</span><span class="n">six</span> <span class="n">vaderSentiment</span> <span class="n">gensim</span> <span class="n">textacy</span> \
   <span class="n">transformers</span> \
   <span class="n">finmarketpy</span> <span class="n">chartpy</span> <span class="n">findatapy</span> \
-  <span class="n">cufflinks</span><span class="o">==</span><span class="mf">0.17</span> <span class="n">plotly_express</span><span class="o">==</span><span class="mf">0.4</span><span class="o">.</span><span class="mi">1</span> \
-  <span class="n">plotly</span><span class="o">==</span><span class="mf">4.5</span><span class="o">.</span><span class="mi">4</span>
-</pre></div>
-
-    </div>
-</div>
-</div>
-
-</div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<p>Also try installing plotly-orca via conda (this is useful if you want to output plotly charts as PNG, but is optional)</p>
-
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="o">!</span>conda install -c plotly plotly-orca --yes
+  <span class="n">cufflinks</span><span class="o">==</span><span class="mf">0.17</span><span class="o">.</span><span class="mi">3</span>  <span class="n">kaleido</span> \
+  <span class="n">plotly</span><span class="o">==</span><span class="mf">4.9</span><span class="o">.</span><span class="mi">0</span>
 </pre></div>
 
     </div>
@@ -13526,7 +13507,7 @@ Anaconda)<ul>
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 
-<pre><code>conda activate py36class
+<pre><code>conda activate py37class
 jupyter notebook --notebook-dir='e:/cuemacro/pythoncourse/pythoncourse/notebooks'</code></pre>
 
 </div>

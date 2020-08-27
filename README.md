@@ -18,6 +18,8 @@ https://nbviewer.jupyter.org/github/cuemacro/teaching/blob/master/pythoncourse/i
 
 # Coding log
 
+* 27 Aug 2020
+    * Updated Python environments to Pandas 1.0.5 and Python 3.7
 * 30 Jun 2020
     * Added orca path on coronavirus notebook
 * 29 Jun 2020

@@ -24,11 +24,7 @@ pip install transformers cvlib pytesseract cmdstanpy==0.4 tabula-py==1.4.3 koala
 
 # findatapy, finmarketpy, chartpy & graphics libraries
 pip install finmarketpy chartpy findatapy \
-   cufflinks==0.17.3 plotly==4.8.0 \
+   cufflinks==0.17.3 plotly==4.8.0 kaleido \
         dash==1.12.0 dash-html-components==1.0.3 dash-core-components==1.10.0 dash-table==4.7.0 jupyter-dash==0.2.1 \
         dtale==1.8.1
-
-# To be able to plot Plotly into PNG or JPG
-conda install -c plotly plotly-orca --yes
-
 
