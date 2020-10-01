@@ -18,6 +18,8 @@ https://nbviewer.jupyter.org/github/cuemacro/teaching/blob/master/pythoncourse/i
 
 # Coding log
 
+* 01 Oct 2020
+    * Updated Python environments to include FinancePy
 * 13 Sep 2020
     * Removed multiprocessing_on_dill dep
 * 27 Aug 2020
