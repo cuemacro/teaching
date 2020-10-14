@@ -18,6 +18,8 @@ https://nbviewer.jupyter.org/github/cuemacro/teaching/blob/master/pythoncourse/i
 
 # Coding log
 
+* 14 Oct 2020
+    * Added extra instructions for finding environment.yml files when installing conda environment
 * 01 Oct 2020
     * Updated Python environments to include FinancePy
 * 13 Sep 2020
