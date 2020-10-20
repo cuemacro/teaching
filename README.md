@@ -18,6 +18,8 @@ https://nbviewer.jupyter.org/github/cuemacro/teaching/blob/master/pythoncourse/i
 
 # Coding log
 
+* 20 Oct 2020
+    * Updated Python environments to latest finmarketpy (0.11.7)
 * 14 Oct 2020
     * Added extra instructions for finding environment.yml files when installing conda environment
 * 01 Oct 2020

@@ -494,7 +494,7 @@ dependencies:
     - feedparser==5.2.1
     - financepy==0.180
     - findatapy==0.1.18
-    - finmarketpy==0.11.6
+    - finmarketpy==0.11.7
     - flask-compress==1.5.0
     - flask-ngrok==0.0.25
     - funcy==1.14

@@ -509,7 +509,7 @@ dependencies:
     - feedfinder2==0.0.4
     - feedparser==5.2.1
     - findatapy==0.1.12
-    - finmarketpy==0.11.4
+    - finmarketpy==0.11.7
     - flask-compress==1.5.0
     - flask-ngrok==0.0.25
     - flatbuffers==1.12
