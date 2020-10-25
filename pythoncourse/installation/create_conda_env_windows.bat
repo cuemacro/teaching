@@ -28,7 +28,7 @@ call conda install -c anaconda xlwings=0.20.2 --yes
 
 REM Install from conda-forge (pyarrow is a newer version!)
 call conda install -c conda-forge ^
-  jupyter_contrib_nbextensions jupyter_nbextensions_configurator ^
+  boto3 jupyter_contrib_nbextensions jupyter_nbextensions_configurator ^
   redis-py python-blosc pathos textblob ^
   vaex=3.0.0 ^
   pyspark=3.0.0 koalas ^

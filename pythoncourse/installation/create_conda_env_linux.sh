@@ -22,9 +22,9 @@ source activate py37class
 
 # Install Tensorflow, PyTorch and Anaconda (lots of packages)
 # only if you have GPU below 2 lines instead of CPU versions
-# conda install anaconda tensorflow-gpu=2.1.0 anaconda pandas=1.0.5 scikit-learn=0.20.2 graphviz python-graphviz matplotlib=3.2.2 --yes
+# conda install anaconda tensorflow-gpu=2.1.0 anaconda pandas=1.0.5 scikit-learn graphviz python-graphviz matplotlib --yes
 # conda install pytorch torchvision cudatoolkit=10.1 -c pytorch --yes
-conda install anaconda tensorflow=2.1.0 anaconda pandas=1.0.5 scikit-learn=0.20.2 graphviz python-graphviz matplotlib=3.2.2 --yes
+conda install anaconda tensorflow=2.1.0 anaconda pandas=1.0.5 scikit-learn graphviz python-graphviz matplotlib --yes
 conda install pytorch torchvision cpuonly -c pytorch --yes
 
 # OpenCV and PyArrow need to be installed earlier
@@ -35,7 +35,7 @@ conda install -c conda-forge pyarrow=1.0.1 opencv modin=0.8.0 --yes
 
 # Install from conda-forge (pyarrow is a newer version!)
 conda install -c conda-forge \
-  jupyter_contrib_nbextensions jupyter_nbextensions_configurator \
+  boto3 jupyter_contrib_nbextensions jupyter_nbextensions_configurator \
   redis-py python-blosc pathos textblob \
   vaex=3.0.0 \
   spacy fastparquet python-snappy nodejs pystan fbprophet setuptools-git \

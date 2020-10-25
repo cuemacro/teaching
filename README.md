@@ -18,6 +18,8 @@ https://nbviewer.jupyter.org/github/cuemacro/teaching/blob/master/pythoncourse/i
 
 # Coding log
 
+* 25 Oct 2020
+    * Updated Linux and Windows conda environments to include boto3
 * 20 Oct 2020
     * Updated Python environments to latest finmarketpy (0.11.7)
 * 14 Oct 2020
