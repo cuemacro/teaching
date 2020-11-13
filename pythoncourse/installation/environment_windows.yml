@@ -583,4 +583,3 @@ dependencies:
     - wordcloud==1.8.0
     - yarl==1.5.1
     - yfinance==0.1.55
-prefix: C:\Anaconda3\envs\py37class

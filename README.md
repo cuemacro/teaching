@@ -18,6 +18,8 @@ https://nbviewer.jupyter.org/github/cuemacro/teaching/blob/master/pythoncourse/i
 
 # Coding log
 
+* 12 Nov 2020
+    * Fixed Linux conda environment file (and updated Windows)
 * 03 Nov 2020
     * Updated Linux conda environment to TensorFlow 2.2.0
 * 31 Oct 2020
