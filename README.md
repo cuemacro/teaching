@@ -15,7 +15,7 @@ https://nbviewer.jupyter.org/github/cuemacro/teaching/blob/master/pythoncourse/i
 
 * [Installing Anaconda Python and PyCharm (nbviewer link)](https://nbviewer.jupyter.org/github/cuemacro/teaching/blob/master/pythoncourse/installation/installing_anaconda_and_pycharm.ipynb) - how to install a Python environment for data analysis
 * [Coronavirus example (nbviewer link)](https://nbviewer.jupyter.org/github/cuemacro/teaching/blob/master/pythoncourse/notebooks/coronavirus_example.ipynb) or run interactively in [Binder](https://mybinder.org/v2/gh/cuemacro/teaching/master?filepath=pythoncourse/notebooks/coronavirus_example.ipynb) - how to download case data for coronavirus and do basic analysis including charting
-* [Coronavirus example (nbviewer link)](https://nbviewer.jupyter.org/github/cuemacro/teaching/blob/master/pythoncourse/notebooks/timestream_example.ipynb) or run interactively in [Binder](https://mybinder.org/v2/gh/cuemacro/teaching/master?filepath=pythoncourse/notebooks/timestream_example.ipynb) - using AWS Timestream database from Python
+* [Timestream example (nbviewer link)](https://nbviewer.jupyter.org/github/cuemacro/teaching/blob/master/pythoncourse/notebooks/timestream_example.ipynb) or run interactively in [Binder](https://mybinder.org/v2/gh/cuemacro/teaching/master?filepath=pythoncourse/notebooks/timestream_example.ipynb) - using AWS Timestream database from Python
 
 # Coding log
 
