@@ -1,0 +1,6 @@
+chartpy
+finmarketpy
+findatapy
+IPython
+boto3
+ipywidgets
