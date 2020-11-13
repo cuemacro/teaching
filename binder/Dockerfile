@@ -32,4 +32,4 @@ RUN pip install --no-cache-dir -r /tmp/teaching/requirements.txt && \
     rm -rf /tmp/teaching
 
 RUN ln -s /home/${NB_USER}/teaching /home/${NB_USER}/work/teaching
-RUN ln -s /home/${NB_USER}/teaching/pythoncourse/notebooks /home/${NB_USER}/work/teaching/pythoncourse/notebooks
+RUN ln -s /home/${NB_USER}/teaching/pythoncourse/notebooks /home/${NB_USER}/work/teaching/notebooks
