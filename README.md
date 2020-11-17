@@ -24,6 +24,7 @@ You can also run some of the notebooks interactively with Binder too
 
 * 17 Nov 2020
     * Updated Anaconda installation notes
+    * Added Google Colab details
 * 13 Nov 2020
     * Adding Binder
     * Fixed Linux conda environment file (and updated Windows)

@@ -13192,7 +13192,7 @@ div#notebook {
 <ul>
 <li>Type in <code>conda activate</code> and press Enter to exit the current conda environment, then <code>conda remove -n py37class --all --yes</code> and press Enter to remove any existing environments called <code>py37class</code></li>
 <li>If you haven't already downloaded the <code>environment_windows.yml</code> file you can do it from the command line using <code>curl</code>:<ul>
-<li>Type <code>curl https://raw.githubusercontent.com/cuemacro/teaching/master/pythoncourse/installation/environment_windows.yml > environment_windows.yml</code> and press Enter</li>
+<li>Type <code>curl https://raw.githubusercontent.com/cuemacro/teaching/master/pythoncourse/installation/environment_windows.yml &gt; environment_windows.yml</code> and press Enter</li>
 </ul>
 </li>
 <li>Type in <code>conda env create -f environment_windows.yml</code> and press Enter</li>
@@ -13267,7 +13267,7 @@ xlwings addin install</code></pre>
 <ul>
 <li>Type in <code>conda activate</code> to exit the current conda environment and press Enter, then <code>conda remove -n py37class --all --yes</code> and press Enter to remove any existing environments called <code>py37class</code></li>
 <li>If you haven't already downloaded the <code>environment_linux.yml</code> or <code>environment_mac.yml</code> file you can do it from the command line using <code>curl</code>:<ul>
-<li>Type <code>curl https://raw.githubusercontent.com/cuemacro/teaching/master/pythoncourse/installation/environment_linux.yml > environment_linux.yml</code> and press Enter (or <code>curl https://raw.githubusercontent.com/cuemacro/teaching/master/pythoncourse/installation/environment_mac.yml > environment_mac.yml</code> on Mac)</li>
+<li>Type <code>curl https://raw.githubusercontent.com/cuemacro/teaching/master/pythoncourse/installation/environment_linux.yml &gt; environment_linux.yml</code> and press Enter (or <code>curl https://raw.githubusercontent.com/cuemacro/teaching/master/pythoncourse/installation/environment_mac.yml &gt; environment_mac.yml</code> on Mac)</li>
 </ul>
 </li>
 <li>Type in <code>conda env create -f environment_linux.yml</code> and press Enter (or <code>conda env create -f environment_mac.yml</code> on Mac)</li>
@@ -13370,7 +13370,33 @@ Anaconda)<ul>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="Using-Microsoft-Azure-Notebooks-with-Jupyter">Using Microsoft Azure Notebooks with Jupyter<a class="anchor-link" href="#Using-Microsoft-Azure-Notebooks-with-Jupyter">&#182;</a></h2><p>If you do not want to install Anaconda on your own machine (or if you don't have the correct permissions to do so), you can instead use Microsoft Azure Notebooks, which gives you a Jupyter notebook in the cloud. This can be a good solution for those wanting to learn Python.</p>
+<h2 id="Using-Google-Colab-with-Jupyter">Using Google Colab with Jupyter<a class="anchor-link" href="#Using-Google-Colab-with-Jupyter">&#182;</a></h2><p>If you do not want to install Anaconda on your own machine (or if you don't have the correct permissions to do so), you can instead use Google Colab, which gives you a Jupyter notebook in the cloud. This can be a good solution for those wanting to learn Python. You'll need a Google account, otherwise you can't save down your notebooks. You can access it at <a href="https://colab.research.google.com/">https://colab.research.google.com/</a></p>
+<p>If you find there are libraries which aren't available, you can install these in Google Colab (as with any Jupyter notebook) using <code>!pip</code> inside the notebook. Below, we have a number of useful libraries to get you started. Note that you might need to re-run pip on Google Colab every so often, because the server gets restarted, and the library installations will be lost.</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="o">!</span>pip install <span class="err">\</span>
+  <span class="n">redis</span> <span class="n">pathos</span> <span class="n">pyarrow</span><span class="o">==</span><span class="mf">1.0</span><span class="o">.</span><span class="mi">1</span> <span class="n">pandas</span><span class="o">==</span><span class="mf">1.0</span><span class="o">.</span><span class="mi">5</span> <span class="n">quandl</span> \
+  <span class="n">finmarketpy</span> <span class="n">chartpy</span> <span class="n">findatapy</span> \
+  <span class="n">cufflinks</span><span class="o">==</span><span class="mf">0.17</span><span class="o">.</span><span class="mi">3</span> <span class="n">kaleido</span> \
+  <span class="n">plotly</span><span class="o">==</span><span class="mf">4.9</span><span class="o">.</span><span class="mi">0</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="Using-Microsoft-Azure-Notebooks-with-Jupyter">Using Microsoft Azure Notebooks with Jupyter<a class="anchor-link" href="#Using-Microsoft-Azure-Notebooks-with-Jupyter">&#182;</a></h2><p>If you do not want to install Anaconda on your own machine (or if you don't have the correct permissions to do so), you can instead use Microsoft Azure Notebooks, which gives you a Jupyter notebook in the cloud. This can be a good solution for those wanting to learn Python. Note that Microsoft are phasing this out so I'd recommend Google Colab notebooks at present.</p>
 <h3 id="Creating-your-first-Jupyter-notebook-in-Microsoft-Azure-Notebooks">Creating your first Jupyter notebook in Microsoft Azure Notebooks<a class="anchor-link" href="#Creating-your-first-Jupyter-notebook-in-Microsoft-Azure-Notebooks">&#182;</a></h3><p>Below we outline the steps to creating your first Jupyter notebook in Microsoft Azure Notebooks.</p>
 <ul>
 <li>Go to <a href="https://notebooks.azure.com/">https://notebooks.azure.com/</a> and sign in with your Microsoft account<ul>
