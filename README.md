@@ -22,6 +22,8 @@ You can also run some of the notebooks interactively with Binder too
 
 # Coding log
 
+* 17 Nov 2020
+    * Updated Anaconda installation notes
 * 13 Nov 2020
     * Adding Binder
     * Fixed Linux conda environment file (and updated Windows)
