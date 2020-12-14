@@ -9,7 +9,7 @@ import dash_html_components as html
 from findatapy.market import Market, MarketDataRequest, MarketDataGenerator
 from chartpy import Chart, Style
 
-# For scaling realized volatility later
+# For scaling realized_vol volatility later
 import math
 
 # external CSS stylesheets

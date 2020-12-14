@@ -11,7 +11,7 @@ https://github.com/cuemacro/teaching/blob/master/pythoncourse/installation/insta
 in https://nbviewer.jupyter.org/ ie. to go to the following link 
 https://nbviewer.jupyter.org/github/cuemacro/teaching/blob/master/pythoncourse/installation/installing_anaconda_and_pycharm.ipynb
 
-# Jupyter notebooks on teaching
+# Jupyter notebooks on teaching 
 
 * [Installing Anaconda Python and PyCharm (nbviewer link)](https://nbviewer.jupyter.org/github/cuemacro/teaching/blob/master/pythoncourse/installation/installing_anaconda_and_pycharm.ipynb) - how to install a Python environment for data analysis
 
@@ -22,6 +22,8 @@ You can also run some of the notebooks interactively with Binder too
 
 # Coding log
 
+* 14 Dec 2020
+    * Updated conda environments for Windows and Linux for TensorFlow 2.3.0 and pyarrow 2.0.0
 * 17 Nov 2020
     * Updated Anaconda installation notes
     * Added Google Colab details

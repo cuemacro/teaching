@@ -15,28 +15,18 @@ call conda activate py37class
 
 REM Install Tensorflow, PyTorch and Anaconda (lots of packages)
 REM only if you have GPU below 2 lines instead of CPU versions
-REM call conda install anaconda tensorflow-gpu=2.1.0 anaconda pandas=1.0.5 scikit-learn=0.20.2 graphviz python-graphviz matplotlib=3.2.2 --yes
-REM call conda install pytorch torchvision cudatoolkit=10.1 -c pytorch --yes
-call conda install anaconda tensorflow=2.1.0 anaconda pandas=1.0.5 scikit-learn=0.20.2 graphviz python-graphviz matplotlib=3.2.2 --yes
-call conda install pytorch torchvision cpuonly -c pytorch --yes
-
-REM OpenCV and PyArrow need to be installed earlier
-call conda install -c conda-forge pyarrow=1.0.1 opencv modin=0.8.0 --yes
-
-REM xlwings only works for Mac or Windows
-call conda install -c anaconda xlwings=0.20.2 --yes
-
-REM Install from conda-forge (pyarrow is a newer version!)
-call conda install -c conda-forge ^
-  boto3 jupyter_contrib_nbextensions jupyter_nbextensions_configurator ^
-  redis-py python-blosc pathos textblob ^
-  vaex=3.0.0 ^
-  pyspark=3.0.0 koalas ^
-  spacy fastparquet python-snappy nodejs pystan fbprophet setuptools-git ^
-  vispy datashader pyproj holoviews streamz quandl bqplot blpapi ^
-  --yes
-
-REM vaex-core vaex-viz vaex-jupyter vaex-arrow vaex-server vaex-hdf5 vaex-astro vaex-distributed vaex-ml
+REM call conda install anaconda tensorflow-gpu=2.3.0 anaconda pandas=1.0.5 scikit-learn=0.20.2 graphviz python-graphviz matplotlib xlwings=0.20.2 --yes
+REM call conda install pytorch torchvision cudatoolkit=10.1 ^
+call conda install anaconda tensorflow=2.3.0 anaconda pandas=1.0.5 scikit-learn=0.20.2 graphviz python-graphviz matplotlib xlwings=0.20.2 --yes
+call conda install pytorch torchvision cpuonly ^
+    pyarrow=2.0.0 opencv modin=0.8.0 ^
+    boto3 jupyter_contrib_nbextensions jupyter_nbextensions_configurator ^
+    redis-py python-blosc pathos textblob ^
+    vaex=3.0.0 ^
+    pyspark koalas ^
+    spacy fastparquet python-snappy nodejs pystan fbprophet setuptools-git ^
+    vispy datashader pyproj holoviews streamz quandl bqplot blpapi ^
+    -c pytorch -c conda-forge --yes
 
 REM Install database
 REM Install Celery

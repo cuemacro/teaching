@@ -22,28 +22,18 @@ source activate py37class
 
 # Install Tensorflow, PyTorch and Anaconda (lots of packages)
 # only if you have GPU below 2 lines instead of CPU versions
-# conda install anaconda tensorflow-gpu=2.2.0 anaconda pandas=1.0.5 scikit-learn graphviz python-graphviz matplotlib --yes
-# conda install pytorch torchvision cudatoolkit=10.1 -c pytorch --yes
-conda install anaconda tensorflow=2.2.0 anaconda pandas=1.0.5 scikit-learn graphviz python-graphviz matplotlib --yes
-conda install pytorch torchvision cpuonly -c pytorch --yes
-
-# OpenCV and PyArrow need to be installed earlier
-conda install -c conda-forge pyarrow=1.0.1 opencv modin=0.8.0 --yes
-
-# xlwings only works for Mac omit on Linux
-# conda install -c conda-forge xlwings=0.20.2 --yes
-
-# Install from conda-forge (pyarrow is a newer version!)
-conda install -c conda-forge \
+# conda install anaconda tensorflow-gpu=2.3.0 anaconda pandas=1.0.5 scikit-learn graphviz python-graphviz matplotlib --yes
+# conda install pytorch torchvision cudatoolkit=10.1 \
+conda install anaconda tensorflow=2.3.0 anaconda pandas=1.0.5 scikit-learn graphviz python-graphviz matplotlib --yes
+conda install pytorch torchvision cpuonly \
+  pyarrow opencv modin=0.8.0 \
   boto3 jupyter_contrib_nbextensions jupyter_nbextensions_configurator \
   redis-py python-blosc pathos textblob \
   vaex=3.0.0 \
   spacy fastparquet python-snappy nodejs pystan fbprophet setuptools-git \
-  pyspark=3.0.0 koalas \
+  pyspark koalas \
   vispy datashader pyproj holoviews streamz quandl bqplot \
-  --yes
-
-# vaex-core vaex-viz vaex-jupyter vaex-arrow vaex-server vaex-hdf5 vaex-astro vaex-distributed vaex-ml
+    -c pytorch -c conda-forge --yes
 
 # Install database
 # Install Celery

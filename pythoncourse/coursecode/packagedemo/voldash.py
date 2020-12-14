@@ -9,7 +9,7 @@ import dash_html_components as html
 from findatapy.market import Market, MarketDataRequest, MarketDataGenerator
 from chartpy import Chart, Style
 
-# For scaling realized volatility later
+# For scaling realized_vol volatility later
 import math
 
 # For plotting
@@ -68,7 +68,7 @@ app_vol.layout = html.Div([
 * We can select the currency pair
 * And also the tenor
 
-The application will then compute realized volatility on the fly.
+The application will then compute realized_vol volatility on the fly.
 '''),
 
     # Plotly chart output
