@@ -22,6 +22,8 @@ You can also run some of the notebooks interactively with Binder too
 
 # Coding log
 
+* 15 Dec 2020
+    * Updated conda environment for Mac for pyarrow 2.0.0 (and fixed transformers)
 * 14 Dec 2020
     * Updated conda environments for Windows and Linux for TensorFlow 2.3.0 and pyarrow 2.0.0
 * 17 Nov 2020
