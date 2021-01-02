@@ -529,7 +529,7 @@ dependencies:
     - fake-useragent==0.1.11
     - feedfinder2==0.0.4
     - feedparser==6.0.2
-    - financepy==0.188
+    - financepy==0.191
     - findatapy==0.1.18
     - finmarketpy==0.11.7
     - flask-compress==1.8.0

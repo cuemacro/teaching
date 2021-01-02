@@ -4,3 +4,4 @@ findatapy
 IPython
 boto3
 ipywidgets
+financepy

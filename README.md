@@ -18,10 +18,14 @@ https://nbviewer.jupyter.org/github/cuemacro/teaching/blob/master/pythoncourse/i
 You can also run some of the notebooks interactively with Binder too
 
 * [Coronavirus example (nbviewer link)](https://nbviewer.jupyter.org/github/cuemacro/teaching/blob/master/pythoncourse/notebooks/coronavirus_example.ipynb) or run interactively in [Binder](https://mybinder.org/v2/gh/cuemacro/teaching/master?filepath=pythoncourse/notebooks/coronavirus_example.ipynb) - how to download case data for coronavirus and do basic analysis including charting
+* [Numba example (nbviewer link)](https://nbviewer.jupyter.org/github/cuemacro/teaching/blob/master/pythoncourse/notebooks/coronavirus_example.ipynb) or run interactively in [Binder](https://mybinder.org/v2/gh/cuemacro/teaching/master?filepath=pythoncourse/notebooks/numba_example.ipynb) - how to speed up CDF with Numba
 * [Timestream example (nbviewer link)](https://nbviewer.jupyter.org/github/cuemacro/teaching/blob/master/pythoncourse/notebooks/timestream_example.ipynb) or run interactively in [Binder](https://mybinder.org/v2/gh/cuemacro/teaching/master?filepath=pythoncourse/notebooks/timestream_example.ipynb) - using AWS Timestream database from Python
 
 # Coding log
 
+* 02 Jan 2021
+  * Updated conda enviornment with newest FinancePy
+  * Added Numba example Jupyter notebook
 * 15 Dec 2020
     * Updated conda environment for Mac for pyarrow 2.0.0 (and fixed transformers)
 * 14 Dec 2020
