@@ -23,6 +23,8 @@ You can also run some of the notebooks interactively with Binder too
 
 # Coding log
 
+* 12 Jan 2021
+  * Added pyxll to Windows conda env
 * 02 Jan 2021
   * Updated conda enviornment with newest FinancePy
   * Added Numba example Jupyter notebook

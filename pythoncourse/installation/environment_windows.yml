@@ -569,6 +569,7 @@ dependencies:
     - pyppeteer==0.2.2
     - pyquery==1.4.3
     - pytesseract==0.3.6
+    - pyxll==5.0.8
     - requests-async==0.6.2
     - requests-file==1.5.1
     - requests-html==0.10.0
