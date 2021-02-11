@@ -23,6 +23,8 @@ You can also run some of the notebooks interactively with Binder too
 
 # Coding log
 
+* 11 Feb 2021
+  * Updated conda environments and Python installation instructions
 * 12 Jan 2021
   * Added pyxll to Windows conda env
 * 02 Jan 2021

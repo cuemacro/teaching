@@ -520,12 +520,13 @@ dependencies:
     - feedfinder2==0.0.4
     - feedparser==6.0.2
     - financepy==0.191
-    - findatapy==0.1.18
+    - findatapy==0.1.20
     - finmarketpy==0.11.7
     - flask-compress==1.8.0
     - flask-ngrok==0.0.25
     - funcy==1.15
     - fxcmpy==1.2.6
+    - gdelt==0.1.10.6
     - gensim==3.8.3
     - h11==0.9.0
     - httpcore==0.10.2

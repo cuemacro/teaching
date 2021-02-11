@@ -15,11 +15,11 @@ call conda activate py37class
 
 REM Install Tensorflow, PyTorch and Anaconda (lots of packages)
 REM only if you have GPU below 2 lines instead of CPU versions
-REM call conda install anaconda tensorflow-gpu=2.3.0 anaconda pandas=1.0.5 scikit-learn=0.20.2 graphviz python-graphviz matplotlib xlwings=0.20.2 --yes
+REM call conda install anaconda tensorflow-gpu=2.3.0 anaconda pandas=1.0.5 scikit-learn=0.20.2 graphviz python-graphviz matplotlib xlwings=0.20.2 -c anaconda --yes
 REM call conda install pytorch torchvision cudatoolkit=10.1 ^
-call conda install anaconda tensorflow=2.3.0 anaconda pandas=1.0.5 scikit-learn=0.20.2 graphviz python-graphviz matplotlib xlwings=0.20.2 --yes
+call conda install anaconda tensorflow=2.3.0 pandas=1.0.5 scikit-learn=0.20.2 graphviz python-graphviz matplotlib xlwings=0.22.0 -c anaconda --yes
 call conda install pytorch torchvision cpuonly ^
-    pyarrow=2.0.0 opencv modin=0.8.0 ^
+    pyarrow opencv modin=0.8.0 ^
     boto3 jupyter_contrib_nbextensions jupyter_nbextensions_configurator ^
     redis-py python-blosc pathos textblob ^
     vaex=3.0.0 ^
