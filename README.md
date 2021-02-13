@@ -20,9 +20,13 @@ You can also run some of the notebooks interactively with Binder too
 * [Coronavirus example (nbviewer link)](https://nbviewer.jupyter.org/github/cuemacro/teaching/blob/master/pythoncourse/notebooks/coronavirus_example.ipynb) or run interactively in [Binder](https://mybinder.org/v2/gh/cuemacro/teaching/master?filepath=pythoncourse/notebooks/coronavirus_example.ipynb) - how to download case data for coronavirus and do basic analysis including charting
 * [Numba example (nbviewer link)](https://nbviewer.jupyter.org/github/cuemacro/teaching/blob/master/pythoncourse/notebooks/numba_example.ipynb) or run interactively in [Binder](https://mybinder.org/v2/gh/cuemacro/teaching/master?filepath=pythoncourse/notebooks/numba_example.ipynb) - how to speed up CDF with Numba
 * [Timestream example (nbviewer link)](https://nbviewer.jupyter.org/github/cuemacro/teaching/blob/master/pythoncourse/notebooks/timestream_example.ipynb) or run interactively in [Binder](https://mybinder.org/v2/gh/cuemacro/teaching/master?filepath=pythoncourse/notebooks/timestream_example.ipynb) - using AWS Timestream database from Python
+* [Vaex example (nbviewer link)](https://nbviewer.jupyter.org/github/cuemacro/teaching/blob/master/pythoncourse/notebooks/vaex_example.ipynb) or run interactively in [Binder](https://mybinder.org/v2/gh/cuemacro/teaching/master?filepath=pythoncourse/notebooks/timestream_example.ipynb) - using AWS Timestream database from Python
+
 
 # Coding log
 
+* 13 Feb 2021
+  * Added vaex example
 * 11 Feb 2021
   * Updated conda environments and Python installation instructions
 * 12 Jan 2021
