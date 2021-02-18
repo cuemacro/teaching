@@ -13092,35 +13092,18 @@ div#notebook {
 <ul>
 <li>Once you've done your Python installation (and have signed up for a Quandl account and API key for free), try running this code below to check. </li>
 <li>Your firewall should also allow you to have access to allow the downloading of packages via conda and pip (if it isn't then you can't do much else, although in some circumstances you might be able to change the pip download URL to a site that does work)</li>
-<li>If opening up firewalls is too much of an issue or you don't have admin rights to install Python locally, then one easier way to get started with Python for learning purposes, is to use something Azure Notebooks (see below). </li>
-<li>This will however, at the very least need the website <a href="https://colab.research.google.com/">https://colab.research.google.com/</a> to be accessible or website <a href="https://repl.it/languages/python3">https://repl.it/languages/python3</a> which offers online Python execution</li>
+<li>If opening up firewalls is too much of an issue or you don't have admin rights to install Python locally, then one easier way to get started with Python for learning purposes, is to use something like Google Colab (see below). </li>
+<li>This will however, at the very least need the website <a href="https://colab.research.google.com/">https://colab.research.google.com/</a> to be accessible (some firms may block some Google websites) or website <a href="https://repl.it/languages/python3">https://repl.it/languages/python3</a> which offers online Python execution</li>
 </ul>
 
 </div>
 </div>
 </div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">quandl</span><span class="o">.</span><span class="n">ApiConfig</span><span class="o">.</span><span class="n">api_key</span> <span class="o">=</span> <span class="s2">&quot;TYPE YOUR KEY HERE&quot;</span>
-
-<span class="c1"># Download data for WTI Crude oil from the EIA database on Quandl (US Department of Energy)</span>
-<span class="c1"># We have looked up this ticker earlier on Quandl&#39;s website</span>
-<span class="n">df_wti</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span><span class="n">quandl</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;EIA/PET_RWTC_D&quot;</span><span class="p">,</span> <span class="n">start_date</span><span class="o">=</span><span class="s2">&quot;2010-01-01&quot;</span><span class="p">,</span> <span class="n">end_date</span><span class="o">=</span><span class="s2">&quot;2019-12-31&quot;</span><span class="p">))</span>
-</pre></div>
-
-    </div>
-</div>
-</div>
-
-</div>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <h2 id="Download-and-install-Anaconda">Download and install Anaconda<a class="anchor-link" href="#Download-and-install-Anaconda">&#182;</a></h2><p>You can download install the Anaconda distribution for Python from <a href="https://www.anaconda.com/distribution">https://www.anaconda.com/distribution</a></p>
-<p>There are versions of Anaconda for Windows, Linux and Mac operating systems. <em>Make sure you install the 64 bit version of Anaconda</em>. The 32 bit version is not compatible with some of the Python libraries we'll be using, and furthermore, it'll likely run out of memory easily.</p>
+<p>There are versions of Anaconda for Windows, Linux and Mac operating systems. <em>Make sure you install the 64 bit version of Anaconda</em>. <strong>The 32 bit version is not compatible with some of the Python libraries we'll be using, and furthermore, it'll likely run out of memory easily.</strong></p>
 <p>By default the Anaconda will be installed at the following folder, which will depend on your username. Make sure you keep a note of where you installed Anaconda for later, in particular when you need to tell Anaconda where you installed the distribution!</p>
 <ul>
 <li>Windows: <code>C:\Users\&lt;your-username&gt;\Anaconda3\</code></li>
@@ -13149,7 +13132,7 @@ div#notebook {
 <ul>
 <li>Type in <code>conda activate</code> and press Enter to exit the current conda environment, then <code>conda remove -n py37class --all --yes</code> and press Enter to remove any existing environments called <code>py37class</code></li>
 <li>If you haven't already downloaded the <code>environment_windows.yml</code> file you can do it from the command line using <code>curl</code>:<ul>
-<li>Type <code>curl https://raw.githubusercontent.com/cuemacro/teaching/master/pythoncourse/installation/environment_windows.yml &gt; environment_windows.yml</code> and press Enter</li>
+<li>Type on one line <code>curl https://raw.githubusercontent.com/cuemacro/teaching/master/pythoncourse/installation/environment_windows.yml &gt; environment_windows.yml</code> and press Enter</li>
 </ul>
 </li>
 <li>Type in <code>conda env create -f environment_windows.yml</code> and press Enter</li>
@@ -13174,32 +13157,37 @@ div#notebook {
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="Windows:-Installing-a-conda-environment-for-Windows-(slower-method)">Windows: Installing a conda environment for Windows (slower method)<a class="anchor-link" href="#Windows:-Installing-a-conda-environment-for-Windows-(slower-method)">&#182;</a></h2><p>A conda environment is a separate version of Python, where you can install all your own Python environments. This is a slower way to do it, but this makes it easier to change the versions of the libraries (note, might not be 100% same versions as my libraries!)</p>
-<ul>
-<li>Download </li>
+<h2 id="Windows:-Installing-a-conda-environment-for-Windows-(slower-method)">Windows: Installing a conda environment for Windows (slower method)<a class="anchor-link" href="#Windows:-Installing-a-conda-environment-for-Windows-(slower-method)">&#182;</a></h2><p>A conda environment is a separate version of Python, where you can install all your own Python environments. This is a slower way to do it, but this makes it easier to change the versions of the libraries (note, might not be 100% same versions as my libraries). Also try this method if the above one takes too long.</p>
+<h3 id="Download-create_conda_env_windows.bat">Download <code>create_conda_env_windows.bat</code><a class="anchor-link" href="#Download-create_conda_env_windows.bat">&#182;</a></h3><ul>
+<li>Open up the Anaconda Prompt (should be in the Start Menu)<ul>
+<li>(Method 1) Download <code>create_conda_env_windows.bat</code><ul>
+<li>Open <code>create_conda_env_windows.bat</code> from GitHub by clicking this <a href="https://raw.githubusercontent.com/cuemacro/teaching/master/pythoncourse/installation/create_conda_env_windows.bat">link</a></li>
+<li>Copy all the text from your browser</li>
 <li>Open up Notepad</li>
-<li>Copy the below text</li>
+<li>Paste the text</li>
 <li>Create a folder <code>C:\pythoncourse</code> (or if you create it elsewhere, keep a note of that)</li>
-<li>Save file <code>create_conda_env_windows.bat</code> (see download link below) in the <code>C:\pythoncourse</code> folder</li>
-<li>Open up the Anaconda Prompt (should be in the Start Menu)</li>
-<li>In this prompt, your Anaconda folder will on the path (ie. it will recognise where <code>conda</code> is installed etc.)</li>
+<li>Save file <code>create_conda_env_windows.bat</code> in the <code>C:\pythoncourse</code> folder</li>
+<li>In this prompt, your Anaconda folder will be on the path (ie. it will recognise where <code>conda</code> is installed etc.)</li>
 <li>Type in
   <code>cd\</code></li>
 <li>This will change directory to the <code>C:\</code> drive</li>
 <li>Then run
   <code>cd\pythoncourse</code></li>
-<li>Then run
+</ul>
+</li>
+<li>(Method 2) Alternatively, you can download <code>create_conda_env_windows.bat</code> using the below command (typed all on one line in the Anaconda Prompt then press Enter:<ul>
+<li><code>curl https://raw.githubusercontent.com/cuemacro/teaching/master/pythoncourse/installation/create_conda_env_windows.bat &gt; create_conda_env_windows.bat</code></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h3 id="Kick-off-installation">Kick off installation<a class="anchor-link" href="#Kick-off-installation">&#182;</a></h3><ul>
+<li>Then type in the below in  in the Anaconda Prompt then press Enter:
   <code>create_conda_env_windows.bat</code></li>
-<li>It will likely take a long time, and you might need to periodically click yes in Windows to allower the installer to change your settings.</li>
+<li>It will likely take a long time, and you might need to periodically click yes in Windows to allow the installer to change your settings.</li>
 </ul>
 
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="Download-create_conda_env_windows.bat-from-GitHub"><a href="https://raw.githubusercontent.com/cuemacro/teaching/master/pythoncourse/installation/create_conda_env_windows.bat">Download create_conda_env_windows.bat from GitHub</a><a class="anchor-link" href="#Download-create_conda_env_windows.bat-from-GitHub">&#182;</a></h3>
 </div>
 </div>
 </div>
@@ -13219,12 +13207,15 @@ xlwings addin install</code></pre>
 <div class="text_cell_render border-box-sizing rendered_html">
 <h2 id="Linux/Mac:-Installing-a-conda-environment-for-Linux/Mac-from-YAML-file-(quickest-method---recommended)">Linux/Mac: Installing a conda environment for Linux/Mac from YAML file (quickest method - recommended)<a class="anchor-link" href="#Linux/Mac:-Installing-a-conda-environment-for-Linux/Mac-from-YAML-file-(quickest-method---recommended)">&#182;</a></h2><p>We can download <a href="https://raw.githubusercontent.com/cuemacro/teaching/master/pythoncourse/installation/environment_linux.yml">environment_linux.yml (click to download)</a> if we're installing on Linux or <a href="https://raw.githubusercontent.com/cuemacro/teaching/master/pythoncourse/installation/environment_mac.yml">environment_mac.yml (click to download)</a> for Mac from our browser or via <code>curl</code> in the command line. We can use that YML file to create our conda environment with all the necessary packages . This should be a lot faster to run. This also installs the exact same libraries versions that I have (and reduces the likelihood of version conflicts between libraries). The conda environment file is periodically updated for new versions of libraries.</p>
 <ul>
-<li>Open up a terminal window (making sure that Anaconda is on your path) on Linux or Mac</li>
+<li>Open a Terminal window (usually a black window icon on both Linux and Mac) making sure that Anaconda is on your path on Linux or Mac<ul>
+<li>See the section <strong>Make sure Anaconda is on your Mac or Linux path</strong> for more information about starting conda, if Anaconda isn't on your paht</li>
+</ul>
+</li>
 <li><p>In this prompt, your Anaconda folder will be on the path (ie. it will recognise where <code>conda</code> is installed etc.)</p>
 <ul>
 <li>Type in <code>conda activate</code> to exit the current conda environment and press Enter, then <code>conda remove -n py37class --all --yes</code> and press Enter to remove any existing environments called <code>py37class</code></li>
 <li>If you haven't already downloaded the <code>environment_linux.yml</code> or <code>environment_mac.yml</code> file you can do it from the command line using <code>curl</code>:<ul>
-<li>Type <code>curl https://raw.githubusercontent.com/cuemacro/teaching/master/pythoncourse/installation/environment_linux.yml &gt; environment_linux.yml</code> and press Enter (or <code>curl https://raw.githubusercontent.com/cuemacro/teaching/master/pythoncourse/installation/environment_mac.yml &gt; environment_mac.yml</code> on Mac)</li>
+<li>Type on one line <code>curl https://raw.githubusercontent.com/cuemacro/teaching/master/pythoncourse/installation/environment_linux.yml &gt; environment_linux.yml</code> and press Enter (or <code>curl https://raw.githubusercontent.com/cuemacro/teaching/master/pythoncourse/installation/environment_mac.yml &gt; environment_mac.yml</code> on Mac)</li>
 </ul>
 </li>
 <li>Type in <code>conda env create -f environment_linux.yml</code> and press Enter (or <code>conda env create -f environment_mac.yml</code> on Mac)</li>
@@ -13252,21 +13243,40 @@ xlwings addin install</code></pre>
 <div class="text_cell_render border-box-sizing rendered_html">
 <h2 id="Linux/Mac:-Installing-a-conda-environment-for-Linux/Mac-(slower-method)">Linux/Mac: Installing a conda environment for Linux/Mac (slower method)<a class="anchor-link" href="#Linux/Mac:-Installing-a-conda-environment-for-Linux/Mac-(slower-method)">&#182;</a></h2><p>A conda environment is a separate version of Python, where you can install all your own Python environments. For Linux 
 and Mac, we'll install more libraries, which you might need to use later (some of which aren't fully supported by Windows).</p>
-<ul>
-<li>Download </li>
+<h3 id="Download-create_conda_env_mac.sh-or-create_conda_env_linux.sh">Download <code>create_conda_env_mac.sh</code> or <code>create_conda_env_linux.sh</code><a class="anchor-link" href="#Download-create_conda_env_mac.sh-or-create_conda_env_linux.sh">&#182;</a></h3><ul>
+<li>Open a Terminal window (usually a black window icon on both Linux and Mac)<ul>
+<li>(Method 1) Download <code>create_conda_env_mac.sh</code> or <code>create_conda_env_linux.sh</code><ul>
+<li>Open <code>create_conda_env_mac.sh</code> from GitHub by clicking this <a href="https://raw.githubusercontent.com/cuemacro/teaching/master/pythoncourse/installation/create_conda_env_mac.sh">link</a> or <code>create_conda_env_linux.sh</code> from GitHub by clicking this <a href="https://raw.githubusercontent.com/cuemacro/teaching/master/pythoncourse/installation/create_conda_env_linux.sh">link</a> or </li>
+<li>Copy all the text from your browser</li>
 <li>Open up a text editor</li>
-<li>Copy the below text</li>
+<li>Paste the text</li>
 <li>Create a folder <code>/Users/&lt;your-username&gt;/pythoncourse</code> for Mac or <code>/home/&lt;your-username&gt;/pythoncourse</code> for Linux</li>
-<li>Save file <code>create_conda_env_linux.sh</code> or <code>create_conda_env_mac.sh</code> (see download link below) in the pythoncourse folder</li>
-<li>Open a Terminal window (usually a black window icon on both Linux and Mac)</li>
+<li>Save text file as <code>create_conda_env_linux.bat</code> in the <code>/Users/&lt;your-username&gt;/pythoncourse</code> for Mac or <code>/home/&lt;your-username&gt;/pythoncourse</code> for Linux</li>
+</ul>
+</li>
+<li>(Method 2) Alternatively, you can download <code>create_conda_env_mac.sh</code> or <code>create_conda_env_linux.sh</code> from the Terminal window<ul>
+<li>Create a folder <code>/Users/&lt;your-username&gt;/pythoncourse</code> for Mac or <code>/home/&lt;your-username&gt;/pythoncourse</code> for Linux</li>
+<li>Type the below command (typed all on one line in a Terminal window then press Enter):<ul>
+<li><code>curl https://raw.githubusercontent.com/cuemacro/teaching/master/pythoncourse/installation/create_conda_env_mac.sh &gt; create_conda_env_mac.sh</code>   </li>
+<li><code>curl https://raw.githubusercontent.com/cuemacro/teaching/master/pythoncourse/installation/create_conda_env_linux.sh &gt; create_conda_env_linux.sh</code>   </li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h3 id="Kick-off-instllation">Kick off instllation<a class="anchor-link" href="#Kick-off-instllation">&#182;</a></h3><h4 id="Make-sure-Anaconda-is-on-your-Mac-or-Linux-path">Make sure Anaconda is on your Mac or Linux path<a class="anchor-link" href="#Make-sure-Anaconda-is-on-your-Mac-or-Linux-path">&#182;</a></h4><ul>
+<li>In a Terminal window (usually a black window icon on both Linux and Mac)<ul>
 <li>Type in (or wherever you installed Anaconda) and press enter to run<ul>
 <li><code>cd /Users/&lt;your-username&gt;/anaconda3/bin</code> for Mac</li>
 <li><code>cd /home/&lt;your-username&gt;/anaconda3/bin</code> for Linux</li>
 </ul>
 </li>
 <li>conda is in this folder</li>
-<li>Note, conda might already be on your path - you can check this by typing <code>conda</code> and pressing enter, to see if you get an error. On Windows
-the installer will have a default option to add Anaconda to your path</li>
+</ul>
+</li>
+<li>Note, conda might already be on your path - you can check this by typing <code>conda</code> and pressing enter, to see if you get an error. On Windows the installer will have a default option to add Anaconda to your path</li>
 <li>On Linux/Mac, it is recommend to add the Anaconda folder to your path</li>
 <li>You can temporarily add paths in Linux/Mac using the following command in the terminal (change the path to wherever you installed
 Anaconda)<ul>
@@ -13279,28 +13289,16 @@ Anaconda)<ul>
 <li><a href="https://opensource.com/article/17/6/set-path-linux">https://opensource.com/article/17/6/set-path-linux</a> for Linux</li>
 </ul>
 </li>
+</ul>
+<h4 id="Run-Anaconda-environment-installation">Run Anaconda environment installation<a class="anchor-link" href="#Run-Anaconda-environment-installation">&#182;</a></h4><ul>
 <li>Then run<ul>
 <li><code>./Users/&lt;your-username&gt;/pythoncourse/create_conda_env_mac.sh</code> for Mac</li>
 <li><code>./home/&lt;your-username&gt;/pythoncourse/create_conda_env_linux.sh</code> for Linux</li>
 </ul>
 </li>
-<li>It will likely take a long time, and you might need to periodically click yes also Windows to change settings</li>
+<li>It will likely take a long time</li>
 </ul>
 
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="Download-create_conda_env_linux.sh-from-GitHub-for-Linux"><a href="https://raw.githubusercontent.com/cuemacro/teaching/master/pythoncourse/installation/create_conda_env_linux.sh">Download create_conda_env_linux.sh from GitHub for Linux</a><a class="anchor-link" href="#Download-create_conda_env_linux.sh-from-GitHub-for-Linux">&#182;</a></h3>
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="Download-create_conda_env_mac.sh-from-GitHub-for-Mac"><a href="https://raw.githubusercontent.com/cuemacro/teaching/master/pythoncourse/installation/create_conda_env_mac.sh">Download create_conda_env_mac.sh from GitHub for Mac</a><a class="anchor-link" href="#Download-create_conda_env_mac.sh-from-GitHub-for-Mac">&#182;</a></h3>
 </div>
 </div>
 </div>

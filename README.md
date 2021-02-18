@@ -25,6 +25,8 @@ You can also run some of the notebooks interactively with Binder too
 
 # Coding log
 
+* 18 Feb 2021
+  * Updated Python installation instructions
 * 13 Feb 2021
   * Added vaex example
 * 11 Feb 2021
