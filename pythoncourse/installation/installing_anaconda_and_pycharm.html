@@ -13158,6 +13158,7 @@ div#notebook {
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <h2 id="Windows:-Installing-a-conda-environment-for-Windows-(slower-method)">Windows: Installing a conda environment for Windows (slower method)<a class="anchor-link" href="#Windows:-Installing-a-conda-environment-for-Windows-(slower-method)">&#182;</a></h2><p>A conda environment is a separate version of Python, where you can install all your own Python environments. This is a slower way to do it, but this makes it easier to change the versions of the libraries (note, might not be 100% same versions as my libraries). Also try this method if the above one takes too long.</p>
+<p>Note that underneath <code>create_conda_env_windows.bat</code> are using <a href="https://github.com/mamba-org/mamba">mamba</a> - which is a faster implementation of conda to install some libraries versus conda. If you have any difficulties with mamba, you might need to change references in <code>create_conda_env_windows.bat</code> where mamba is installing libraries to conda.</p>
 <h3 id="Download-create_conda_env_windows.bat">Download <code>create_conda_env_windows.bat</code><a class="anchor-link" href="#Download-create_conda_env_windows.bat">&#182;</a></h3><ul>
 <li>Open up the Anaconda Prompt (should be in the Start Menu)<ul>
 <li>(Method 1) Download <code>create_conda_env_windows.bat</code><ul>
@@ -13242,7 +13243,7 @@ xlwings addin install</code></pre>
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <h2 id="Linux/Mac:-Installing-a-conda-environment-for-Linux/Mac-(slower-method)">Linux/Mac: Installing a conda environment for Linux/Mac (slower method)<a class="anchor-link" href="#Linux/Mac:-Installing-a-conda-environment-for-Linux/Mac-(slower-method)">&#182;</a></h2><p>A conda environment is a separate version of Python, where you can install all your own Python environments. For Linux 
-and Mac, we'll install more libraries, which you might need to use later (some of which aren't fully supported by Windows).</p>
+and Mac, we'll install more libraries, which you might need to use later (some of which aren't fully supported by Windows). Note that underneath <code>create_conda_env_linux.sh</code> (or Mac) are using <a href="https://github.com/mamba-org/mamba">mamba</a> - which is a faster implementation of conda to install some libraries versus conda. If you have any difficulties with mamba, you might need to change references in <code>create_conda_env_linux.sh</code> (or Mac) where mamba is installing libraries to conda.</p>
 <h3 id="Download-create_conda_env_mac.sh-or-create_conda_env_linux.sh">Download <code>create_conda_env_mac.sh</code> or <code>create_conda_env_linux.sh</code><a class="anchor-link" href="#Download-create_conda_env_mac.sh-or-create_conda_env_linux.sh">&#182;</a></h3><ul>
 <li>Open a Terminal window (usually a black window icon on both Linux and Mac)<ul>
 <li>(Method 1) Download <code>create_conda_env_mac.sh</code> or <code>create_conda_env_linux.sh</code><ul>
