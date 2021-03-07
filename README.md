@@ -25,6 +25,8 @@ You can also run some of the notebooks interactively with Binder too
 
 # Coding log
 
+* 07 Mar 2021
+  * Added if all else fails conda installation
 * 04 Mar 2021
   * Updated conda bat/sh files (now use mamba to install libraries instead of conda)
   * Updated conda environments

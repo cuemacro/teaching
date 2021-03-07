@@ -13306,6 +13306,39 @@ Anaconda)<ul>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="Windows/Linux/Mac:-Installing-a-conda-environment-if-all-else-fails">Windows/Linux/Mac: Installing a conda environment if all else fails<a class="anchor-link" href="#Windows/Linux/Mac:-Installing-a-conda-environment-if-all-else-fails">&#182;</a></h2><p>If either the faster or slower methods for installing a conda environment fail, you can try to create something similar to the py37class environment in a more manual way. Then later, you will likely to need to install libraries as you need them through the course.</p>
+<p>In your Anaconda Prompt on Windows or Terminal on Linux/Mac, run the following commands.</p>
+<ul>
+<li><p>Switch to the base environment</p>
+<ul>
+<li><code>conda activate</code></li>
+</ul>
+</li>
+<li><p>Remove any existing <code>py37class</code> environment</p>
+<ul>
+<li><code>conda remove -n py37class --all --yes</code></li>
+</ul>
+</li>
+<li><p>Create a barebones <code>py37class</code> environment</p>
+<ul>
+<li><code>conda create -n py37class python=3.7</code></li>
+</ul>
+</li>
+<li><p>Activate the new <code>py37class</code> environment, install the <code>anaconda</code> libraries, which include things like Pandas, NumPy etc. and install the Cuemacro finance libraries to get you started.</p>
+<ul>
+<li><code>conda activate py37class</code></li>
+<li><code>conda install anaconda</code></li>
+<li><code>pip install chartpy findatapy finmarketpy</code></li>
+</ul>
+</li>
+</ul>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
 <h2 id="Download-and-install-PyCharm">Download and install PyCharm<a class="anchor-link" href="#Download-and-install-PyCharm">&#182;</a></h2><ul>
 <li>If you running Python locally, you can try to install PyCharm, which makes it easier to develop Python code</li>
 <li>You can download and install PyCharm Community from <a href="https://www.jetbrains.com/pycharm/download">https://www.jetbrains.com/pycharm/download</a></li>
