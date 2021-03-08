@@ -13127,7 +13127,7 @@ div#notebook {
 <div class="text_cell_render border-box-sizing rendered_html">
 <h2 id="Windows:-Installing-a-conda-environment-for-Windows-from-YML-file-(quickest-method---recommended)">Windows: Installing a conda environment for Windows from YML file (quickest method - recommended)<a class="anchor-link" href="#Windows:-Installing-a-conda-environment-for-Windows-from-YML-file-(quickest-method---recommended)">&#182;</a></h2><p>We can download <a href="https://raw.githubusercontent.com/cuemacro/teaching/master/pythoncourse/installation/environment_windows.yml">environment_windows.yml (click to download)</a> from our browser or via <code>curl</code> in the command line. We can use that YML file to create our conda environment with all the necessary packages. This also installs the exact same libraries versions that I have (and reduces the likelihood of version conflicts between libraries). The conda environment file is periodically updated for new versions of libraries. Sometimes conda might hang for a very long time, if this is the case, try the "slower" method below.</p>
 <ul>
-<li>Open up the Anaconda Prompt (should be in the Start Menu)</li>
+<li>Open up the Anaconda Prompt (should be in the Start Menu usually labelled Anaconda Prompt (Anaconda3))</li>
 <li><p>In this prompt, your Anaconda folder will be on the path (ie. it will recognise where <code>conda</code> is installed etc.)</p>
 <ul>
 <li>Type in <code>conda activate</code> and press Enter to exit the current conda environment, then <code>conda remove -n py37class --all --yes</code> and press Enter to remove any existing environments called <code>py37class</code></li>
@@ -13273,20 +13273,23 @@ and Mac, we'll install more libraries, which you might need to use later (some o
 </ul>
 <h3 id="Kick-off-instllation">Kick off instllation<a class="anchor-link" href="#Kick-off-instllation">&#182;</a></h3><h4 id="Make-sure-Anaconda-is-on-your-Mac-or-Linux-path">Make sure Anaconda is on your Mac or Linux path<a class="anchor-link" href="#Make-sure-Anaconda-is-on-your-Mac-or-Linux-path">&#182;</a></h4><ul>
 <li>In a Terminal window (usually a black window icon on both Linux and Mac)<ul>
-<li>Type in (or wherever you installed Anaconda) and press enter to run<ul>
-<li><code>cd /Users/&lt;your-username&gt;/anaconda3/bin</code> for Mac</li>
-<li><code>cd /home/&lt;your-username&gt;/anaconda3/bin</code> for Linux</li>
+<li>Note, conda might already be on your path - you can check this by typing 
+  <code>conda activate</code> and pressing enter, </li>
+<li>Check if you get an error or not. On Windows the installer will have a default option to add Anaconda to your path. If you don't get an error, then conda is already on your path, and you can skip to the section "Run Anaconda environment installation"<ul>
+<li>Type in (or wherever you installed Anaconda sometimes on Mac it can be at <code>/Users/&lt;your-username&gt;/opt/anaconda3/bin</code>) and press enter to run</li>
 </ul>
 </li>
+<li><code>cd /Users/&lt;your-username&gt;/anaconda3/bin</code> for Mac</li>
+<li><code>cd /home/&lt;your-username&gt;/anaconda3/bin</code> for Linux<ul>
 <li>conda is in this folder</li>
 </ul>
 </li>
-<li>Note, conda might already be on your path - you can check this by typing <code>conda</code> and pressing enter, to see if you get an error. On Windows the installer will have a default option to add Anaconda to your path</li>
+</ul>
+</li>
 <li>On Linux/Mac, it is recommend to add the Anaconda folder to your path</li>
-<li>You can temporarily add paths in Linux/Mac using the following command in the terminal (change the path to wherever you installed
-Anaconda)<ul>
-<li><code>export PATH=/Users/&lt;your-username&gt;/anaconda3/bin:$PATH</code> for Mac</li>
-<li><code>export PATH=/home/&lt;your-username&gt;/anaconda3/bin:$PATH</code> for Linux</li>
+<li>You can temporarily add paths in Linux/Mac using the following command in the terminal (change the path to wherever you installed Anaconda)<ul>
+<li>For Mac: <code>export PATH=/Users/&lt;your-username&gt;/anaconda3/bin:$PATH</code></li>
+<li>For Linux: <code>export PATH=/home/&lt;your-username&gt;/anaconda3/bin:$PATH</code></li>
 </ul>
 </li>
 <li>To permanently add folders to your path by editing a file like <code>.bashrc</code> which is in your home folder<ul>
@@ -13296,9 +13299,14 @@ Anaconda)<ul>
 </li>
 </ul>
 <h4 id="Run-Anaconda-environment-installation">Run Anaconda environment installation<a class="anchor-link" href="#Run-Anaconda-environment-installation">&#182;</a></h4><ul>
+<li>Make the scripts executable<ul>
+<li>For Mac: <code>chmod +x /Users/&lt;your-username&gt;/pythoncourse/create_conda_env_mac.sh</code></li>
+<li>For Linux: <code>chmod +x /home/&lt;your-username&gt;/pythoncourse/create_conda_env_linux.sh</code></li>
+</ul>
+</li>
 <li>Then run<ul>
-<li><code>./Users/&lt;your-username&gt;/pythoncourse/create_conda_env_mac.sh</code> for Mac</li>
-<li><code>./home/&lt;your-username&gt;/pythoncourse/create_conda_env_linux.sh</code> for Linux</li>
+<li>For Mac: <code>./Users/&lt;your-username&gt;/pythoncourse/create_conda_env_mac.sh</code></li>
+<li>For Linux: <code>./home/&lt;your-username&gt;/pythoncourse/create_conda_env_linux.sh</code></li>
 </ul>
 </li>
 <li>It will likely take a long time</li>
