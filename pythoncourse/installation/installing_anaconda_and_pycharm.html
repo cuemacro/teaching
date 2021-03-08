@@ -13338,11 +13338,12 @@ and Mac, we'll install more libraries, which you might need to use later (some o
 <li><code>conda create -n py37class python=3.7</code></li>
 </ul>
 </li>
-<li><p>Activate the new <code>py37class</code> environment, install the <code>anaconda</code> libraries, which include things like Pandas, NumPy etc. and install the Cuemacro finance libraries to get you started.</p>
+<li><p>Activate the new <code>py37class</code> environment, install the <code>anaconda</code> libraries, which include things like Pandas, NumPy etc. and install the minimal set of Cuemacro finance libraries to get you started, and do pip install as needed with additional libraries</p>
 <ul>
 <li><code>conda activate py37class</code></li>
 <li><code>conda install anaconda</code> (and if you find it hangs remove this line)</li>
-<li><code>pip install chartpy findatapy finmarketpy dash</code></li>
+<li><code>pip install pandas==1.0.5 finmarketpy chartpy findatapy cufflinks kaleido dash plotly</code></li>
+<li>On Mac or Windows <code>pip install xlwings</code></li>
 </ul>
 </li>
 </ul>
