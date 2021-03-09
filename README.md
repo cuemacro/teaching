@@ -25,6 +25,8 @@ You can also run some of the notebooks interactively with Binder too
 
 # Coding log
 
+* 09 Mar 2021
+  * Updated installation instructions
 * 08 Mar 2021
   * Updated installation instructions
 * 07 Mar 2021
