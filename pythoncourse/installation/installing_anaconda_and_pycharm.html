@@ -13090,9 +13090,29 @@ div#notebook {
 <div class="text_cell_render border-box-sizing rendered_html">
 <h2 id="Make-sure-firewalls-are-open-to-allow-access-to-market-data">Make sure firewalls are open to allow access to market data<a class="anchor-link" href="#Make-sure-firewalls-are-open-to-allow-access-to-market-data">&#182;</a></h2><p>This is an important one! Make sure that you can download data via Python for libraries like Quandl and also to install Python.</p>
 <ul>
-<li>Once you've done your Python installation (and have signed up for a Quandl account and API key for free), try running this code below to check. </li>
-<li>Your firewall should also allow you to have access to allow the downloading of packages via conda and pip (if it isn't then you can't do much else, although in some circumstances you might be able to change the pip download URL to a site that does work)</li>
-<li>If opening up firewalls is too much of an issue or you don't have admin rights to install Python locally, then one easier way to get started with Python for learning purposes, is to use something like Google Colab (see below). </li>
+<li>Once you've done your Python installation and also the <code>py37class</code> environment detailed below (and have signed up for a Quandl account and API key for free), try running the code at the end of this guide to check it's installed the correct packages</li>
+<li><p>Your firewall should also allow you to have access to allow the downloading of packages via conda and pip</p>
+<ul>
+<li>it isn't then you can't do much else, although in some circumstances you might be able to change the pip download URL to a site that does work/using proxy details provided by your firm, with</li>
+<li><a href="https://docs.anaconda.com/anaconda/user-guide/tasks/proxy/">Using Anaconda behind a company proxy</a><ul>
+<li>The below shows how we can configure conda to use proxy servers<ul>
+<li><code>conda config --set proxy_servers.http http://id:pw@proxyserver:port</code></li>
+<li><code>conda config --set proxy_servers.https https://id:pw@proxyserver:port</code></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a href="https://pip.pypa.io/en/stable/user_guide/">Pip user guide</a><ul>
+<li>The below shows how we can specify the proxy server when downloading with pip<ul>
+<li><code>pip install --proxy=https://[id:pwd@]proxyserver:port somepackage</code></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>If opening up firewalls is too much of an issue or you don't have admin rights to install Python locally, then one easier way to get started with Python for learning purposes, is to use something like Google Colab (see below).</p>
+</li>
 <li>This will however, at the very least need the website <a href="https://colab.research.google.com/">https://colab.research.google.com/</a> to be accessible (some firms may block some Google websites) or website <a href="https://repl.it/languages/python3">https://repl.it/languages/python3</a> which offers online Python execution</li>
 </ul>
 
@@ -13107,7 +13127,7 @@ div#notebook {
 <p>By default the Anaconda will be installed at the following folder, which will depend on your username. Make sure you keep a note of where you installed Anaconda for later, in particular when you need to tell Anaconda where you installed the distribution!</p>
 <ul>
 <li>Windows: <code>C:\Users\&lt;your-username&gt;\Anaconda3\</code></li>
-<li>macOS: <code>/Users/&lt;your-username&gt;/anaconda3</code></li>
+<li>macOS: <code>/Users/&lt;your-username&gt;/anaconda3</code> or <code>`/Users/&lt;your-username&gt;/opt/anaconda3</code></li>
 <li>Linux: <code>/home/&lt;your-username&gt;/anaconda3</code></li>
 </ul>
 <p>Anaconda comes with many data science focused Python libraries. However, we'll still need to install quite a few other extra ones. Also in some instances, we'll install a different versions of certain libraries (including an earlier one for Pandas).</p>
