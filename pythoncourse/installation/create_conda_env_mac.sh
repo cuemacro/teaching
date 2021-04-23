@@ -19,7 +19,7 @@ source activate
 # this script
 conda install mamba -n base -c conda-forge
 
-# Remove any existing environment called py37class, and create a py37class with anaconda packages
+# Remove any existing environment called py38class, and create a py38class with anaconda packages
 mamba remove -n py38class --all --yes
 mamba create -n py38class python=3.8
 conda activate py38class
@@ -52,7 +52,7 @@ pip install arctic==1.79.4 \
    celery==5.0.5 celery[redis] celery[msgpack] msgpack-python \
    fxcmpy alpha_vantage yfinance twython newspaper3k seasonal pdfminer.six vaderSentiment gensim wordcloud rise requests_html \
    textacy sentencepiece tabula-py \
-   transformers==3.0.2 pytesseract cmdstanpy==0.4  \
+   transformers==3.0.2 pytesseract cmdstanpy \
    cvlib \
    cufflinks==0.17.3 plotly==4.14.3 kaleido \
         dash==1.20.0 dash-html-components==1.1.3 dash-core-components==1.16.0 dash-table==4.11.3 jupyter-dash==0.4.0 chart_studio==1.1.0 \
