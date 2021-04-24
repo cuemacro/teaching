@@ -13077,7 +13077,7 @@ div#notebook {
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="Installing-Anaconda-and-PyCharm">Installing Anaconda and PyCharm<a class="anchor-link" href="#Installing-Anaconda-and-PyCharm">&#182;</a></h1><p>Saeed Amen - Copyright Cuemacro 2020 - <a href="https://www.cuemacro.com">https://www.cuemacro.com</a> - saeed@cuemacro.com</p>
+<h1 id="Installing-Anaconda-and-PyCharm">Installing Anaconda and PyCharm<a class="anchor-link" href="#Installing-Anaconda-and-PyCharm">&#182;</a></h1><p>Saeed Amen - Copyright Cuemacro 2021 - <a href="https://www.cuemacro.com">https://www.cuemacro.com</a> - saeed@cuemacro.com</p>
 <p>In this notebook, we discuss how to install the Anaconda distribution of Python and other applications you need to run do development in Python, which will be useful for doing financial analysis in Python with libraries including the Cuemacro libraries, finmarketpy, findatapy and chartpy.</p>
 <p>You can also download a lot of this material from <a href="https://github.com/cuemacro/teaching">https://github.com/cuemacro/teaching</a> - in particular the scripts for installing the conda environments. We'll also be installing a lot of other useful libraries for machine learning, natural language processing etc.</p>
 <p>We'll also make other suggestions so you can do financial data analysis, such as making sure that your firewalls allow access to sites like Quandl.</p>
@@ -13090,7 +13090,7 @@ div#notebook {
 <div class="text_cell_render border-box-sizing rendered_html">
 <h2 id="Make-sure-firewalls-are-open-to-allow-access-to-market-data">Make sure firewalls are open to allow access to market data<a class="anchor-link" href="#Make-sure-firewalls-are-open-to-allow-access-to-market-data">&#182;</a></h2><p>This is an important one! Make sure that you can download data via Python for libraries like Quandl and also to install Python.</p>
 <ul>
-<li>Once you've done your Python installation and also the <code>py37class</code> environment detailed below (and have signed up for a Quandl account and API key for free), try running the code at the end of this guide to check it's installed the correct packages</li>
+<li>Once you've done your Python installation and also the <code>py38class</code> environment detailed below (and have signed up for a Quandl account and API key for free), try running the code at the end of this guide to check it's installed the correct packages</li>
 <li><p>Your firewall should also allow you to have access to allow the downloading of packages via conda and pip</p>
 <ul>
 <li>it isn't then you can't do much else, although in some circumstances you might be able to change the pip download URL to a site that does work/using proxy details provided by your firm, with</li>
@@ -13150,7 +13150,7 @@ div#notebook {
 <li>Open up the Anaconda Prompt (should be in the Start Menu usually labelled Anaconda Prompt (Anaconda3))</li>
 <li><p>In this prompt, your Anaconda folder will be on the path (ie. it will recognise where <code>conda</code> is installed etc.)</p>
 <ul>
-<li>Type in <code>conda activate</code> and press Enter to exit the current conda environment, then <code>conda remove -n py37class --all --yes</code> and press Enter to remove any existing environments called <code>py37class</code></li>
+<li>Type in <code>conda activate</code> and press Enter to exit the current conda environment, then <code>conda remove -n py38class --all --yes</code> and press Enter to remove any existing environments called <code>py38class</code></li>
 <li>If you haven't already downloaded the <code>environment_windows.yml</code> file you can do it from the command line using <code>curl</code>:<ul>
 <li>Type on one line <code>curl https://raw.githubusercontent.com/cuemacro/teaching/master/pythoncourse/installation/environment_windows.yml &gt; environment_windows.yml</code> and press Enter</li>
 </ul>
@@ -13162,7 +13162,7 @@ div#notebook {
 </li>
 <li>Anaconda will then run all the necessary command to download the various packages above using conda and pip</li>
 <li>Sometimes when you see the progress bar for certain libraries it will appear to stall, but you can sometimes try pressing "y" to make it continue</li>
-<li>At the end of the process you'll have a Python 3.7 conda environment with the name 'py37class' which you can use, with all the packages you'll need for this course, such as pandas, numpy etc.</li>
+<li>At the end of the process you'll have a Python 3.7 conda environment with the name 'py38class' which you can use, with all the packages you'll need for this course, such as pandas, numpy etc.</li>
 <li>Note that you may need to put in the full path for wherever you downloaded the <code>environment_windows.yml</code> file or you can simply <code>cd</code> to that folder and then run the above conda command</li>
 <li>Typically when you download files from your internet browser, Windows will usually save it in the users downloads folder, this is usually accessable by doing
   <code>cd \Users\&lt;your-username&gt;\Downloads</code> and then pressing Enter</li>
@@ -13222,7 +13222,7 @@ div#notebook {
 <div class="text_cell_render border-box-sizing rendered_html">
 <h2 id="Excel:-Installing-xlwings-addin-in-Excel-on-Windows-(or-Mac)">Excel: Installing xlwings addin in Excel on Windows (or Mac)<a class="anchor-link" href="#Excel:-Installing-xlwings-addin-in-Excel-on-Windows-(or-Mac)">&#182;</a></h2><p>Both of the above should install the xlwings Python library. You also need to add the xlwings addin to Excel too. Instructions for this can be found at <a href="https://docs.xlwings.org/en/stable/addin.html">https://docs.xlwings.org/en/stable/addin.html</a> (xlwings is also supported on Excel for Mac, although the functionality may differ). It won't work on Linux, given there's no Linux version of Excel). Usually this will involve, closing Excel, then running the following commands in your Anaconda Prompt, before restarting Excel:</p>
 
-<pre><code>conda activate py37class
+<pre><code>conda activate py38class
 xlwings addin install</code></pre>
 
 </div>
@@ -13239,7 +13239,7 @@ xlwings addin install</code></pre>
 </li>
 <li><p>In this prompt, your Anaconda folder will be on the path (ie. it will recognise where <code>conda</code> is installed etc.)</p>
 <ul>
-<li>Type in <code>conda activate</code> to exit the current conda environment and press Enter, then <code>conda remove -n py37class --all --yes</code> and press Enter to remove any existing environments called <code>py37class</code></li>
+<li>Type in <code>conda activate</code> to exit the current conda environment and press Enter, then <code>conda remove -n py38class --all --yes</code> and press Enter to remove any existing environments called <code>py38class</code></li>
 <li>If you haven't already downloaded the <code>environment_linux.yml</code> or <code>environment_mac.yml</code> file you can do it from the command line using <code>curl</code>:<ul>
 <li>Type on one line <code>curl https://raw.githubusercontent.com/cuemacro/teaching/master/pythoncourse/installation/environment_linux.yml &gt; environment_linux.yml</code> and press Enter (or <code>curl https://raw.githubusercontent.com/cuemacro/teaching/master/pythoncourse/installation/environment_mac.yml &gt; environment_mac.yml</code> on Mac)</li>
 </ul>
@@ -13247,7 +13247,7 @@ xlwings addin install</code></pre>
 <li>Type in <code>conda env create -f environment_linux.yml</code> and press Enter (or <code>conda env create -f environment_mac.yml</code> on Mac)</li>
 <li>Anaconda will then run all the necessary command to download the various packages above using conda and pip</li>
 <li>Sometimes when you see the progress bar for certain libraries it will appear to stall, but you can sometimes try pressing "y" to make it continue</li>
-<li>At the end of the process you'll have a Python 3.6 conda environment with the name 'py37class' which you can use, with all the packages you'll need for this course, such as pandas, numpy etc.</li>
+<li>At the end of the process you'll have a Python 3.6 conda environment with the name 'py38class' which you can use, with all the packages you'll need for this course, such as pandas, numpy etc.</li>
 <li>Note that you may need to put in the full path for wherever you downloaded the <code>environment_linux.yml</code> (or <code>environment_mac.yml</code>) file or you can simply <code>cd</code> to that folder and then run the above conda command</li>
 <li>Typically on Mac OS X when you save down files from your internet browser they will be in the user's home downloads folder, which you can get to by typing
   <code>cd ~/Downloads</code> and then pressing Enter</li>
@@ -13340,7 +13340,7 @@ and Mac, we'll install more libraries, which you might need to use later (some o
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="Windows/Linux/Mac:-Installing-a-conda-environment-if-all-else-fails">Windows/Linux/Mac: Installing a conda environment if all else fails<a class="anchor-link" href="#Windows/Linux/Mac:-Installing-a-conda-environment-if-all-else-fails">&#182;</a></h2><p>If either the faster or slower methods for installing a conda environment fail, you can try to create something similar to the py37class environment in a more manual way. Then later, you will likely to need to install libraries as you need them through the course.</p>
+<h2 id="Windows/Linux/Mac:-Installing-a-conda-environment-if-all-else-fails">Windows/Linux/Mac: Installing a conda environment if all else fails<a class="anchor-link" href="#Windows/Linux/Mac:-Installing-a-conda-environment-if-all-else-fails">&#182;</a></h2><p>If either the faster or slower methods for installing a conda environment fail, you can try to create something similar to the py38class environment in a more manual way. Then later, you will likely to need to install libraries as you need them through the course.</p>
 <p>In your Anaconda Prompt on Windows or Terminal on Linux/Mac, run the following commands.</p>
 <ul>
 <li><p>Switch to the <code>base</code> environment</p>
@@ -13348,21 +13348,21 @@ and Mac, we'll install more libraries, which you might need to use later (some o
 <li><code>conda activate</code></li>
 </ul>
 </li>
-<li><p>Remove any existing <code>py37class</code> environment</p>
+<li><p>Remove any existing <code>py38class</code> environment</p>
 <ul>
-<li><code>conda remove -n py37class --all --yes</code></li>
+<li><code>conda remove -n py38class --all --yes</code></li>
 </ul>
 </li>
-<li><p>Create a barebones <code>py37class</code> environment (if this hangs, we'll just have to use our <code>base</code> environment</p>
+<li><p>Create a barebones <code>py38class</code> environment (if this hangs, we'll just have to use our <code>base</code> environment</p>
 <ul>
-<li><code>conda create -n py37class python=3.7</code></li>
+<li><code>conda create -n py38class python=3.8</code></li>
 </ul>
 </li>
-<li><p>Activate the new <code>py37class</code> environment (if it managed to install, otherwise we'll just install everything in our <code>base</code> environment, which isn't ideal, but will at least get us the libraries we need), install the <code>anaconda</code> libraries, which include things like Pandas, NumPy etc. and install the minimal set of Cuemacro finance libraries to get you started, and do pip install as needed with additional libraries</p>
+<li><p>Activate the new <code>py38class</code> environment (if it managed to install, otherwise we'll just install everything in our <code>base</code> environment, which isn't ideal, but will at least get us the libraries we need), install the <code>anaconda</code> libraries, which include things like Pandas, NumPy etc. and install the minimal set of Cuemacro finance libraries to get you started, and do pip install as needed with additional libraries</p>
 <ul>
-<li><code>conda activate py37class</code></li>
+<li><code>conda activate py38class</code></li>
 <li><code>conda install anaconda</code> (and if you find it hangs remove this line)</li>
-<li><code>pip install pandas==1.0.5 finmarketpy chartpy findatapy cufflinks kaleido dash plotly</code></li>
+<li><code>pip install pandas==1.2.3 finmarketpy chartpy findatapy cufflinks kaleido dash plotly</code></li>
 <li>On Mac or Windows <code>pip install xlwings</code></li>
 </ul>
 </li>
@@ -13379,10 +13379,10 @@ and Mac, we'll install more libraries, which you might need to use later (some o
 <li>You can download and install PyCharm Community from <a href="https://www.jetbrains.com/pycharm/download">https://www.jetbrains.com/pycharm/download</a></li>
 <li>There are versions for PyCharm for Windows, Linux and Mac operating systems.</li>
 <li>PyCharm IDE makes it easier to write and run Python code</li>
-<li>In File / Settings - you will likely need to set PyCharm to use your py37class environment, which is likely at the following locations<ul>
-<li>Windows: <code>C:\Users\&lt;your-username&gt;\Anaconda3\envs\py37class</code></li>
-<li>macOS: <code>/Users/&lt;your-username&gt;/anaconda3/envs/py37class</code></li>
-<li>Linux: <code>/home/&lt;your-username&gt;/anaconda3/envs/py37class</code></li>
+<li>In File / Settings - you will likely need to set PyCharm to use your py38class environment, which is likely at the following locations<ul>
+<li>Windows: <code>C:\Users\&lt;your-username&gt;\Anaconda3\envs\py38class</code></li>
+<li>macOS: <code>/Users/&lt;your-username&gt;/anaconda3/envs/py38class</code></li>
+<li>Linux: <code>/home/&lt;your-username&gt;/anaconda3/envs/py38class</code></li>
 </ul>
 </li>
 <li>PyCharm will create a workspace for you, where you can place your code</li>
@@ -13407,10 +13407,10 @@ and Mac, we'll install more libraries, which you might need to use later (some o
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="o">!</span>pip install <span class="err">\</span>
-  <span class="n">redis</span> <span class="n">pathos</span> <span class="n">pyarrow</span><span class="o">==</span><span class="mf">2.0</span><span class="o">.</span><span class="mi">0</span> <span class="n">pandas</span><span class="o">==</span><span class="mf">1.0</span><span class="o">.</span><span class="mi">5</span> <span class="n">quandl</span> \
+  <span class="n">redis</span> <span class="n">pathos</span> <span class="n">pyarrow</span><span class="o">==</span><span class="mf">3.0</span><span class="o">.</span><span class="mi">0</span> <span class="n">pandas</span><span class="o">==</span><span class="mf">1.2</span><span class="o">.</span><span class="mi">3</span> <span class="n">quandl</span> \
   <span class="n">finmarketpy</span> <span class="n">chartpy</span> <span class="n">findatapy</span> \
   <span class="n">cufflinks</span><span class="o">==</span><span class="mf">0.17</span><span class="o">.</span><span class="mi">3</span> <span class="n">kaleido</span> \
-  <span class="n">plotly</span><span class="o">==</span><span class="mf">4.9</span><span class="o">.</span><span class="mi">0</span>
+  <span class="n">plotly</span><span class="o">==</span><span class="mf">4.14</span><span class="o">.</span><span class="mi">3</span>
 </pre></div>
 
     </div>
@@ -13447,7 +13447,7 @@ and Mac, we'll install more libraries, which you might need to use later (some o
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <h3 id="Installing-Bloomberg-to-access-data-via-API-(optional)">Installing Bloomberg to access data via API (optional)<a class="anchor-link" href="#Installing-Bloomberg-to-access-data-via-API-(optional)">&#182;</a></h3><p>It is helpful to install Bloomberg's blpapi Python library if you can (and have a Bloomberg account and have a Bloomberg Terminal with Windows).</p>
-<p>The py37class environment for Windows already contains blpapi, so you don't need to do this step!</p>
+<p>The py38class environment for Windows already contains blpapi, so you don't need to do this step!</p>
 <p>However, if you want to install it without conda, you follow the instructions at <a href="https://github.com/cuemacro/findatapy/blob/master/BLOOMBERG.md">https://github.com/cuemacro/findatapy/blob/master/BLOOMBERG.md</a></p>
 
 </div>
@@ -13480,7 +13480,7 @@ and Mac, we'll install more libraries, which you might need to use later (some o
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>You can test your Python installation, by starting the Anaconda prompt (switching to the right conda environment) and then starting Jupyter (in Azure Notebook, you'll start a Jupyter notebook via it's own interface) using the below commands.</p>
+<p>You can test your Python installation, by starting the Anaconda prompt (switching to the right conda environment) and then starting Jupyter (in Google Colab, you'll start a Jupyter notebook via it's own interface) using the below commands.</p>
 <p>Note, that you will likely have to change the default notebook-dir parameter (or you can just omit it, in which case Jupyter will use the current working directory).</p>
 
 </div>
@@ -13490,7 +13490,7 @@ and Mac, we'll install more libraries, which you might need to use later (some o
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 
-<pre><code>conda activate py37class
+<pre><code>conda activate py38class
 jupyter notebook --notebook-dir='e:/cuemacro/pythoncourse/pythoncourse/notebooks'</code></pre>
 
 </div>
@@ -13506,7 +13506,7 @@ jupyter notebook --notebook-dir='e:/cuemacro/pythoncourse/pythoncourse/notebooks
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[4]:</div>
+<div class="prompt input_prompt">In&nbsp;[2]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">chartpy</span>

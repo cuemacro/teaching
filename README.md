@@ -25,6 +25,8 @@ You can also run some of the notebooks interactively with Binder too
 
 # Coding log
 
+* 24 Apr 2021
+  * Updated conda environments to Python 3.8 and Pandas 1.2.3
 * 09 Mar 2021
   * Updated installation instructions
 * 08 Mar 2021
