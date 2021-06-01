@@ -538,7 +538,7 @@ dependencies:
     - catalogue==2.0.3
     - celery==5.0.5
     - chart-studio==1.1.0
-    - chartpy==0.1.8
+    - chartpy==0.1.9
     - click-didyoumean==0.0.3
     - click-plugins==1.1.1
     - click-repl==0.1.6
@@ -568,9 +568,9 @@ dependencies:
     - feedfinder2==0.0.4
     - feedparser==6.0.2
     - financepy==0.193
-    - findatapy==0.1.20
+    - findatapy==0.1.21
     - findspark==1.4.2
-    - finmarketpy==0.11.8
+    - finmarketpy==0.11.9
     - flask-compress==1.9.0
     - flask-ngrok==0.0.25
     - freetype-py==2.2.0

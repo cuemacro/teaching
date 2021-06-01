@@ -1,4 +1,4 @@
-# teaching - resources for Cuemacro courses
+ teaching - resources for Cuemacro courses
 
 In this repo, we have resources for Cuemacro courses (including Python for finance taught on QDC), such as how to install Anaconda, PyCharm etc.
 
@@ -22,9 +22,10 @@ You can also run some of the notebooks interactively with Binder too
 * [Timestream example (nbviewer link)](https://nbviewer.jupyter.org/github/cuemacro/teaching/blob/master/pythoncourse/notebooks/timestream_example.ipynb) or run interactively in [Binder](https://mybinder.org/v2/gh/cuemacro/teaching/master?filepath=pythoncourse/notebooks/timestream_example.ipynb) - using AWS Timestream database from Python
 * [Vaex example (nbviewer link)](https://nbviewer.jupyter.org/github/cuemacro/teaching/blob/master/pythoncourse/notebooks/vaex_example.ipynb) or run interactively in [Binder](https://mybinder.org/v2/gh/cuemacro/teaching/master?filepath=pythoncourse/notebooks/timestream_example.ipynb) - TBA Binder friendly version
 
-
 # Coding log
 
+* 01 Jun 2021
+  * Updated Cuemacro libraries to latest versions for conda environments
 * 24 Apr 2021
   * Updated conda environments to Python 3.8 and Pandas 1.2.3
 * 09 Mar 2021
