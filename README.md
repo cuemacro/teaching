@@ -24,6 +24,9 @@ You can also run some of the notebooks interactively with Binder too
 
 # Coding log
 
+* 03 Jun 2021
+  * Updated findatapy library in conda environments
+
 * 01 Jun 2021
   * Updated Cuemacro libraries to latest versions for conda environments
 * 24 Apr 2021
