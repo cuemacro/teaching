@@ -24,6 +24,8 @@ You can also run some of the notebooks interactively with Binder too
 
 # Coding log
 
+* 29 Jul 2021
+  * Updated environment.yml files for yfinance 0.1.63
 * 25 Jun 2021
   * Updated xlwings files for py38class
 * 03 Jun 2021
