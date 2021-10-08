@@ -54,7 +54,7 @@ pip install arctic==1.79.4 \
         dash==1.20.0 dash-html-components==1.1.3 dash-core-components==1.16.0 dash-table==4.11.3 jupyter-dash==0.4.0 chart_studio==1.1.0 \
         jupyter-book==0.10.2 jupyterbook-latex \
         dtale==1.43.0 pyldavis \
-   finmarketpy chartpy findatapy financepy findspark pandas==1.2.3 numpy==1.19.1 jedi==0.15.2 parso==0.8.2
+   finmarketpy chartpy findatapy financepy==0.193 findspark pandas==1.2.3 numpy==1.19.1 jedi==0.15.2 parso==0.8.2
 
 # Hack for vaex
 pip uninstall progressbar2

@@ -24,6 +24,8 @@ You can also run some of the notebooks interactively with Binder too
 
 # Coding log
 
+* 08 Oct 2021
+  * Updated some library versions (chartpy, findatapy and finmarketpy)
 * 29 Jul 2021
   * Updated environment.yml files for yfinance 0.1.63
 * 25 Jun 2021
