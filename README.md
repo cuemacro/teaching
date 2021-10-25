@@ -24,6 +24,8 @@ You can also run some of the notebooks interactively with Binder too
 
 # Coding log
 
+* 25 Oct 2021
+  * Minor update to installation instructions
 * 08 Oct 2021
   * Updated some library versions (chartpy, findatapy and finmarketpy)
 * 29 Jul 2021
