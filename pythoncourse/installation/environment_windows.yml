@@ -657,4 +657,5 @@ dependencies:
     - websocket-client==0.58.0
     - websockets==8.1
     - wordcloud==1.8.1
-    - yfinance==0.1.63
+    - yfinance==0.1.69
+    -
