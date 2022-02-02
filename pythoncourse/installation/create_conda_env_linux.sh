@@ -34,7 +34,7 @@ source activate py38class
 mamba install anaconda scikit-learn matplotlib -c anaconda --yes
 mamba install tensorflow graphviz python-graphviz -c anaconda --yes
 mamba install pytorch torchvision cpuonly -c pytorch --yes
-mamba install pyarrow opencv modin \
+mamba install pyarrow opencv modin=0.9.1 \
     boto3 \
     redis-py python-blosc pathos textblob \
     pyspark koalas vaex=4.0.0 numpy=1.19.1 \

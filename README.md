@@ -24,6 +24,8 @@ You can also run some of the notebooks interactively with Binder too
 
 # Coding log
 
+* 02 Feb 2022
+  * Made modin version=0.9.1 for scripts
 * 15 Jan 2022
   * Updated yfinance in conda YML to 0.1.69
 * 25 Oct 2021

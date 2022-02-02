@@ -26,7 +26,7 @@ REM   pytorch torchvision cudatoolkit=10.1 ^
 call mamba install anaconda scikit-learn matplotlib xlwings=0.23.0 -c anaconda --yes
 call mamba install tensorflow graphviz python-graphviz -c anaconda --yes
 call mamba install pytorch torchvision cpuonly -c pytorch --yes
-call mamba install pyarrow opencv modin ^
+call mamba install pyarrow opencv modin=0.9.1 ^
     boto3 ^
     redis-py python-blosc pathos textblob ^
     pyspark koalas vaex=4.0.0 numpy=1.19.1 ^

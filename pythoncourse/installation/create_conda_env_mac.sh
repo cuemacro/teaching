@@ -32,7 +32,7 @@ source activate py38class
 #   pytorch torchvision cudatoolkit=10.1 \
 mamba install anaconda scikit-learn matplotlib xlwings=0.23.0 tensorflow graphviz python-graphviz pytorch pyarrow fastparquet \
     python-snappy holoviews datashader pystan pyspark nodejs numpy=1.19.1 opencv -c anaconda --yes
-mamba install modin koalas \
+mamba install modin=0.9.1 koalas \
     jupyter_contrib_nbextensions jupyter_nbextensions_configurator vaex numpy=1.19.1 -c conda-forge --yes
 # conda install pandas=1.2.3 -c anaconda --yes
 
