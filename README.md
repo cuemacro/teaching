@@ -24,6 +24,11 @@ You can also run some of the notebooks interactively with Binder too
 
 # Coding log
 
+* 03 Feb 2022
+  * Updated Windows conda environment (`environment_windows.yml` 
+  & `create_conda_env_windows.bat`)
+  * Updated Linux conda environment (`environment_linux.yml` 
+  & `create_conda_env_linux.sh`)
 * 02 Feb 2022
   * Made modin version=0.9.1 for scripts
 * 15 Jan 2022

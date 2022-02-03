@@ -1,4 +1,5 @@
 REM Assumes that Anaconda has already been downloaded and installed
+REM Tested with Anaconda3-2021.11 on Windows
 
 REM Can create an environment YML file by running: conda env export > environment_windows.yml
 REM Create env from YML: conda env create -f environment_windows.yml
@@ -23,34 +24,33 @@ REM Install Tensorflow, PyTorch and Anaconda (lots of packages)
 REM only if you have GPU below 2 lines instead of CPU versions
 REM call mamba install anaconda tensorflow-gpu=2.3.0 anaconda pandas=1.2.3 scikit-learn graphviz python-graphviz matplotlib xlwings=0.23.0 ^
 REM   pytorch torchvision cudatoolkit=10.1 ^
-call mamba install anaconda scikit-learn matplotlib xlwings=0.23.0 -c anaconda --yes
+call mamba install anaconda scikit-learn matplotlib xlwings=0.23.0 lz4 dask=2021.4.0 ^
+    pandas=1.2.3 scipy=1.6.1 numpy=1.19.1 -c anaconda --yes
 call mamba install tensorflow graphviz python-graphviz -c anaconda --yes
 call mamba install pytorch torchvision cpuonly -c pytorch --yes
-call mamba install pyarrow opencv modin=0.9.1 ^
+call mamba install pyarrow opencv=4.5.3 modin=0.9.1 ^
     boto3 ^
     redis-py python-blosc pathos textblob ^
-    pyspark koalas vaex=4.0.0 numpy=1.19.1 ^
+    pyspark koalas vaex=4.7.0 pandas=1.2.3 scipy=1.6.1 numpy=1.19.1 ^
     spacy fastparquet python-snappy nodejs pystan fbprophet setuptools-git ^
-    vispy datashader pyproj holoviews streamz quandl bqplot blpapi -c conda-forge --yes
-call mamba install jupyter_contrib_nbextensions jupyter_nbextensions_configurator voila notebook=6.1.4 -c conda-forge --yes
-call mamba install pandas=1.2.3 -c anaconda --yes
+    vispy datashader pyproj holoviews streamz quandl bqplot blpapi gensim ^
+    textacy transformers pyldavis eikon=1.1.5 findspark celery ^
+    pytesseract tabula-py ^
+    newspaper3k dtale ^
+    sentencepiece jupyter_contrib_nbextensions ^
+    jupyter_nbextensions_configurator voila -c conda-forge --yes
+call mamba install pandas=1.2.3 scipy=1.6.1 numpy=1.19.1 -c anaconda --yes
 
-REM Install database
-REM Install Celery
-REM For findatapy and NLP and complex graphics
-REM Install transformers/huggingface and table libraries
-REM Install graphics/plotting libraries
 REM Install findatapy, chartpy and findatapy
+REM Install various graphics libraries
 call pip install arctic==1.79.4 ^
-   celery==5.0.5 celery[redis] celery[msgpack] msgpack-python ^
-   fxcmpy alpha_vantage yfinance twython newspaper3k seasonal pdfminer.six vaderSentiment gensim wordcloud rise requests_html ^
-   textacy sentencepiece ^
-   transformers pytesseract cmdstanpy tabula-py  ^
+   fxcmpy alpha_vantage yfinance twython seasonal pdfminer.six ^
+   vaderSentiment rise requests_html ^
    cvlib ^
-   cufflinks==0.17.3 plotly==4.14.3 kaleido ^
-        dash==1.20.0 dash-html-components==1.1.3 dash-core-components==1.16.0 dash-table==4.11.3 jupyter-dash==0.4.0 chart_studio==1.1.0 ^
-        dtale==1.43.0 pyldavis ^
-   finmarketpy chartpy findatapy financepy==0.193 eikon==1.1.5 pyxll findspark pandas==1.2.3 numpy==1.19.1 notebook==6.1.4
+   cufflinks==0.17.3 plotly==4.14.3 kaleido wordcloud ^
+        dash dash-html-components dash-core-components ^
+        dash-table jupyter-dash chart_studio pillow==9.0.1 ^
+   finmarketpy chartpy findatapy financepy==0.193 pandas==1.2.3
 
 REM Hack for vaex!
 call pip uninstall progressbar2
@@ -67,3 +67,6 @@ REM call jupyter labextension install plotlywidget --no-build
 REM call jupyter labextension install jupyterlab-plotly --no-build
 REM call jupyter labextension install bqplot --no-build
 REM call jupyter lab build
+
+REM Run this if you need to use spacy to install the large English model
+REM call python -m spacy download en_core_web_lg
