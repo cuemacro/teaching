@@ -33,7 +33,7 @@ source activate py38class
 mamba install anaconda scikit-learn matplotlib xlwings=0.23.0 tensorflow graphviz python-graphviz pytorch pyarrow fastparquet \
     python-snappy holoviews datashader pystan pyspark nodejs numpy=1.19.1 opencv -c anaconda --yes
 mamba install modin=0.9.1 koalas \
-    jupyter_contrib_nbextensions jupyter_nbextensions_configurator vaex numpy=1.19.1 -c conda-forge --yes
+    jupyter_contrib_nbextensions jupyter_nbextensions_configurator vaex numpy=1.19.1 gensim=3.8.3 -c conda-forge --yes
 # conda install pandas=1.2.3 -c anaconda --yes
 
 # Install database
@@ -46,15 +46,16 @@ pip install arctic==1.79.4 \
    redis quandl prophet boto3 textblob \
    spacy vispy pathos bqplot streamz pyproj \
    celery celery[redis] celery[msgpack] msgpack-python \
-   fxcmpy alpha_vantage yfinance twython newspaper3k seasonal pdfminer.six vaderSentiment gensim wordcloud rise requests_html \
+   fxcmpy alpha_vantage yfinance twython newspaper3k seasonal pdfminer.six vaderSentiment wordcloud rise requests_html \
    textacy sentencepiece tabula-py \
    transformers==3.0.2 pytesseract cmdstanpy==0.9.5 \
    cvlib \
-   cufflinks==0.17.3 plotly==4.14.3 kaleido \
-        dash==1.20.0 dash-html-components==1.1.3 dash-core-components==1.16.0 dash-table==4.11.3 jupyter-dash==0.4.0 chart_studio==1.1.0 \
+   cufflinks==0.17.3 plotly kaleido \
+        dash dash-html-components dash-core-components dash-table jupyter-dash chart_studio \
         jupyter-book==0.10.2 jupyterbook-latex \
         dtale==1.43.0 pyldavis \
-   finmarketpy chartpy findatapy financepy==0.193 findspark pandas==1.2.3 numpy==1.19.1 jedi==0.15.2 parso==0.8.2
+   finmarketpy chartpy findatapy financepy==0.193 findspark pandas==1.2.3 \
+   numpy==1.19.1 jedi==0.15.2 parso==0.8.2
 
 # Hack for vaex
 pip uninstall progressbar2

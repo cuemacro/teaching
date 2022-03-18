@@ -33,8 +33,8 @@ call mamba install pyarrow opencv=4.5.3 modin=0.9.1 ^
     redis-py python-blosc pathos textblob ^
     pyspark koalas vaex=4.7.0 pandas=1.2.3 scipy=1.6.1 numpy=1.19.1 ^
     spacy fastparquet python-snappy nodejs pystan fbprophet setuptools-git ^
-    vispy datashader pyproj holoviews streamz quandl bqplot blpapi gensim ^
-    textacy transformers pyldavis eikon=1.1.5 findspark celery ^
+    vispy datashader pyproj holoviews streamz quandl bqplot blpapi gensim=3.8.3 ^
+    textacy=0.10.0 transformers pyldavis eikon=1.1.5 findspark celery ^
     pytesseract tabula-py ^
     newspaper3k dtale ^
     sentencepiece jupyter_contrib_nbextensions ^
@@ -46,12 +46,13 @@ REM Install various graphics libraries
 call pip install arctic==1.79.4 ^
    fxcmpy alpha_vantage yfinance twython seasonal pdfminer.six ^
    vaderSentiment rise requests_html ^
-   cvlib ^
-   cufflinks==0.17.3 plotly==4.14.3 kaleido wordcloud ^
+   cvlib==0.2.6 ^
+   cufflinks==0.17.3 plotly kaleido wordcloud ^
         dash dash-html-components dash-core-components ^
-        dash-table jupyter-dash chart_studio pillow==9.0.1 ^
+        dash-table jupyter-dash chart_studio Pillow==7.2.0 ^
    finmarketpy chartpy findatapy financepy==0.193 pandas==1.2.3
 
+REM plotly==4.14.3
 REM Hack for vaex!
 call pip uninstall progressbar2
 call pip install progressbar2

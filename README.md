@@ -24,6 +24,10 @@ You can also run some of the notebooks interactively with Binder too
 
 # Coding log
 
+* 18 Mar 2022
+  * Updated Windows and Linux conda environments for 
+    * latest Dash (and gensim=3.8.5)
+    * fixed various versioning issues
 * 03 Feb 2022
   * Updated Windows conda environment (`environment_windows.yml` 
   & `create_conda_env_windows.bat`)
