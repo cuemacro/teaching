@@ -680,7 +680,6 @@ dependencies:
     - cvlib==0.2.6
     - dash-table==5.0.0
     - datetime==4.4
-    - en-core-web-lg==3.2.0
     - enum-compat==0.0.3
     - fake-useragent==0.1.11
     - financepy==0.193

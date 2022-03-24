@@ -4,6 +4,8 @@ REM Tested with Anaconda3-2021.11 on Windows
 REM Can create an environment YML file by running: conda env export > environment_windows.yml
 REM Create env from YML: conda env create -f environment_windows.yml
 
+call conda activate
+
 REM Update conda
 call conda update -n base -c defaults conda --yes
 

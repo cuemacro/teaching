@@ -6,6 +6,9 @@
 # Can create an environment YML file by running: conda env export > environment_linux.yml
 # Create env from YML: conda env create -f environment_linux.yml
 
+conda activate
+source activate
+
 # Update conda
 conda update -n base -c defaults conda --yes
 
