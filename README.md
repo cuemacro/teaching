@@ -21,6 +21,7 @@ You can also run some of the notebooks interactively with Binder too
 * [Numba example (nbviewer link)](https://nbviewer.jupyter.org/github/cuemacro/teaching/blob/master/pythoncourse/notebooks/numba_example.ipynb) or run interactively in [Binder](https://mybinder.org/v2/gh/cuemacro/teaching/master?filepath=pythoncourse/notebooks/numba_example.ipynb) - how to speed up CDF with Numba
 * [Timestream example (nbviewer link)](https://nbviewer.jupyter.org/github/cuemacro/teaching/blob/master/pythoncourse/notebooks/timestream_example.ipynb) or run interactively in [Binder](https://mybinder.org/v2/gh/cuemacro/teaching/master?filepath=pythoncourse/notebooks/timestream_example.ipynb) - using AWS Timestream database from Python
 * [Vaex example (nbviewer link)](https://nbviewer.jupyter.org/github/cuemacro/teaching/blob/master/pythoncourse/notebooks/vaex_example.ipynb) or run interactively in [Binder](https://mybinder.org/v2/gh/cuemacro/teaching/master?filepath=pythoncourse/notebooks/timestream_example.ipynb) - TBA Binder friendly version
+* [French election example (nbviewer link)](https://nbviewer.jupyter.org/github/cuemacro/teaching/blob/master/pythoncourse/notebooks/vaex_example.ipynb) or run interactively in [Binder](https://mybinder.org/v2/gh/cuemacro/teaching/master?filepath=pythoncourse/notebooks/french_elec_fx_vol_example.ipynb) - TBA Binder friendly version
 
 # Coding log
 
