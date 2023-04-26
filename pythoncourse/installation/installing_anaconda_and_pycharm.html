@@ -14250,12 +14250,29 @@ and Mac, we'll install more libraries, which you might need to use later (some o
 </div>
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<h2 id="Problems-with-Jupyter-notebook">Problems with Jupyter notebook<a class="anchor-link" href="#Problems-with-Jupyter-notebook">&#182;</a></h2><p>When running a Jupyter notebook if you get a kernal error displaed and in the command line it shows an error like <code>Kernal Error - FileNotFoundError: [WinError 2] The system cannot find the file specified</code>, you might need to install the <code>ipykernel</code> from the command line. To do this in the Anaconda Prompt type in the following:</p>
+<h2 id="Problems-with-getting-correct-Python-to-run-in-Jupyter-notebook">Problems with getting correct Python to run in Jupyter notebook<a class="anchor-link" href="#Problems-with-getting-correct-Python-to-run-in-Jupyter-notebook">&#182;</a></h2><p>When running a Jupyter notebook if you get a kernal error displaed and in the command line it shows an error like <code>Kernal Error - FileNotFoundError: [WinError 2] The system cannot find the file specified</code>. Basically, this means that Jupyter can't find the correct Python under your conda environment (eg. <code>py38class</code>).</p>
+<p>One fix is to search for <code>kernel.json</code> under your Anaconda folder, and check it has the correct path for the Python under your conda environment. Eg. for <code>py38class</code> we would likely find it in <code>&lt;&lt;Whatever your Anaconda Folder Is&gt;&gt;/py38class/share/jupyter/kernels/python3/kernel.json</code> and below is a sample file.</p>
+<p><code>{
+ "argv": [
+  "c:/Anaconda3/envs/py38class\\python.exe",
+  "-m",
+  "ipykernel_launcher",
+  "-f",
+  "{connection_file}"
+ ],
+ "display_name": "Python 3 (ipykernel)",
+ "language": "python",
+ "metadata": {
+  "debugger": true
+ }
+}</code></p>
+<p>Once, you've made these changes you'll need to restart Jupyter.</p>
+<p>Alternatively, you might need to install the <code>ipykernel</code> from the command line. To do this in the Anaconda Prompt type in the following:</p>
 <ul>
 <li><code>conda activate py38class</code></li>
-<li><code>python -m ipykernel install --user</code></li>
+<li><code>python -m ipykernel install --user --name=py38class</code></li>
 </ul>
-<p>More details can be found on <a href="https://github.com/jupyter/notebook/issues/4079">https://github.com/jupyter/notebook/issues/4079</a></p>
+<p>More details can be found on <a href="https://github.com/jupyter/notebook/issues/4079">https://github.com/jupyter/notebook/issues/4079</a> and <a href="https://towardsdatascience.com/get-your-conda-environment-to-show-in-jupyter-notebooks-the-easy-way-17010b76e874">https://towardsdatascience.com/get-your-conda-environment-to-show-in-jupyter-notebooks-the-easy-way-17010b76e874</a></p>
 
 </div>
 </div>

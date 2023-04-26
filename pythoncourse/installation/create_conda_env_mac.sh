@@ -57,7 +57,7 @@ pip install arctic==1.79.4 \
    cufflinks==0.17.3 plotly kaleido wordcloud \
         dash dash-html-components dash-core-components \
         dash-table jupyter-dash chart_studio \
-   finmarketpy chartpy findatapy financepy==0.193 pandas==1.2.3 numpy==1.19.5
+   finmarketpy chartpy findatapy financepy==0.220 pandas==1.2.3 numpy==1.19.5
 
 # Hack for vaex!
 pip uninstall progressbar2

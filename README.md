@@ -25,6 +25,9 @@ You can also run some of the notebooks interactively with Binder too
 
 # Coding log
 
+* 26 Apr 2023
+  * 
+
 * 04 Apr 2022
   * Added French election example
 * 24 Mar 2022

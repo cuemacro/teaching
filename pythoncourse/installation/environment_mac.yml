@@ -567,10 +567,10 @@ dependencies:
     - fake-useragent==0.1.11
     - feedfinder2==0.0.4
     - feedparser==6.0.2
-    - financepy==0.193
+    - financepy==0.220
     - findatapy==0.1.25
     - findspark==1.4.2
-    - finmarketpy==0.11.10
+    - finmarketpy==0.11.12
     - flask-compress==1.9.0
     - flask-ngrok==0.0.25
     - freetype-py==2.2.0
@@ -652,7 +652,7 @@ dependencies:
     - seasonal==0.3.1
     - sentencepiece==0.1.95
     - sgmllib3k==1.0.0
-    - sklearn==0.0
+    - scikit-learn==1.0.2
     - smart-open==3.0.0
     - smmap==4.0.0
     - socketio-client==0.7.2
