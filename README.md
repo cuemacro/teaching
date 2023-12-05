@@ -25,6 +25,8 @@ You can also run some of the notebooks interactively with Binder too
 
 # Coding log
 
+* 05 Dec 2023
+  * Removed fxcmpy as dependency in conda installations
 * 14 May 2023
   * Changed versions for findatapy and other libraries in conda envs
 * 04 Apr 2022

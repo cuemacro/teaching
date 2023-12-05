@@ -633,9 +633,8 @@ dependencies:
     - enum-compat==0.0.3
     - fake-useragent==0.1.11
     - financepy==0.220
-    - findatapy==0.1.29
+    - findatapy==0.1.31
     - finmarketpy==0.11.12
-    - fxcmpy==1.2.10
     - imutils==0.5.4
     - jupyter-dash==0.4.1
     - kaleido==0.2.1

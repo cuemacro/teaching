@@ -50,8 +50,8 @@ mamba install vispy datashader pyproj holoviews streamz quandl bqplot gensim=3.8
 
 # Install findatapy, chartpy and findatapy 
 # Install various graphics libraries
-pip install arctic==1.79.4 \
-   fxcmpy alpha_vantage yfinance twython seasonal pdfminer.six \
+pip install \
+   alpha_vantage yfinance twython seasonal pdfminer.six \
    vaderSentiment rise requests_html \
    cvlib==0.2.6 \
    cufflinks==0.17.3 plotly kaleido wordcloud \
