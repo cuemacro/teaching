@@ -682,9 +682,9 @@ dependencies:
     - datetime==4.4
     - enum-compat==0.0.3
     - fake-useragent==0.1.11
-    - financepy==0.220
+    - financepy==0.310
     - findatapy==0.1.31
-    - finmarketpy==0.11.12
+    - finmarketpy==0.11.13
     - imutils==0.5.4
     - jupyter-dash==0.4.1
     - kaleido==0.2.1
@@ -707,7 +707,7 @@ dependencies:
     - retrying==1.3.3
     - rise==5.7.1
     - seasonal==0.3.1
-    - scikit-learn==1.0.2
+    - scikit-learn
     - twython==3.9.1
     - tzdata==2022.1
     - tzlocal==4.1

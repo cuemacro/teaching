@@ -25,6 +25,10 @@ You can also run some of the notebooks interactively with Binder too
 
 # Coding log
 
+* 17 Jan 2024
+  * Loosened scikit-learn version
+* 01 Jan 2024
+  * Updated finmarketpy dependency in installation
 * 05 Dec 2023
   * Removed fxcmpy as dependency in conda installations
 * 14 May 2023
