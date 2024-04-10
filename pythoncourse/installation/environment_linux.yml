@@ -673,7 +673,7 @@ dependencies:
     - backports-zoneinfo==0.2.1
     - bs4==0.0.1
     - chart-studio==1.1.0
-    - chartpy==0.1.11
+    - chartpy==0.1.14
     - colorlover==0.3.0
     - configparser==5.2.0
     - cufflinks==0.17.3
@@ -683,7 +683,7 @@ dependencies:
     - enum-compat==0.0.3
     - fake-useragent==0.1.11
     - financepy==0.310
-    - findatapy==0.1.34
+    - findatapy==0.1.35
     - finmarketpy==0.11.13
     - imutils==0.5.4
     - jupyter-dash==0.4.1

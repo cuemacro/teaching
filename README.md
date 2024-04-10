@@ -25,6 +25,8 @@ You can also run some of the notebooks interactively with Binder too
 
 # Coding log
 
+* 10 Apr 2024
+  * Updated chartpy and findatapy versions
 * 04 Apr 2024
   * Updated findatapy version in installation
 * 01 Apr 2024
