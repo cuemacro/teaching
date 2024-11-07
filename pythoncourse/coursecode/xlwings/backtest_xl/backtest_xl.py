@@ -33,6 +33,8 @@ def get_figure(ticker, data_source, start_date, api_key):
 
     if data_source == 'quandl':
         md_request.quandl_api_key = api_key
+    elif data_source == "alfred":
+        md_request.fred_api_key = api_key
 
     df = Market(market_data_generator=MarketDataGenerator()).fetch_market(md_request)
 
