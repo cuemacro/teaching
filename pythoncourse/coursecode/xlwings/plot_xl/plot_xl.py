@@ -18,7 +18,7 @@ def get_figure(ticker, api_key):
 
     # import quandl
     #
-    # # Fetch market data from Quandl
+    # # Fetch market data from Quandl (deprecated)
     # quandl.ApiConfig.api_key = api_key
     # df = quandl.get(ticker, start_date="2000-01-01")
     from findatapy.market import Market, MarketDataGenerator, MarketDataRequest
@@ -36,8 +36,7 @@ def get_figure(ticker, api_key):
         cache_algo='internet_load_return',
         fred_api_key=api_key)  # How to return data
 
-    # You need to type your FRED API below (or modify the DataCred file)
-
+    # You need to type your FRED API above
     df = market.fetch_market(market_data_request)
     df = df.fillna(method='ffill')
 

@@ -25,6 +25,8 @@ You can also run some of the notebooks interactively with Binder too
 
 # Coding log
 
+* 17 Jan 2025
+  * Updated findatapy version in conda environments
 * 07 Nov 2024
   * Updated xlwings files to use FRED instead of Quandl
 * 19 May 2024
