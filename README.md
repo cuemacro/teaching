@@ -25,6 +25,8 @@ You can also run some of the notebooks interactively with Binder too
 
 # Coding log
 
+* 19 Feb 2025
+  * Updated findatapy version in conda environments
 * 17 Jan 2025
   * Updated findatapy version in conda environments
 * 07 Nov 2024
@@ -33,7 +35,7 @@ You can also run some of the notebooks interactively with Binder too
   * Updated finmarketpy version
 * 10 Apr 2024
   * Updated chartpy and findatapy versions
-* 04 Apr 2024
+* 04 Apr 2024 
   * Updated findatapy version in installation
 * 01 Apr 2024
   * Updated findatapy version in installation
