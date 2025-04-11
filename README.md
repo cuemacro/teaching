@@ -25,6 +25,8 @@ You can also run some of the notebooks interactively with Binder too
 
 # Coding log
 
+* 11 Apr 2025
+  * Updated installation notes
 * 19 Feb 2025
   * Updated findatapy version in conda environments
 * 17 Jan 2025

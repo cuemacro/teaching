@@ -11,16 +11,16 @@ call conda update -n base -c defaults conda --yes
 
 call conda activate
 
-REM mamba is a very fast version of conda https://github.com/mamba-org/mamba
-REM if you have problems with mamba, remove the below line and make all references to mamba => conda later on in
-REM this script
-call conda install mamba=0.7.3 -n base -c conda-forge
-REM 0.7.3
+REM Remove any existing environment called py310class, and create a py38class with anaconda packages
+call conda remove -n py310class --all --yes
+call conda create -n py310class python=3.10
+call conda activate py310class
 
-REM Remove any existing environment called py38class, and create a py38class with anaconda packages
-call mamba remove -n py38class --all --yes
-call mamba create -n py38class python=3.8
-call conda activate py38class
+pip install uv
+
+uv pip install
+
+PyQt6
 
 REM Install Tensorflow, PyTorch and Anaconda (lots of packages)
 REM only if you have GPU below 2 lines instead of CPU versions
@@ -45,14 +45,17 @@ call mamba install pandas=1.2.3 scipy=1.6.1 numpy=1.19.1 -c anaconda --yes
 
 REM Install findatapy, chartpy and findatapy
 REM Install various graphics libraries
-call pip install ^
+call uv pip install ^
    alpha_vantage yfinance twython seasonal pdfminer.six ^
    vaderSentiment rise requests_html ^
    cvlib==0.2.6 ^
    cufflinks==0.17.3 plotly kaleido wordcloud ^
         dash dash-html-components dash-core-components ^
         dash-table jupyter-dash chart_studio Pillow==7.2.0 ^
-   finmarketpy chartpy findatapy financepy==0.310 pandas==1.2.3
+   finmarketpy chartpy findatapy
+
+call uv pip install numba numpy scipy llvmlite ipython pandas prettytable
+call uv pip install financepy==0.370 --no-deps
 
 REM plotly==4.14.3
 REM Hack for vaex!
